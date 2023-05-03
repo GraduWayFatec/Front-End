@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="img-grad">
+        <img src="../../assets/img/Gradiente.svg" alt="" class="gradiante">
+    </div>    
+    <div class="nav">
+        <nav>
+            <div class="left">
+                <p class="date"> Sábado, 23 Abril 2023</p>
+                <p *ngFor="let name of nameList" class="info">
+                    Olá, {{ name.name }}! O que Deseja realizar?
+                </p>
+            </div>
+            <div class="right">
+                <a href="#">
+                    <img src="../../assets/img/Perfil.svg" alt="">
+                    
+                </a>
+            </div>
+        </nav>
+    </div>    
+</div>
