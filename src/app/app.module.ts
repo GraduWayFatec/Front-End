@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { PainelComponent } from './Pages/painel/painel.component';
+import { CardsComponent } from './Pages/cards/cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MenuComponent,
-    PainelComponent
+    PainelComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule
