@@ -6,7 +6,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-right: 2px solid #9EFFCA;
+    border-right: 1px solid #9EFFCA;
+    
 }
 
 .row{
@@ -30,10 +31,9 @@
 hr.hr{
     width: 175px;
     height: 2px;
-    left: 0px;
-    top: 138px;
     background: radial-gradient(50% 50% at 50% 50%, #9EFFCA 44.79%, rgba(139, 130, 181, 0) 100%);
     opacity: 0.32;  
+    border-top: 0;
 }
 
 .logo{
