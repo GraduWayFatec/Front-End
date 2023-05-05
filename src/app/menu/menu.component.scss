@@ -10,6 +10,12 @@
     
 }
 
+img.management{
+    width: 22px;
+    height: 24px;
+    margin-left: 2px;
+}
+
 .row{
     display: flex;
     flex-direction: column;
@@ -68,6 +74,7 @@ img.img-icon{
 .btn.btn-primary{
     display: flex;
     align-items: center;
+    justify-items: space-between;
     padding: 16px 8px;
     gap: 8px;
     isolation: isolate;
@@ -91,6 +98,7 @@ img.img-icon{
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
     color: #9EFFCA;
 }
+
 
 .img-container{
     display: flex;
