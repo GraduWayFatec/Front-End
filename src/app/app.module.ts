@@ -7,6 +7,8 @@ import { MenuComponent } from './menu/menu.component';
 import { CardsComponent } from './dashboard/cards/cards.component';
 
 import { SearchComponent } from './dashboard/search/search.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import { SearchComponent } from './dashboard/search/search.component';
     HeaderComponent,
     MenuComponent,
     CardsComponent,
-    SearchComponent
+    SearchComponent,
+    RegisterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
