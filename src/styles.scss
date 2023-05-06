@@ -4,4 +4,16 @@
 
 *{
     font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #383448;
+    --color-2: #9EFFCA;
+    --color-3: #1F1A3C;
+    --color-4: #FFFFFF;
 }
