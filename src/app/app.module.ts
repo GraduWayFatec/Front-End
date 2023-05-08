@@ -10,6 +10,8 @@ import { CardsComponent } from './dashboard/cards/cards.component';
 import { SearchComponent } from './dashboard/search/search.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ManagementComponent } from './pages/management/management.component';
+import { BodyManagementComponent } from './management/body-management/body-management.component';
+import { CardManagementComponent } from './management/card-management/card-management.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ManagementComponent } from './pages/management/management.component';
     CardsComponent,
     SearchComponent,
     DashboardComponent,
-    ManagementComponent
+    ManagementComponent,
+    BodyManagementComponent,
+    CardManagementComponent
   ],
   imports: [
     BrowserModule,
