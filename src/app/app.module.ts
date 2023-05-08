@@ -9,6 +9,7 @@ import { CardsComponent } from './dashboard/cards/cards.component';
 
 import { SearchComponent } from './dashboard/search/search.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ManagementComponent } from './pages/management/management.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     MenuComponent,
     CardsComponent,
     SearchComponent,
-    DashboardComponent
+    DashboardComponent,
+    ManagementComponent
   ],
   imports: [
     BrowserModule,
