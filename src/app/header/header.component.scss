@@ -4,14 +4,14 @@
     top: 8px;
 }
 .container{
-    height: 30vh;
+    max-height: 30vh;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;;
-    width: 1221px;
+    width: 100%;
 }
 img.gradiante{
 
-    width: 1200px;
-    height: 147px;
+    width: 98%;
+    height: auto;
 }
 
 .img-grad{
@@ -34,7 +34,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1115px;
+    width: 93%;
     height: 129px;
     top: -90px;
 
@@ -46,7 +46,7 @@ nav{
     /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 28px;
-    gap: 450px;
+    gap: 1rem;
 }
 
 .date{
@@ -67,3 +67,5 @@ nav{
 // .right{
 //     padding-bottom: 30px;
 // }
+
+
