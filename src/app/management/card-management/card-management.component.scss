@@ -122,5 +122,16 @@ hr {
 .config{
     display: flex;
     align-items: end;
-    gap: 24px;
+    gap: 16px;
+}
+
+.bottom .config button{
+    background-color: transparent;
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+.bottom .config button:hover{
+    border: 1.3px #FFF solid;
+    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
 }
