@@ -236,6 +236,7 @@
     border-radius: 3px;
     outline: none;
     cursor: pointer;
+    box-shadow: 0px 0px 10px #9EFFCA;
   }
   
   .body .b-right .content .forms .terms .checkbox:checked {
@@ -270,7 +271,7 @@
 
     background: none;
     box-shadow: #FFFFFF;
-
+    overflow: unset;
 }
 
 .body .progress .progress1 {
@@ -278,6 +279,7 @@
     width: 112px;
     height: 5px;
     border-radius: 28px;
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .progress .progress2 {
@@ -285,6 +287,7 @@
     width: 112px;
     height: 5px;
     border-radius: 28px;
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .progress .progress3 {
@@ -292,6 +295,7 @@
     width: 112px;
     height: 5px;
     border-radius: 28px;
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .footer {
