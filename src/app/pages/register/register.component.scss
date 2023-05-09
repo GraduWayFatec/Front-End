@@ -170,10 +170,10 @@
 
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 8px;
     text-align: left;
-    color: #FFFFFF80;
+    color: #FFFFFF;
 
     display: flex;
     justify-content: center;
@@ -222,7 +222,7 @@
 
     background: none;
     box-shadow: #FFFFFF;
-
+    overflow: unset;
 }
 
 .body .progress .progress1 {
@@ -230,6 +230,7 @@
     width: 112px;
     height: 5px;
     border-radius: 28px;
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .progress .progress2 {
@@ -271,4 +272,5 @@
     color: var(--color-2);
     border: none;
     text-decoration: underline;
+    text-shadow: 0px 0px 10px #9EFFCA;
 }
