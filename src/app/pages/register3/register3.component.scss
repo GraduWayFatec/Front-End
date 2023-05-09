@@ -170,10 +170,10 @@
 
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 8px;
     text-align: left;
-    color: #FFFFFF80;
+    color: #FFFFFF;
 
     display: flex;
     justify-content: center;
@@ -219,12 +219,8 @@
     color: var(--color-2);
     border: none;
     text-decoration: underline;
+    text-shadow: 0px 0px 10px #9EFFCA;
 }
-
-// .body .b-right .content .forms .terms .checkbox input:checked {
-//     display: none;
-//     background-color: var(--color-2);
-// }
 
 .body .b-right .content .forms .terms .checkbox {
     -webkit-appearance: none;
@@ -323,4 +319,5 @@
     color: var(--color-2);
     border: none;
     text-decoration: underline;
+    text-shadow: 0px 0px 10px #9EFFCA;
 }
