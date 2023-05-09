@@ -9,6 +9,7 @@
     
     border-radius: 28px;
     color:white;
+    cursor: pointer;
 }
 
 .card-body{
@@ -119,6 +120,7 @@ $grey: #9EFFCA;
 .mcui-checkbox {
   display: flex;  
   padding: 0.6em 0;
+  cursor: pointer;
   // alinhamento do texto
 
   input[type="checkbox"] {

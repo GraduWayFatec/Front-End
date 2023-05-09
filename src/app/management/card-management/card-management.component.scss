@@ -1,14 +1,18 @@
 .card{
-    width: 305px;
-    height: 300px;
-    box-sizing: border-box;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
-    box-shadow: 5px 5px 64px rgba(41, 15, 0, 0.4);
-    backdrop-filter: blur(80px);
-    /* Note: backdrop-filter has minimal browser support */
-    
-    border-radius: 28px;
-    color:white;
+  width: 305px;
+  height: 300px;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
+  box-shadow: 5px 5px 64px rgba(41, 15, 0, 0.4);
+  backdrop-filter: blur(80px);
+  /* Note: backdrop-filter has minimal browser support */
+  
+  border-radius: 28px;
+  color:white;
+}
+
+.card:hover{
+  cursor: pointer;
 }
 
 .card-body{
@@ -143,6 +147,7 @@ $grey: #9EFFCA;
 .mcui-checkbox {
   display: flex;  
   padding: 0.6em 0;
+  cursor: pointer;
   // alinhamento do texto
 
   input[type="checkbox"] {
@@ -170,11 +175,6 @@ $grey: #9EFFCA;
     }
   }
 
-  input[type="checkbox"]:disabled ~ div {
-    color: $grey;
-    cursor: not-allowed;
-  //   muda o cursor quando a opção não está disponível para clicar
-  }
 }
 
 .mcui-check {
