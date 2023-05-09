@@ -112,3 +112,60 @@ hr {
 .student{
   margin-bottom: 29px;
 }
+
+$main: #9EFFCA; //#008cff;
+$grey: #9EFFCA;
+  
+.mcui-checkbox {
+  display: flex;  
+  padding: 0.6em 0;
+  // alinhamento do texto
+
+  input[type="checkbox"] {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  //   a tag input traz uma checkbox do html. Esses comando tiram o original
+  }
+
+  input[type="checkbox"] + div{
+    border: 2px solid $grey;
+    height: 1.5em;
+    width: 1.5em;
+    box-sizing: border-box;
+    border-radius: 2px;
+// aqui traz a check box, tranforma em quadrado, o tamanho e etc
+  }
+
+  input[type="checkbox"]:checked + div {
+    .mcui-check {
+      opacity: 1;
+      background-color: #9EFFCA;
+    }
+  }
+
+  input[type="checkbox"]:disabled ~ div {
+    color: $grey;
+    cursor: not-allowed;
+  //   muda o cursor quando a opção não está disponível para clicar
+  }
+}
+
+.mcui-check {
+  height: 100%;
+  width: 100%;
+  transform: scale(1);
+  color: #383448;
+  opacity: 0;
+  // cor do check do quadrado
+
+  polyline {
+    fill: none;
+    transform-origin: 50% 50%;
+    stroke-width: 5px;
+    stroke-dasharray: 22.771367900227325;
+    stroke: currentcolor;
+  //   faz o ícone de dentro do quadrado ser uma check
+  }
+}
