@@ -100,21 +100,18 @@
 
 .body .b-right {
     background-color: var(--color-1);
-    // width: 496px;
+    width: 496px;
     height: 490px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    // border: 2px #FFF solid;
-    // border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
     border-radius: 28px;
 
-    // box-shadow: 10px 10px 64px rgba(41, 15, 0, 0.56);
-    // backdrop-filter: blur(80px);
-    padding: 5px;
-    background-image: linear-gradient(45deg, #9EFFCA, rgba(139, 130, 181, 0.4), rgba(139, 130, 181, 0.4), #9EFFCA);
+    box-shadow: 10px 10px 64px rgba(41, 15, 0, 0.56);
+    padding: 1px;
+    background-image: linear-gradient(45deg, var(--color-1), var(--color-2), var(--color-1), var(--color-2));
 }
 
 .body .b-right .content {
@@ -125,12 +122,12 @@
     justify-content: center;
     gap: 48px;
 
-    width: 433px;
-    height: 616px;
+    width: 490px;
+    height: 484px;
 
     padding: 0px 40px;
 
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 .body .b-right .content .title {
@@ -229,6 +226,7 @@
   .body .b-right .content .forms .horizontal .checkbox:checked {
     background-color: var(--color-2);
     border-color: var(--color-2);
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .b-right .content .forms .horizontal .forget button {
@@ -360,4 +358,5 @@
     color: var(--color-2);
     border: none;
     text-decoration: underline;
+    text-shadow: 0px 0px 10px #9EFFCA;
 }
