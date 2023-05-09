@@ -195,7 +195,7 @@
 
     background: none;
     box-shadow: #FFFFFF;
-
+    overflow: unset;
 }
 
 .body .progress .progress1 {
@@ -203,6 +203,7 @@
     width: 112px;
     height: 5px;
     border-radius: 28px;
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .progress .progress2 {
@@ -210,6 +211,7 @@
     width: 112px;
     height: 5px;
     border-radius: 28px;
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .progress .progress3 {
@@ -244,4 +246,5 @@
     color: var(--color-2);
     border: none;
     text-decoration: underline;
+    text-shadow: 0px 0px 10px #9EFFCA;
 }
