@@ -136,7 +136,7 @@ hr {
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
 }
 
-
+ 
 $main: #9EFFCA; //#008cff;
 $grey: #9EFFCA;
   
@@ -159,6 +159,7 @@ $grey: #9EFFCA;
     width: 1.5em;
     box-sizing: border-box;
     border-radius: 2px;
+    display: flex;
 // aqui traz a check box, tranforma em quadrado, o tamanho e etc
   }
 
