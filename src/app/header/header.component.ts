@@ -7,8 +7,6 @@ import { InfoPerson } from '../shared/header.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  nameList: InfoPerson[] =[
-    new InfoPerson("Glaubas")
-  ]
+  nameList:string ="Glaubas"
 
 }
