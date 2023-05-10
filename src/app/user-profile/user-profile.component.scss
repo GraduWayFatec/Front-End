@@ -58,7 +58,25 @@
 }
 
 .modal-dialog .modal-content .modal-body {
-    padding: 0px 24px 0px 24px;
+    padding: 10px 24px 0px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 16px;
+}
+
+.modal-dialog .modal-content .modal-body .header-table {
+    padding: 24px 0px 0px 0px;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias {
+    padding: 24px 0px 0px 0px;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias h5 {
+    padding: 0px 0px 24px 0px;
 }
 
 .modal-dialog .modal-content .modal-body h5 {
@@ -177,7 +195,7 @@
 
 .modal-dialog .modal-content .modal-body .social-medias .linkedin {
     display: flex;
-    align-items: center;
+    align-items: center;    
 
     gap: 24px;
 }
