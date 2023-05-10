@@ -1,5 +1,5 @@
 
-<div class="card" id="card">
+<div class="card" (click)="onCardClick()">
     <div class="card-body">
         <div class="top">
             <div class="left">
@@ -8,7 +8,7 @@
             </div>
             <div class="right">
                 <label class="mcui-checkbox">
-                    <input type="checkbox" id="checkbox">
+                    <input type="checkbox" [checked]="isChecked">
                     <div>
                     <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true" >
                         <title>checkmark-circle</title>

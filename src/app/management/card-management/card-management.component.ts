@@ -5,25 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './card-management.component.html',
   styleUrls: ['./card-management.component.scss']
 })
-
 export class CardManagementComponent implements OnInit {
 
   isChecked: boolean = false;
 
-  ngOnInit() {
-    const card: HTMLElement = document.getElementById("card")!;
-    const card2: HTMLElement = document.getElementById("checkbox")!;
-    const checkbox: HTMLInputElement = document.getElementById("checkbox") as HTMLInputElement;
+  ngOnInit() {}
 
-
-    card.addEventListener("click", () => {
-      this.isChecked = !this.isChecked;
-      checkbox.checked = this.isChecked
-    });
-    card2.addEventListener("click", () => {
-      this.isChecked = !this.isChecked;
-      checkbox.checked = this.isChecked
-    });
+  onCardClick() {
+    this.isChecked = !this.isChecked;
   }
-
 }
