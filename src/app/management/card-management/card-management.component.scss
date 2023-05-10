@@ -13,6 +13,11 @@
 
 .card:hover{
   cursor: pointer;
+  border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+  h1{
+    color: #9EFFCA
+  }
+
 }
 
 .card-body{
