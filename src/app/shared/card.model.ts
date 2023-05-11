@@ -1,5 +1,5 @@
 export class InfoCard{
-    constructor(public classe:number, public course:string, public year:number, public student:number) {
+    constructor(public classe:number, public course:string, public year:number, public student:number, public img:string) {
     
     }
 }
