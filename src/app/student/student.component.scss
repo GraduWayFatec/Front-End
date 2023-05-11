@@ -1,0 +1,9 @@
+.container{
+    width: 1088px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
+    box-shadow: 10px 10px 64px rgba(41, 15, 0, 0.56);
+    backdrop-filter: blur(80px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 28px;
+}
