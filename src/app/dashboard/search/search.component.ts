@@ -18,7 +18,6 @@ export class SearchComponent implements AfterViewInit {
     });
   }
 
-  ngOnInit() {}
 
   ngAfterViewInit(): void {}
 }
