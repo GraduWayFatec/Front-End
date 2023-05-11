@@ -160,7 +160,7 @@ img{
     
 }
 
-.cards{
+.container-cards{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -169,7 +169,6 @@ img{
     height: calc(74.7vh - 249px);
     overflow-y: auto;
     background: transparent;
-    width: 100%;
     padding-left: 3.5%;
     margin-right: 3.5%;
     padding-top: 12px;
@@ -177,6 +176,7 @@ img{
     border-radius: 24px;
     
 }
+
 
 
 

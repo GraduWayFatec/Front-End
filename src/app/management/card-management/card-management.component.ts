@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { InfoCard } from 'src/app/shared/card.model';
 
 @Component({
   selector: 'app-card-management',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-management.component.scss']
 })
 export class CardManagementComponent implements OnInit {
+  @Input() itens!: InfoCard;
+  
+
 
   isChecked: boolean = false;
 
