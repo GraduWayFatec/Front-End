@@ -19,7 +19,6 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
-  // { path: 'cookies', component: CookiesComponent },
   // { path: "dashboard", component: DashboardComponent},
   // { path: 'register', component: RegisterComponent },
   // { path: 'user-profile', component: UserProfileComponent },
@@ -30,7 +29,7 @@ const routes: Routes = [
   // { path: "management", component: ManagementComponent},
   // { path: 'privacy', component: PrivacyComponent },
   // { path: 'register2', component: Register2Component },
-  // { path: 'register3', component: Register3Component },
+  // { path: 'register3', component: Register3Component }
 
 ];
 
