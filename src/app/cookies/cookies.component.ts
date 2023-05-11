@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./cookies.component.scss']
 })
 export class CookiesComponent {
-
+  accept():any{
+    console.log("Olá")
+  }
 }
