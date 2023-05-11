@@ -3,14 +3,14 @@
     <div class="card-body">
         <div class="top">
             <div class="left">
-                <h1 class="card-title">Turma 13º </h1>
-                <h2 class="card-subtitle">Big Data no Agronegócio</h2>
+                <h1 class="card-title">Turma {{ itens.classe }}º </h1>
+                <h2 class="card-subtitle">{{ itens.course }}</h2>
             </div>
             <div class="right">
                 <label class="mcui-checkbox">
                     <input type="checkbox" (click)="onCardClick()" [checked]="isChecked">
                     <div>
-                    <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
+                    <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true" >
                         <title>checkmark-circle</title>
                         <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
                     </svg> 
@@ -21,11 +21,11 @@
         <hr>
         <div class="date">
             <h3 class="sub">Data de Formatura</h3>
-            <h4 class="description">2021</h4>
+            <h4 class="description">{{ itens.year }}</h4>
         </div>
         <div class="student">
             <h3 class="sub">Alunos cadastrados</h3>
-            <h4 class="description">37</h4>
+            <h4 class="description">{{ itens.student }}</h4>
         </div>
         <div class="curse">
             <img src="../../../assets/img/Big Data.svg" alt="">

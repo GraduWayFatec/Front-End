@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { InfoCard } from 'src/app/shared/card.model';
 
 @Component({
   selector: 'app-cards',
@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class CardsComponent implements OnInit{
+  @Input() itens!: InfoCard;
+
   isChecked: boolean = false;
 
   ngOnInit() {}

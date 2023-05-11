@@ -108,9 +108,6 @@ img{
     justify-content:center;
     align-items: center;
     background: none;
-}
-
-.cards{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -124,8 +121,8 @@ img{
     margin-right: 3.5%;
     margin-top: 5vh;
     padding-top: 12px;
-    // box-shadow: 5px 5px 64px rgba(41, 15, 0, 0.4);
 }
+
 
 
 *::-webkit-scrollbar {

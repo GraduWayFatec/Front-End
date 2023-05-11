@@ -22,13 +22,8 @@
         </div>
     </div>
     <div class="container-cards">
-        <div class="cards">
-                <app-cards></app-cards>            
-                <app-cards></app-cards>
-                <app-cards></app-cards>
-                <app-cards></app-cards>
-                <app-cards></app-cards>
-                <app-cards></app-cards>
+        <div class="cards" *ngFor="let i of infocard">
+                <app-cards [itens]="i"></app-cards>            
         </div>
     </div>
 </div>
