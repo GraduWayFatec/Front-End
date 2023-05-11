@@ -12,6 +12,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ManagementComponent } from './pages/management/management.component';
 import { BodyManagementComponent } from './management/body-management/body-management.component';
 import { CardManagementComponent } from './management/card-management/card-management.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CardManagementComponent } from './management/card-management/card-manag
     DashboardComponent,
     ManagementComponent,
     BodyManagementComponent,
-    CardManagementComponent
+    CardManagementComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
