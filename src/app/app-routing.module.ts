@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 // import { PrivacyComponent } from './privacy/privacy.component';
 // import { Register2Component } from './pages/register2/register2.component';
 // import { Register3Component } from './pages/register3/register3.component';
+import { MessageComponent } from './message/message.component';
 
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -19,6 +20,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
+  { path: "message", component: MessageComponent},
   // { path: "dashboard", component: DashboardComponent},
   // { path: 'register', component: RegisterComponent },
   // { path: 'user-profile', component: UserProfileComponent },
