@@ -7,7 +7,7 @@ import { CookiesComponent } from './cookies/cookies.component';
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
-  { path: 'cookies', component: CookiesComponent },
+  // { path: 'cookies', component: CookiesComponent },
 
 ];
 
