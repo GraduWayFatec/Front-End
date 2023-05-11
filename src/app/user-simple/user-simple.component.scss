@@ -1,0 +1,114 @@
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 170px;
+
+    background-color: var(--color-1);
+    box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
+
+    border-radius: 28px; 
+    padding: 4px;
+
+    background-image: linear-gradient(45deg, var(--color-1), var(--color-2), var(--color-1), var(--color-2));
+}
+
+.modal-dialog .modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 400px;
+    height: 170px;
+
+    color: var(--color-4);
+    background-color: var(--color-1);
+
+    border-radius: 25px;
+}
+
+.modal-dialog .modal-content .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    overflow: hidden;
+
+    gap: 18px;
+}
+
+.modal-dialog .modal-content .modal-body .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.modal-dialog .modal-content .modal-body .user img {
+    width: 40px;
+    height: 40px;
+}
+
+.modal-dialog .modal-content .modal-body .user p {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    text-align: center;
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+
+    width: 280px;
+
+    color: #FFFFFF;
+
+    gap: 5px;
+    
+    margin: 0;
+}
+
+.modal-dialog .modal-content .modal-body .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 24px;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias button {
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias .linkedin img {
+    width: 32px;
+    height: 32px;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias .instagram img {
+    width: 32px;
+    height: 32px;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias .lattes img {
+    width: 32px;
+    height: 32px;
+}
+
+.modal-dialog .modal-content .modal-body .social-medias .facebook img {
+    width: 32px;
+    height: 32px;
+}
