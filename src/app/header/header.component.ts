@@ -7,6 +7,6 @@ import { InfoPerson } from '../shared/header.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  nameList:string ="Luizito"
+  nameList:string ="Glaubas"
 
 }

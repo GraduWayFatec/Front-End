@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
@@ -15,4 +15,9 @@ export class CardsComponent implements OnInit{
   onCardClick() {
     this.isChecked = !this.isChecked;
   }
+  @Input() outCheck: boolean = false;
+
+  onChange(){}
+
+
 }
