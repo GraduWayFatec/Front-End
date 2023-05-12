@@ -12,7 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 // import { PrivacyComponent } from './privacy/privacy.component';
 // import { Register2Component } from './pages/register2/register2.component';
 // import { Register3Component } from './pages/register3/register3.component';
-import { ExitComponent } from './exit/exit.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -20,7 +20,7 @@ import { ExitComponent } from './exit/exit.component';
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
-  { path: "exit", component: ExitComponent},
+  { path: "menu", component: MenuComponent},
   // { path: "dashboard", component: DashboardComponent},
   // { path: 'register', component: RegisterComponent },
   // { path: 'user-profile', component: UserProfileComponent },
