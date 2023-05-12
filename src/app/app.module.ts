@@ -15,6 +15,7 @@ import { CardManagementComponent } from './management/card-management/card-manag
 import { StudentComponent } from './student/student.component';
 import { CardStudentComponent } from './student/card-student/card-student.component';
 import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
+import { CardEditStudentComponent } from './edit-classroom/card-edit-student/card-edit-student.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EditClassroomComponent } from './edit-classroom/edit-classroom.componen
     CardManagementComponent,
     StudentComponent,
     CardStudentComponent,
-    EditClassroomComponent
+    EditClassroomComponent,
+    CardEditStudentComponent
   ],
   imports: [
     BrowserModule,

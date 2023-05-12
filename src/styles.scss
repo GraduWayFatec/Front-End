@@ -17,3 +17,17 @@
     --color-3: #1F1A3C;
     --color-4: #FFFFFF;
 }
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: linear-gradient(270deg, rgba(158, 255, 202, 0.2) 0%, rgba(158, 255, 202, 0) 97.91%);
+    box-shadow: 0px 0px 12px #9EFFCA;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background: #9EFFCA;
+    border-radius: 12px;
+}
