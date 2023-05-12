@@ -14,6 +14,7 @@ import { BodyManagementComponent } from './management/body-management/body-manag
 import { CardManagementComponent } from './management/card-management/card-management.component';
 import { StudentComponent } from './student/student.component';
 import { CardStudentComponent } from './student/card-student/card-student.component';
+import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CardStudentComponent } from './student/card-student/card-student.compon
     BodyManagementComponent,
     CardManagementComponent,
     StudentComponent,
-    CardStudentComponent
+    CardStudentComponent,
+    EditClassroomComponent
   ],
   imports: [
     BrowserModule,
