@@ -33,6 +33,7 @@
 
     text-shadow: 0px 0px 16px #FFFFFF;
     margin: 0;
+    word-wrap: break-word; 
 }
 
 .card-body .left{
@@ -99,4 +100,32 @@ $grey: #9EFFCA;
     stroke: currentcolor;
   //   faz o ícone de dentro do quadrado ser uma check
   }
+}
+
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.right .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.right button{
+    background: transparent;
+    border: transparent;
+    width: 32px;
+    height: 32px;
+}
+
+.right button:hover{
+    border: 1.3px #FFF solid;
+    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+    border-radius: 8px;
 }

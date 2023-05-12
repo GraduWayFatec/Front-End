@@ -3,7 +3,15 @@
         <img src="../../../assets/img/perfil-student.svg" alt="">
         <h2>{{ itens.name }}</h2>
     </div>
-    <div class="rigth">
+    <div class="right">
+        <div class="buttons">
+            <button class="edit">
+                <img src="../../../assets/img/edit.svg" alt="">
+            </button>
+            <button class="delete">
+                <img src="../../../assets/img/Delete.svg" alt="">
+            </button>
+        </div>
         <label class="mcui-checkbox">
             <input type="checkbox" (click)="onCardClick()" [checked]="isChecked">
             <div>

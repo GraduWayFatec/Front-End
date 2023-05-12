@@ -19,17 +19,17 @@ export class EditClassroomComponent implements AfterViewInit{
     new InfoPerson("Glaubas"),
     new InfoPerson("Douglas"),
     new InfoPerson("Jucelino"),
-    new InfoPerson("ffsafssafsafa"),
-    new InfoPerson("aaaaaaaaaaaaaaa"),
-    new InfoPerson("eeeeeeeeeeeeeeeee"),
-    new InfoPerson("daaaaaaaaaaadadad"),
-    new InfoPerson("sssssssssssssssss"),
-    new InfoPerson("dadafafsfsdgrgewgw"),
-    new InfoPerson("aaaaaaaaaaaaaaa"),
-    new InfoPerson("eeeeeeeeeeeeeeeee"),
-    new InfoPerson("daaaaaaaaaaadadad"),
-    new InfoPerson("sssssssssssssssss"),
-    new InfoPerson("dadafafsfsdgrgewgw")
+    new InfoPerson("ffsaf ssafsafa"),
+    new InfoPerson("aaaaaaa aaaaaaaa"),
+    new InfoPerson("eeeeee eeeeeeeeeee"),
+    new InfoPerson("daaaaaaa aaaadadad"),
+    new InfoPerson("sssssss ssssssssss"),
+    new InfoPerson("dadafafsf sdgrgewgw"),
+    new InfoPerson("aaaaaaa aaaaaaaa"),
+    new InfoPerson("eeeeeeeee eeeeeeee"),
+    new InfoPerson("daaaaaaa aaaadadad"),
+    new InfoPerson("ssssssss sssssssss"),
+    new InfoPerson("dadafafs fsdgrgewgw")
   ]
 
   constructor() {}
