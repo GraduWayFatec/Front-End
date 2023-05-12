@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CardsComponent } from './dashboard/cards/cards.component';
 
 import { SearchComponent } from './dashboard/search/search.component';
+import { EditAdmProfileComponent } from './edit-adm-profile/edit-adm-profile.component';
 
 // import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -28,6 +29,7 @@ import { SearchComponent } from './dashboard/search/search.component';
     MenuComponent,
     CardsComponent,
     SearchComponent,
+    EditAdmProfileComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,
