@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CardStudentComponent {
 
+  isChecked:boolean = false;
+
+  onCardClick() {
+    this.isChecked = !this.isChecked;
+  }
 }

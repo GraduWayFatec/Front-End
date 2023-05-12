@@ -13,6 +13,14 @@
     padding: 31px 25px 31px 25px;
 }
 
+.card-body:hover{
+    cursor: pointer;
+    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+  h2{
+    color: #9EFFCA
+  }
+}
+
 .card-body h2 {
     font-size: 16px;
     line-height: 20px;
