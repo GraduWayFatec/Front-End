@@ -9,6 +9,7 @@ import { CardsComponent } from './dashboard/cards/cards.component';
 
 import { SearchComponent } from './dashboard/search/search.component';
 import { FilterComponent } from './dashboard/filter/filter.component';
+import { YearComponent } from './dashboard/filter/year/year.component';
 
 // import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -30,6 +31,7 @@ import { FilterComponent } from './dashboard/filter/filter.component';
     CardsComponent,
     SearchComponent,
     FilterComponent,
+    YearComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,
