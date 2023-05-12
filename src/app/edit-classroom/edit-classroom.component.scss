@@ -27,7 +27,7 @@
     color: var(--color-4);
     
 
-    padding: 24px 40px 24px 24px; 
+    padding: 24px 40px 12px 24px; 
 
     
 }
@@ -126,14 +126,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 0px 24px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .modal-dialog .modal-content .modal-top .modal-body .second-line {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 0px 24px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .modal-dialog .modal-content .modal-top .modal-body .first-line .course button {
@@ -249,6 +249,7 @@ hr{
     background: radial-gradient(50% 50% at 50% 50%, #9EFFCA 44.79%, rgba(139, 130, 181, 0) 100%);
     opacity: 0.32;  
     border-top: 0;
+    background-color: #9EFFCA;
 }
 
 .modal-bottom{
