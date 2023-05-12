@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CardsComponent } from './dashboard/cards/cards.component';
 
 import { SearchComponent } from './dashboard/search/search.component';
+import { AddClassComponent } from './add-class/add-class.component';
 
 // import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -28,6 +29,7 @@ import { SearchComponent } from './dashboard/search/search.component';
     MenuComponent,
     CardsComponent,
     SearchComponent,
+    AddClassComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,
