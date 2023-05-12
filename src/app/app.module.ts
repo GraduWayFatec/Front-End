@@ -13,6 +13,7 @@ import { ManagementComponent } from './pages/management/management.component';
 import { BodyManagementComponent } from './management/body-management/body-management.component';
 import { CardManagementComponent } from './management/card-management/card-management.component';
 import { StudentComponent } from './student/student.component';
+import { CardStudentComponent } from './student/card-student/card-student.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StudentComponent } from './student/student.component';
     ManagementComponent,
     BodyManagementComponent,
     CardManagementComponent,
-    StudentComponent
+    StudentComponent,
+    CardStudentComponent
   ],
   imports: [
     BrowserModule,
