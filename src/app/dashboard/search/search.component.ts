@@ -18,6 +18,7 @@ export class SearchComponent implements AfterViewInit {
     new InfoCard(15, "Mecanização Agronegócio", 2023, 21, "../../../assets/img/MAP.svg")
   ]
 
+  
   constructor() {}
 
   @ViewChildren(CardsComponent)

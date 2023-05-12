@@ -22,14 +22,15 @@
                 <img src="../../assets/img/Mensagem.svg" alt="" class="mensager-img">
                 Enviar Mensagem
             </button>
-            <button class="select">
+            <button class="select" (click)="onCardClickAll()">
                 Selecionar Todos
             </button>
         </div>
     </div>
     <hr>
     <div class="bottom">
-        Embaixo
-        <app-card-student></app-card-student>
+        <div class="cards" *ngFor="let i of InfoPerson">
+            <app-card-student [itens]="i"></app-card-student>
+        </div>
     </div>
 </div>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { InfoPerson } from '../shared/header.model';
 
 @Component({
   selector: 'app-header',
