@@ -1,10 +1,15 @@
 *{
-    margin: 0;
     padding: 0;
-
+    margin: 0;
 }
 .container{
-    width: 75%;
+    position: fixed;
+    top: 3em;
+    margin-left: 80%;
+    left: -70%;
+    z-index: 10;
+    
+    width: 80%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
     box-shadow: 10px 10px 64px rgba(41, 15, 0, 0.56);
     backdrop-filter: blur(80px);
@@ -115,8 +120,8 @@ hr{
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-    padding: 24px;
-    gap: 48px;
+    padding: 24px 0 24px 24px;
+    gap: 32px;
     width: 97%;
     height: calc(100vh - 250px);
     overflow-y: auto;
