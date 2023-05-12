@@ -11,6 +11,7 @@ import { SearchComponent } from './dashboard/search/search.component';
 import { FilterComponent } from './dashboard/filter/filter.component';
 import { YearComponent } from './dashboard/filter/year/year.component';
 import { AcademicEducationComponent } from './academic-education/academic-education.component';
+import { EducationLevelComponent } from './academic-education/education-level/education-level.component';
 
 // import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -34,6 +35,7 @@ import { AcademicEducationComponent } from './academic-education/academic-educat
     FilterComponent,
     YearComponent,
     AcademicEducationComponent,
+    EducationLevelComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,
