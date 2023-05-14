@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { FilterComponent } from './dashboard/filter/filter.component';
 // import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 // import { RegisterComponent } from './pages/register/register.component';
@@ -19,6 +20,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
+   { path: "filter", component: FilterComponent},
   // { path: "dashboard", component: DashboardComponent},
   // { path: 'register', component: RegisterComponent },
   // { path: 'user-profile', component: UserProfileComponent },

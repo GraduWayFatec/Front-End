@@ -10,6 +10,7 @@ import { CardsComponent } from './dashboard/cards/cards.component';
 import { SearchComponent } from './dashboard/search/search.component';
 import { FilterComponent } from './dashboard/filter/filter.component';
 import { YearComponent } from './dashboard/filter/year/year.component';
+import { CourseComponent } from './dashboard/filter/course/course.component';
 
 // import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -32,6 +33,7 @@ import { YearComponent } from './dashboard/filter/year/year.component';
     SearchComponent,
     FilterComponent,
     YearComponent,
+    CourseComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,
@@ -43,6 +45,7 @@ import { YearComponent } from './dashboard/filter/year/year.component';
     // ManagementComponent,
     // PrivacyComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule
