@@ -21,6 +21,6 @@ export class CompanyCategoryComponent implements OnInit {
   }
 
   ngOnInit(): void{
-
-  }
+    
+  } 
 }
