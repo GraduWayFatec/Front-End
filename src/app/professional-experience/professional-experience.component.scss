@@ -22,7 +22,7 @@
     color: var(--color-4);
     background-color: var(--color-1);
 
-    padding: 24px 40px 24px 24px; 
+    padding: 10px 24px 0px 24px; 
 
     border-radius: 25px;
 }
@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 10px;
 }
 
 .modal-dialog .modal-content .modal-header .h-left h1 {
@@ -93,6 +93,7 @@
     
     background: var(--color-1);
 }
+
 
 .modal-dialog .modal-content .modal-body .field::placeholder {
     color: var(--color-4);
@@ -191,9 +192,7 @@
 .modal-dialog .modal-content .modal-body .third-line .city {
     width: 200px;
 }
-.modal-dialog .modal-content .modal-body .third-line .city .title-city {
-    width: 200px;
-}
+
 
 .modal-dialog .modal-content .modal-footer {
     display: flex;
@@ -239,3 +238,49 @@
     border: 0.5px #FFF solid;
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
 }
+
+
+// adicionando funcionalidade pro botão dropdown
+
+.dropdown-checkbox {
+    display: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+  }
+  
+  .dropdown-checkbox:checked ~ .dropdown-content {
+    display: block;
+    margin-left: 100px;
+  }
+
+  label {
+    width: 320px;
+    height: 20px;
+
+    border-radius: 0px 0px 12px 0px;
+    border-bottom: 1px solid var(--color-2);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 8px;
+    text-align: left;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px;
+    
+    background: var(--color-1);
+}
+
+.arrow {
+    margin-left: 290px;
+}
+

@@ -15,6 +15,7 @@ export class CompanyCategoryComponent implements OnInit {
     new Category('Terceiro Setor'),
   ];
 
+    
   constructor(){
 
   }

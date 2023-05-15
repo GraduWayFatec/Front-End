@@ -28,9 +28,12 @@
                     <div class="class">
 
                         <p class="title">Categoria</p>
-                        <input class="field" type="text" placeholder="" value="">
-                        <button><img src="../../assets/img/dropdown.svg" alt=""></button>
-                        <app-company-category></app-company-category>
+                        <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
+                        <label for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <div class="dropdown-content">
+                          <app-company-category></app-company-category>
+                        </div>
+                        
                     </div>
 
                 </div>
@@ -62,7 +65,7 @@
 
                     <div class="city">
 
-                        <p class="title-city">Cidade</p>
+                        <p class="title">Cidade</p>
                         <input class="field3" type="text" placeholder="Pompeia" value="">
 
                     </div>

@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { School } from 'src/app/shared/education-level.model'
 
 @Component({
