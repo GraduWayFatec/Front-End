@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ViewChild, ViewChildren, QueryList } from '@a
 import { CardsComponent } from '../cards/cards.component';
 import { InfoCard } from 'src/app/shared/card.model';
 
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
