@@ -19,7 +19,7 @@ export class SearchComponent implements AfterViewInit {
   ]
 
   
-  constructor() {}
+  
 
   @ViewChildren(CardsComponent)
   cardsComponents!: QueryList<CardsComponent>;

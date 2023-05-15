@@ -11,7 +11,6 @@ export class CardsComponent implements OnInit{
   @Input() itens!: InfoCard;
 
   isChecked: boolean = false;
-
   ngOnInit() {}
 
   onCardClick() {

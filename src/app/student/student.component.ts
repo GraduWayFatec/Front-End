@@ -2,6 +2,8 @@ import { Component,AfterViewInit, ViewChildren,QueryList } from '@angular/core';
 import { InfoPerson } from '../shared/card-person.model';
 import { CardStudentComponent } from './card-student/card-student.component';
 
+import { StudentService } from '../services/student.service';
+
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
@@ -32,7 +34,9 @@ export class StudentComponent implements AfterViewInit{
     new InfoPerson("dadafafsfsdgrgewgw")
   ]
 
-  constructor() {}
+  constructor(public studentService: StudentService) {}
+
+
   @ViewChildren(CardStudentComponent)
   cardStudent!: QueryList<CardStudentComponent>;
 
