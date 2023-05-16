@@ -1,0 +1,131 @@
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
+    box-shadow: 10px 10px 64px rgba(41, 15, 0, 0.56);
+    backdrop-filter: blur(80px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 28px;
+    width: 350px;
+    height: 80px;
+    padding: 31px 25px 31px 25px;
+}
+
+.card-body:hover{
+    cursor: pointer;
+    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+  h2{
+    color: #9EFFCA
+  }
+}
+
+.card-body h2 {
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+
+    /* color-7 */
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 0px 16px #FFFFFF;
+    margin: 0;
+    word-wrap: break-word; 
+}
+
+.card-body .left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+}
+
+$main: #9EFFCA; //#008cff;
+$grey: #9EFFCA;
+  
+.mcui-checkbox {
+  display: flex;  
+  padding: 0.6em 0;
+  cursor: pointer;
+  // alinhamento do texto
+
+  input[type="checkbox"] {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  //   a tag input traz uma checkbox do html. Esses comando tiram o original
+  }
+
+  input[type="checkbox"] + div{
+    border: 2px solid $grey;
+    height: 1.5em;
+    width: 1.5em;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: flex;
+// aqui traz a check box, tranforma em quadrado, o tamanho e etc
+  }
+
+  input[type="checkbox"]:checked + div {
+    .mcui-check {
+      opacity: 1;
+      background-color: #9EFFCA;
+    }
+  }
+
+  input[type="checkbox"]:disabled ~ div {
+    color: $grey;
+    cursor: not-allowed;
+  //   muda o cursor quando a opção não está disponível para clicar
+  }
+}
+
+.mcui-check {
+  height: 100%;
+  width: 100%;
+  transform: scale(1);
+  color: #383448;
+  opacity: 0;
+  // cor do check do quadrado
+
+  polyline {
+    fill: none;
+    transform-origin: 50% 50%;
+    stroke-width: 5px;
+    stroke-dasharray: 22.771367900227325;
+    stroke: currentcolor;
+  //   faz o ícone de dentro do quadrado ser uma check
+  }
+}
+
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.right .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.right button{
+    background: transparent;
+    border: transparent;
+    width: 32px;
+    height: 32px;
+}
+
+.right button:hover{
+    border: 1.3px #FFF solid;
+    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+    border-radius: 8px;
+}

@@ -1,4 +1,5 @@
 <div class="container">
+    <!-- <app-student></app-student> -->
     <div class="top">
         <div class="search">
             <div class="left">
@@ -7,11 +8,14 @@
                 </form>
             </div>
             <div class="right">
-                <button class="btn-mensager">
+                <button>
                     <img src="../../../assets/img/Mensagem.svg" alt="">
                     Enviar Mensagem
                 </button>
-                <button class="btn-select-all">Selecionar Todos</button>
+                <button class="btn-select-all"  class="btn-mensager" (click)="onCardClickAll()">
+                <!-- <button class="btn-select-all"  class="btn-mensager"> -->
+                    Selecionar Todos
+                </button>
                 <button class="btn-filter">
                     <img src="../../../assets/img/Vector.svg" alt="" class="filter">
                 </button>
@@ -19,13 +23,8 @@
         </div>
     </div>
     <div class="container-cards">
-        <div class="cards">
-                <app-cards></app-cards>            
-                <app-cards></app-cards>
-                <app-cards></app-cards>
-                <app-cards></app-cards>
-                <app-cards></app-cards>
-                <app-cards></app-cards>
+        <div class="cards" *ngFor="let i of infocard">
+                <app-cards [itens]="i"></app-cards>            
         </div>
     </div>
 </div>

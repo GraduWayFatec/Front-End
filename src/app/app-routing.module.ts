@@ -7,7 +7,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CookiesComponent } from './cookies/cookies.component';
 import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
 import { LoginComponent } from './pages/login/login.component';
-// import { ManagementComponent } from "./pages/management/management.component";
+import { ManagementComponent } from "./pages/management/management.component";
 import { PrivacyComponent } from './privacy/privacy.component';
 import { Register2Component } from './pages/register2/register2.component';
 import { Register3Component } from './pages/register3/register3.component';
@@ -19,7 +19,7 @@ import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { MessageComponent } from './message/message.component';
 import { SaveComponent } from './save/save.component';
 import { UserSimpleComponent } from './user-simple/user-simple.component';
-// import { AcademicEducationComponent } from './academic-education/academic-education.component';
+import { AcademicEducationComponent } from './academic-education/academic-education.component';
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component'
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -28,7 +28,7 @@ const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
   { path: "professional-experience", component: ProfessionalExperienceComponent},
-  // { path: "academic-education", component: AcademicEducationComponent},
+  { path: "academic-education", component: AcademicEducationComponent},
   { path: "menu", component: MenuComponent},
   { path: "delete", component: DeleteComponent},
   { path: "add-class", component: AddClassComponent},
@@ -44,7 +44,7 @@ const routes: Routes = [
   { path: 'edit-userprofile', component: EditUserprofileComponent },
   { path: 'login', component: LoginComponent },
   { path: '', component: LoginComponent },
-  // { path: "management", component: ManagementComponent},
+  { path: "management", component: ManagementComponent},
   { path: 'privacy', component: PrivacyComponent },
   { path: 'register2', component: Register2Component },
   { path: 'register3', component: Register3Component }

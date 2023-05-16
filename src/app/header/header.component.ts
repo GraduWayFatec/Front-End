@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { InfoPerson } from '../shared/header.model';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +6,6 @@ import { InfoPerson } from '../shared/header.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  nameList: InfoPerson[] =[
-    new InfoPerson("Glaubas")
-  ]
+  nameList:string ="Glaubas"
 
 }

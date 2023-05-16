@@ -34,6 +34,15 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { Register2Component } from './pages/register2/register2.component';
 import { Register3Component } from './pages/register3/register3.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ManagementComponent } from './pages/management/management.component';
+import { BodyManagementComponent } from './management/body-management/body-management.component';
+import { CardManagementComponent } from './management/card-management/card-management.component';
+import { StudentComponent } from './student/student.component';
+import { CardStudentComponent } from './student/card-student/card-student.component';
+import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
+import { CardEditStudentComponent } from './edit-classroom/card-edit-student/card-edit-student.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -67,12 +76,22 @@ import { RegisterComponent } from './pages/register/register.component';
     // ManagementComponent,
     PrivacyComponent,
     CookiesComponent,
-    RegisterComponent
+    RegisterComponent,
+    ManagementComponent,
+    BodyManagementComponent,
+    CardManagementComponent,
+    StudentComponent,
+    CardStudentComponent,
+    EditClassroomComponent,
+    CardEditStudentComponent
   ],
   imports: [
     BrowserModule,
     ModalModule.forRoot(),
-    AppRoutingModule,
+    AppRoutingModule,,
+    ModalModule.forRoot(),
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="top">
+        <div class="search">
+            <div class="left">
+                <form class="forms">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Pesquisar">
+                </form>
+            </div>
+            <div class="right">
+                <button class="btn-select-all" (click)="onAllCardClick()">Selecionar Todos</button>
+                <button class="btn-filter">
+                    <img src="../../../assets/img/Vector.svg" alt="" class="filter">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+        <div class="info">
+            <h1>Turmas</h1>
+            <div class="buttons">
+                <button class="delete">Excluir selecionados</button>
+                <button class="add">Adicionar</button>
+            </div>
+        </div>
+        <div class="container-cards">
+            <div class="cards" *ngFor="let i of infocard">
+                <app-card-management [itens]="i"></app-card-management>
+            </div>
+        </div>
+    </div>
+</div>

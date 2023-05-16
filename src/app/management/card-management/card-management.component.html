@@ -27,8 +27,22 @@
             <h3 class="sub">Alunos cadastrados</h3>
             <h4 class="description">{{ itens.student }}</h4>
         </div>
-        <div class="curse">
-            <img src="{{ itens.img }}" alt="">
+        <div class="bottom">
+            <div class="curse">
+                <img src="{{ itens.img }}" alt="">
+            </div>
+            <div class="config">
+                <div class="edit">
+                    <button routerLink="">
+                        <img src="../../../assets/img/edit.svg" alt="">
+                    </button>
+                </div>
+                <div class="delete">
+                    <button routerLink="">
+                        <img src="../../../assets/img/Delete.svg" alt="">
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
