@@ -1,12 +1,10 @@
 .card{
-    width: 305px;
-    height: 300px;
+    width: 320px;
+    height: 290px;
     box-sizing: border-box;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
-    box-shadow: 5px 5px 64px rgba(41, 15, 0, 0.4);
-    backdrop-filter: blur(80px);
-    /* Note: backdrop-filter has minimal browser support */
-    
+    box-shadow: 5px 40px 64px rgba(41, 15, 0, 0.4);
+    backdrop-filter: blur(80px);    
     border-radius: 28px;
     color:white;
     cursor: pointer;

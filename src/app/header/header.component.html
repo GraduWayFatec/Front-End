@@ -1,11 +1,11 @@
 <div class="container">
     <div class="img-grad">
         <img src="../../assets/img/Gradiente.svg" alt="" class="gradiante">
-    </div>    
+    </div>
     <div class="nav">
         <nav>
             <div class="left">
-                <p class="date"> Sábado, 23 Abril 2023</p>
+                <p class="date">{{ currentDate | date: 'EEEE, dd MMM yyyy' }}</p>
                 <p class="info">
                     Olá, {{ nameList }}! O que Deseja realizar?
                 </p>
@@ -13,9 +13,8 @@
             <div class="right">
                 <a href="#">
                     <img src="../../assets/img/Perfil.svg" alt="">
-                    
                 </a>
             </div>
         </nav>
-    </div>    
+    </div>
 </div>
