@@ -15,6 +15,7 @@ import { AddClassComponent } from './add-class/add-class.component';
 import { EditAdmProfileComponent } from './edit-adm-profile/edit-adm-profile.component';
 import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { MessageComponent } from './message/message.component';
+import { SaveComponent } from './save/save.component';
 
 import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -39,6 +40,7 @@ import { RegisterComponent } from './pages/register/register.component';
     AddClassComponent,
     EditAdmProfileComponent,
     MessageComponent,
+    SaveComponent,
     AdmProfileComponent,
     CookiesComponent,
     // DashboardComponent,
