@@ -10,6 +10,7 @@ import { CardsComponent } from './dashboard/cards/cards.component';
 
 import { SearchComponent } from './dashboard/search/search.component';
 import { ExitComponent } from './exit/exit.component';
+import { DeleteComponent } from './delete/delete.component';
 
 // import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -31,6 +32,7 @@ import { ExitComponent } from './exit/exit.component';
     CardsComponent,
     SearchComponent,
     ExitComponent,
+    DeleteComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,
