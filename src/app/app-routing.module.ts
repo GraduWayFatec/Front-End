@@ -16,6 +16,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { AddClassComponent } from './add-class/add-class.component';
 import { EditAdmProfileComponent } from './edit-adm-profile/edit-adm-profile.component';
 import { AdmProfileComponent } from './adm-profile/adm-profile.component';
+import { MessageComponent } from './message/message.component';
 
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: "add-class", component: AddClassComponent},
   { path: "edit-adm-profile", component: EditAdmProfileComponent},
   { path: "adm-profile", component: AdmProfileComponent},
+  { path: "message", component: MessageComponent},
   // { path: "dashboard", component: DashboardComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'user-profile', component: UserProfileComponent },
