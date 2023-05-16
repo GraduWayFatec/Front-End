@@ -10,7 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 // import { ManagementComponent } from "./pages/management/management.component";
 import { PrivacyComponent } from './privacy/privacy.component';
 import { Register2Component } from './pages/register2/register2.component';
-// import { Register3Component } from './pages/register3/register3.component';
+import { Register3Component } from './pages/register3/register3.component';
 import { MenuComponent } from './menu/menu.component';
 import { DeleteComponent } from './delete/delete.component';
 import { AddClassComponent } from './add-class/add-class.component';
@@ -40,8 +40,7 @@ const routes: Routes = [
   // { path: "management", component: ManagementComponent},
   { path: 'privacy', component: PrivacyComponent },
   { path: 'register2', component: Register2Component },
-  // { path: 'register3', component: Register3Component }
-
+  { path: 'register3', component: Register3Component }
 ];
 
 @NgModule({

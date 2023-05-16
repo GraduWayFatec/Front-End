@@ -24,7 +24,7 @@ import { LoginComponent } from './pages/login/login.component';
 // import { ManagementComponent } from "./pages/management/management.component";
 import { PrivacyComponent } from './privacy/privacy.component';
 import { Register2Component } from './pages/register2/register2.component';
-// import { Register3Component } from './pages/register3/register3.component';
+import { Register3Component } from './pages/register3/register3.component';
 import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
@@ -44,7 +44,7 @@ import { RegisterComponent } from './pages/register/register.component';
     // DashboardComponent,
     RegisterComponent,
     Register2Component,
-    // Register3Component,
+    Register3Component,
     UserProfileComponent,
     EditUserprofileComponent,
     LoginComponent,
