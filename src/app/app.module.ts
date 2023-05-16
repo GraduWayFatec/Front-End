@@ -26,6 +26,8 @@ import { CookiesComponent } from './cookies/cookies.component';
 // import { PrivacyComponent } from './privacy/privacy.component';
 // import { Register2Component } from './pages/register2/register2.component';
 // import { Register3Component } from './pages/register3/register3.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -49,11 +51,13 @@ import { CookiesComponent } from './cookies/cookies.component';
     // LoginComponent,
     // ManagementComponent,
     // PrivacyComponent,
-    CookiesComponent
+    CookiesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     ModalModule.forRoot(),
+    AppRoutingModule,
     AppRoutingModule
   ],
   providers: [],
