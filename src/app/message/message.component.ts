@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-message',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./message.component.scss']
 })
 export class MessageComponent {
+  constructor(public modalRef: BsModalRef) {}
 
+  fecharModal() {
+    this.modalRef.hide();
+  }
 }
