@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { DashboardComponent } from "./pages/dashboard/dashboard.component";
+import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { RegisterComponent } from './pages/register/register.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CookiesComponent } from './cookies/cookies.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: "message", component: MessageComponent},
   { path: "save", component: SaveComponent},
   { path: "user-simple", component: UserSimpleComponent},
-  // { path: "dashboard", component: DashboardComponent},
+  { path: "dashboard", component: DashboardComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'cookies', component: CookiesComponent },
