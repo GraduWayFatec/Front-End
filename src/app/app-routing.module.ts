@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { RegisterComponent } from './pages/register/register.component';
-// import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CookiesComponent } from './cookies/cookies.component';
 // import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
 // import { LoginComponent } from './pages/login/login.component';
@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: "adm-profile", component: AdmProfileComponent},
   // { path: "dashboard", component: DashboardComponent},
   { path: 'register', component: RegisterComponent },
-  // { path: 'user-profile', component: UserProfileComponent },
+  { path: 'user-profile', component: UserProfileComponent },
   { path: 'cookies', component: CookiesComponent },
   // { path: 'edit-userprofile', component: EditUserprofileComponent },
   // { path: 'login', component: LoginComponent },

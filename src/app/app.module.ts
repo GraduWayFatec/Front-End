@@ -18,8 +18,7 @@ import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 // import { RegisterComponent } from './pages/register/register.component';
-// import { UserProfileComponent } from './user-profile/user-profile.component';
-// import { CookiesComponent } from './cookies/cookies.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 // import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
 // import { LoginComponent } from './pages/login/login.component';
 // import { ManagementComponent } from "./pages/management/management.component";
@@ -40,12 +39,12 @@ import { RegisterComponent } from './pages/register/register.component';
     AddClassComponent,
     EditAdmProfileComponent,
     AdmProfileComponent,
-    // CookiesComponent,
+    CookiesComponent,
     // DashboardComponent,
-    // RegisterComponent,
+    RegisterComponent,
     // Register2Component,
     // Register3Component,
-    // UserProfileComponent,
+    UserProfileComponent,
     // EditUserprofileComponent,
     // LoginComponent,
     // ManagementComponent,
