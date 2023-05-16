@@ -17,6 +17,9 @@ import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { MessageComponent } from './message/message.component';
 import { SaveComponent } from './save/save.component';
 import { UserSimpleComponent } from './user-simple/user-simple.component';
+import { FilterComponent } from './dashboard/filter/filter.component';
+import { YearComponent } from './dashboard/filter/year/year.component';
+import { AcademicEducationComponent } from './academic-education/academic-education.component';
 
 import { CookiesComponent } from './cookies/cookies.component';
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -36,6 +39,9 @@ import { RegisterComponent } from './pages/register/register.component';
     MenuComponent,
     CardsComponent,
     SearchComponent,
+    FilterComponent,
+    YearComponent,
+    AcademicEducationComponent,
     ExitComponent,
     DeleteComponent,
     AddClassComponent,

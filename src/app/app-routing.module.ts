@@ -19,13 +19,14 @@ import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { MessageComponent } from './message/message.component';
 import { SaveComponent } from './save/save.component';
 import { UserSimpleComponent } from './user-simple/user-simple.component';
-
+import { AcademicEducationComponent } from './academic-education/academic-education.component';
 
 //IMPORTS DOS COMPONENTES DO PORTAL
 
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
+  { path: "academic-education", component: AcademicEducationComponent},
   { path: "menu", component: MenuComponent},
   { path: "delete", component: DeleteComponent},
   { path: "add-class", component: AddClassComponent},
@@ -40,7 +41,7 @@ const routes: Routes = [
   { path: 'cookies', component: CookiesComponent },
   { path: 'edit-userprofile', component: EditUserprofileComponent },
   { path: 'login', component: LoginComponent },
-  // { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent },
   // { path: "management", component: ManagementComponent},
   { path: 'privacy', component: PrivacyComponent },
   { path: 'register2', component: Register2Component },

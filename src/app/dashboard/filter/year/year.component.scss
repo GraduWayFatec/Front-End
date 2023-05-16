@@ -1,0 +1,76 @@
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #383448;
+
+}
+
+$grey: #9EFFCA;
+
+.card-check {
+  padding: 10px 0 10px 0;
+  height: auto;
+  width: 120px;
+  background-color: #383448;
+  border-radius: 28px;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.checkbox{
+    display: flex;  
+    gap: 25px;  
+
+}
+
+  .mcui-checkbox {
+    padding: 2px 0 0 20px; 
+
+    input[type="checkbox"] + div{
+      border: 2px solid $grey;
+      height: 1.2em;
+      width: 1.2em;
+      box-sizing: border-box;
+      border-radius: 2px;
+      position: absolute;
+      display: flex;
+      
+
+// aqui traz a check box, tranforma em quadrado, o tamanho e etc
+    }
+  
+    input[type="checkbox"]:checked + div {
+      .mcui-check {
+        opacity: 1;
+        background-color: #9EFFCA;
+      }
+    }
+  }
+  
+  .mcui-check {
+
+    transform: scale(1);
+    color: #383448;
+    opacity: 0;
+    // cor do check do quadrado
+  
+    polyline {
+      fill: none;
+      transform-origin: 50% 50%;
+      stroke-width: 5px;
+      stroke-dasharray: 22.771367900227325;
+      stroke: currentcolor;
+    //   faz o ícone de dentro do quadrado ser uma check
+    }
+  }
+
+.years {
+  font-family: 'Poppins', sans-serif; 
+  color: white;
+  width: 100%;
+  margin-left: -10px;
+  font-size: 16px;
+}

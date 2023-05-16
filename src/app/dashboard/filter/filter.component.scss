@@ -1,0 +1,119 @@
+.filter {
+    width: auto;
+  }
+  
+  .dropdown {
+    --_gap: 0.5rem;
+  }
+  .dropdown-btn {
+    display: flex;
+    padding-left: 25px;
+    padding-top: 60px;
+    position: relative;
+  }
+  
+  .dropdown-filter {
+    display: none;
+  // tirar o checkbox original
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    padding: 30px 0 0 32px;
+    list-style: none;
+    border-radius: 28px;
+    width: 326px;
+    height: 316px;
+    display: none;
+    background-color: #383448;
+  }
+  
+  .dropdown-filter:checked + .dropdown-list {
+    display: block;
+  }
+  
+  img{
+    width: 16px;
+    height: 16px;
+    
+  }
+  label:hover{
+    border-bottom: 2px #00A54E solid;
+  }
+  
+  .dropdown-ano {
+    display: none;  
+  }
+  
+  .dropdown-ano:checked + .dropdown-list-modal2 {
+    display: block;
+    font-family: 'Poppins' sans-serif, ;
+    font-size: 16px;
+  }
+  
+  .dropdown-curso {
+    display: none;
+  }
+  
+  .dropdown-curso:checked + .dropdown-list-modal1 {
+    display: block;
+  }
+  
+  .button-filter{
+    position: absolute;
+    left: 8.16%;
+    right: 69.9%;
+    top: 15.62%;
+    bottom: 76.56%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+  
+  .dropdown-list-modal1 {
+    display: none;
+    position: absolute;
+    top: calc(100% + var(--_gap));
+    left: 0;
+    right: 0;
+    padding: 40px 0 0 32px;
+    list-style: none;
+    background-color: var(--color-white);
+    border-radius: 28px;
+    width: 326px;
+    height: 316px;
+    background-color: #383448;
+    
+  }
+  
+  .dropdown-list-modal2 {
+    display: none;
+  }
+  
+  .button {
+    color: White; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px;
+    width: 256px;
+    height: 60px;
+    border: rgb(255, 0, 0);
+    border-radius: 2px;
+  }
+  
+  span {
+    color: white;
+  }
+  
+  .btn {
+    border-radius: 28px;
+    border: 4px !important;
+    border-color:#9EFFCA !important;
+  }
+  
+  .dropdown-selected {
+    border-radius: 28px;
+    border: 4px, solid, #9EFFCA;
+  }
