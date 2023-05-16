@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +24,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
 import { LoginComponent } from './pages/login/login.component';
 // import { ManagementComponent } from "./pages/management/management.component";
-// import { PrivacyComponent } from './privacy/privacy.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 // import { Register2Component } from './pages/register2/register2.component';
 // import { Register3Component } from './pages/register3/register3.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -50,7 +51,7 @@ import { RegisterComponent } from './pages/register/register.component';
     EditUserprofileComponent,
     LoginComponent,
     // ManagementComponent,
-    // PrivacyComponent,
+    PrivacyComponent,
     CookiesComponent,
     RegisterComponent
   ],

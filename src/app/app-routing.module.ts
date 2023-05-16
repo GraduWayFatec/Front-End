@@ -8,7 +8,7 @@ import { CookiesComponent } from './cookies/cookies.component';
 import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
 import { LoginComponent } from './pages/login/login.component';
 // import { ManagementComponent } from "./pages/management/management.component";
-// import { PrivacyComponent } from './privacy/privacy.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 // import { Register2Component } from './pages/register2/register2.component';
 // import { Register3Component } from './pages/register3/register3.component';
 import { MenuComponent } from './menu/menu.component';
@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   // { path: '', component: LoginComponent },
   // { path: "management", component: ManagementComponent},
-  // { path: 'privacy', component: PrivacyComponent },
+  { path: 'privacy', component: PrivacyComponent },
   // { path: 'register2', component: Register2Component },
   // { path: 'register3', component: Register3Component }
 
