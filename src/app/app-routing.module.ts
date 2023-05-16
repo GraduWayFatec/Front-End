@@ -15,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { DeleteComponent } from './delete/delete.component';
 import { AddClassComponent } from './add-class/add-class.component';
+import { EditAdmProfileComponent } from './edit-adm-profile/edit-adm-profile.component';
 
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: "menu", component: MenuComponent},
   { path: "delete", component: DeleteComponent},
   { path: "add-class", component: AddClassComponent},
+  { path: "edit-adm-profile", component: EditAdmProfileComponent},
   // { path: "dashboard", component: DashboardComponent},
   // { path: 'register', component: RegisterComponent },
   // { path: 'user-profile', component: UserProfileComponent },
