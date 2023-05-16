@@ -20,7 +20,7 @@ import { CookiesComponent } from './cookies/cookies.component';
 // import { RegisterComponent } from './pages/register/register.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
-// import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 // import { ManagementComponent } from "./pages/management/management.component";
 // import { PrivacyComponent } from './privacy/privacy.component';
 // import { Register2Component } from './pages/register2/register2.component';
@@ -46,7 +46,7 @@ import { RegisterComponent } from './pages/register/register.component';
     // Register3Component,
     UserProfileComponent,
     EditUserprofileComponent,
-    // LoginComponent,
+    LoginComponent,
     // ManagementComponent,
     // PrivacyComponent,
     CookiesComponent,

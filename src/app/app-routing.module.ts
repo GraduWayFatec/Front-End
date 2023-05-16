@@ -6,7 +6,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CookiesComponent } from './cookies/cookies.component';
 import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
-// import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 // import { ManagementComponent } from "./pages/management/management.component";
 // import { PrivacyComponent } from './privacy/privacy.component';
 // import { Register2Component } from './pages/register2/register2.component';
@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'cookies', component: CookiesComponent },
   { path: 'edit-userprofile', component: EditUserprofileComponent },
-  // { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   // { path: '', component: LoginComponent },
   // { path: "management", component: ManagementComponent},
   // { path: 'privacy', component: PrivacyComponent },
