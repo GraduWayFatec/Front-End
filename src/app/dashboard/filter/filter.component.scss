@@ -1,119 +1,328 @@
-.filter {
-    width: auto;
-  }
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 380px;
+  height: 55vh;
+  background-color: var(--color-1);
+  box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
+
+  border-radius: 28px;
+  padding: 3px;
+
+  background-image: linear-gradient(45deg, var(--color-1), var(--color-2), var(--color-1), var(--color-2));
+}
+
+.modal-dialog .modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: var(--color-4);
+  background-color: var(--color-1);
+
+  padding: 24px 40px 24px 24px; 
+
+  border-radius: 25px;
+}
+
+.modal-dialog .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
-  .dropdown {
-    --_gap: 0.5rem;
-  }
-  .dropdown-btn {
-    display: flex;
-    padding-left: 25px;
-    padding-top: 60px;
-    position: relative;
-  }
+  padding: 24px 0px 0px 24px;
+}
+
+.modal-dialog .modal-content .modal-header .h-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.modal-dialog .modal-content .modal-header .h-left h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.modal-dialog .modal-content .modal-body {
+  padding: 10px 24px 10px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.modal-dialog .modal-content .modal-body .title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  width: 220px;
+
+  color: #A8A5AF;
+}
+
+.modal-dialog .modal-content .modal-body .field {
+  width: 270px;
+  height: 20px;
+
+  border-radius: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--color-2);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 8px;
+  text-align: left;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
   
-  .dropdown-filter {
-    display: none;
-  // tirar o checkbox original
-  }
+  background: var(--color-1);
+}
+
+.modal-dialog .modal-content .modal-body .field::placeholder {
+  color: var(--color-4);
+}
+
+.modal-dialog .modal-content .modal-body .field:focus {
+  outline: none;
+  box-shadow: none;
+  border-radius: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--color-2);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: var(--color-1);
+  color: #FFFFFF;
+}
+
+.modal-dialog .modal-content .modal-body .field2 {
+  width: 270px;
+  height: 20px;
+
+  border-radius: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--color-2);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 8px;
+  text-align: left;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
   
-  .dropdown-list {
-    position: absolute;
-    padding: 30px 0 0 32px;
-    list-style: none;
-    border-radius: 28px;
-    width: 326px;
-    height: 316px;
-    display: none;
-    background-color: #383448;
-  }
+  background: var(--color-1);
+}
+
+.modal-dialog .modal-content .modal-body .field2::placeholder {
+  color: var(--color-4);
+}
+
+.modal-dialog .modal-content .modal-body .field2:focus {
+  outline: none;
+  box-shadow: none;
+  border-radius: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--color-2);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: var(--color-1);
+  color: #FFFFFF;
+}
+
+.modal-dialog .modal-content .modal-body .first-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0px 0px 0px;
+}
+
+.modal-dialog .modal-content .modal-body .second-line {
+  // display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 38px 0px 0px 0px;
+}
+
+.modal-dialog .modal-content .modal-body .first-line .class button {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+}
+
+.modal-dialog .modal-content .modal-body .first-line .class button img {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+  left: 265px;
+  top: 53px;
+}
+
+.modal-dialog .modal-content .modal-body .second-line .class button {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+}
+.modal-dialog .modal-content .modal-body .second-line .class button img {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+  left: 265px;
+  top: 168px;
+}
+
+.modal-dialog .modal-content .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+  padding: 16px 45px 16px 24px; 
+  gap: 24px;
+}
+
+.modal-dialog .modal-content .modal-footer .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 160px;
+  height: 40px;
+
+  color: var(--color-4);
+
+  background-color: #6B997F;
   
-  .dropdown-filter:checked + .dropdown-list {
-    display: block;
-  }
+  border-radius: 12px;
+  border: 0.5px #FFF solid;
+  border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, rgba(158, 255, 202, 0.2) 0%, rgba(158, 255, 202, 0) 97.91%);
+  // box-shadow: 0px 0px 12px #9EFFCA;
+  border-radius: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #9EFFCA;
+  border-radius: 12px;
+  box-shadow: 0px 0px 12px #9EFFCA;
+}
+
+.dropdown-checkbox {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-checkbox:checked ~ .dropdown-content {
+  display: block;
+  margin-left: 100px;
+}
+.dropdown-checkbox2 {
+  display: none;
+}
+
+.dropdown-content2 {
+  display: none;
+}
+
+.dropdown-checkbox:checked ~ .dropdown-content2 {
+  display: block;
+  margin-left: 100px;
+}
+
+
+.fieldlabel {
+  width: 260px;
+  height: 20px;
+
+  border-radius: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--color-2);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 8px;
+  text-align: left;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
   
-  img{
-    width: 16px;
-    height: 16px;
-    
-  }
-  label:hover{
-    border-bottom: 2px #00A54E solid;
-  }
+  background: var(--color-1);
+}
+
+
+.fieldlabel2 {
+  width: 260px;
+  height: 20px;
+
+  border-radius: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--color-2);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 8px;
+  text-align: left;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
   
-  .dropdown-ano {
-    display: none;  
-  }
-  
-  .dropdown-ano:checked + .dropdown-list-modal2 {
-    display: block;
-    font-family: 'Poppins' sans-serif, ;
-    font-size: 16px;
-  }
-  
-  .dropdown-curso {
-    display: none;
-  }
-  
-  .dropdown-curso:checked + .dropdown-list-modal1 {
-    display: block;
-  }
-  
-  .button-filter{
-    position: absolute;
-    left: 8.16%;
-    right: 69.9%;
-    top: 15.62%;
-    bottom: 76.56%;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 20px;
-    color: #FFFFFF;
-  }
-  
-  .dropdown-list-modal1 {
-    display: none;
-    position: absolute;
-    top: calc(100% + var(--_gap));
-    left: 0;
-    right: 0;
-    padding: 40px 0 0 32px;
-    list-style: none;
-    background-color: var(--color-white);
-    border-radius: 28px;
-    width: 326px;
-    height: 316px;
-    background-color: #383448;
-    
-  }
-  
-  .dropdown-list-modal2 {
-    display: none;
-  }
-  
-  .button {
-    color: White; 
-    font-family: 'Poppins', sans-serif; 
-    font-size: 16px;
-    width: 256px;
-    height: 60px;
-    border: rgb(255, 0, 0);
-    border-radius: 2px;
-  }
-  
-  span {
-    color: white;
-  }
-  
-  .btn {
-    border-radius: 28px;
-    border: 4px !important;
-    border-color:#9EFFCA !important;
-  }
-  
-  .dropdown-selected {
-    border-radius: 28px;
-    border: 4px, solid, #9EFFCA;
-  }
+  background: var(--color-1);
+}
+
+.arrow {
+  margin-left: 235px;
+}
