@@ -13,6 +13,7 @@ import { ExitComponent } from './exit/exit.component';
 import { DeleteComponent } from './delete/delete.component';
 import { AddClassComponent } from './add-class/add-class.component';
 import { EditAdmProfileComponent } from './edit-adm-profile/edit-adm-profile.component';
+import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 
 import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -37,6 +38,7 @@ import { CookiesComponent } from './cookies/cookies.component';
     DeleteComponent,
     AddClassComponent,
     EditAdmProfileComponent,
+    AdmProfileComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,
