@@ -29,7 +29,6 @@ import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditUserprofileComponent } from './edit-userprofile/edit-userprofile.component';
 import { LoginComponent } from './pages/login/login.component';
-// import { ManagementComponent } from "./pages/management/management.component";
 import { PrivacyComponent } from './privacy/privacy.component';
 import { Register2Component } from './pages/register2/register2.component';
 import { Register3Component } from './pages/register3/register3.component';
@@ -41,8 +40,6 @@ import { StudentComponent } from './student/student.component';
 import { CardStudentComponent } from './student/card-student/card-student.component';
 import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 import { CardEditStudentComponent } from './edit-classroom/card-edit-student/card-edit-student.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -73,11 +70,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserProfileComponent,
     EditUserprofileComponent,
     LoginComponent,
-    // ManagementComponent,
+    ManagementComponent,
     PrivacyComponent,
     CookiesComponent,
     RegisterComponent,
-    ManagementComponent,
     BodyManagementComponent,
     CardManagementComponent,
     StudentComponent,
@@ -88,10 +84,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     ModalModule.forRoot(),
-    AppRoutingModule,,
-    ModalModule.forRoot(),
-    MatDialogModule,
-    BrowserAnimationsModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
