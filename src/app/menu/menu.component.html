@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row"> 
         <div class="top">
-            <a href="" class="icon">  
+            <a href="/dashboard" class="icon">  
                 <img src="../../assets/img/Logo.svg" alt="" class="img-icon">
             </a> 
             <hr class="hr">
@@ -9,7 +9,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <div class="content">
-                            <button routerLink="/dashboard" class="btn btn-primary dashboard">
+                            <button routerLink="/dashboard" class="btn btn-dashboard" [ngClass]="{ 'selected': isButtonSelected }" (click)="toggleButtonSelection()">
                                 <!-- <img src="../../assets/img/{{ menu.img }}" alt=""> -->
                                 <img src="../../assets/img/01botton.svg" alt="" class="dashboard">
                                 Painel de Turmas
@@ -18,7 +18,7 @@
                     </li>
                     <li class="nav-item">
                         <div class="content">
-                            <button routerLink="/management" href="" class="btn btn-primary management">
+                            <button routerLink="/management" href="" class="btn btn-management" [ngClass]="{ 'selected': isButtonSelected }" (click)="toggleButtonSelection()">
                                 <img src="../../assets/img/Gerenciamento.svg" alt="" class="management">
                                 Gerenciamento
                             </button>
@@ -31,7 +31,7 @@
         <div class="bottom">
             <hr class="hr">
             <div class="exists">
-                <button class="btn btn-primary" (click)="abrirModal()">
+                <button class="btn btn-exit" (click)="abrirModal()">
                     <img src="../../assets/img/Sair.svg" alt="">
                     Sair
                 </button>
