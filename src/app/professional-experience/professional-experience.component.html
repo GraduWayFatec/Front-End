@@ -6,7 +6,7 @@
 
             <div class="h-left">
 
-                <h1 class="title" id="staticBackdropLabel">Formação Acadêmica</h1>
+                <h1 class="title" id="staticBackdropLabel">Experiência Profissional</h1>
 
             </div>
         
@@ -14,59 +14,36 @@
 
         <div class="modal-body">
 
-            <!-- <h5>Nível de Escolaridade</h5> -->
-
             <form>
 
                 <div class="first-line">
 
-                    <div class="course">
+                    <div class="company">
 
-                        <p class="title">Nível de Escolaridade</p>
-                        <input class="field" type="text" placeholder="Graduação" value="">
-                        <button><img src="../../assets/img/dropdown.svg" alt=""></button>
+                        <p class="title">Nome da Empresa</p>
+                        <input class="field" type="text" placeholder="-" value="">
+
                     </div>
 
-                    <div class="tipodeescola">
-                        <p class="title">Tipo</p>
-                        <div class="checkbox">
+                    <div class="class">
+
+                        <p class="title">Categoria</p>
+                        <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
+                        <label for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <div class="dropdown-content">
+                          <app-company-category></app-company-category>
+                        </div>
                         
-                        <label class="mcui-checkbox">
-                        <input type="checkbox">
-                        <div class="check-tipo">
-                          <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
-                            <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
-                          </svg>
-                          <p class="subtitle">Pública</p>
-                        </div> 
-                    </label>
-                 
-                        <label class="mcui-checkbox">
-                        <input type="checkbox">
-                        <div class="check-tipo">
-                          <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
-                            <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
-                          </svg>
-                          <p class="subtitle">Privada</p>
-                        </div> 
-                    </label>
                     </div>
-                </div>
+
                 </div>
                 
                 <div class="second-line">
                     
-                    <div class="number">
+                    <div class="profession">
 
-                        <p class="title">Nome da Instituição</p>
-                        <input class="field" type="text" placeholder="Fatec Pompeia Shunji Nishimura" value="">
-                    </div>
-
-                    <div class="date">
-
-                        <p class="title">Curso</p>
-                        <input class="field" type="text" placeholder="Big Data no Agronegócio" value="">
-
+                        <p class="title">Profissão/Função</p>
+                        <input class="field" type="text" placeholder="Programador" value="">
                     </div>
                     
                 </div>
@@ -115,8 +92,6 @@
             </form>
             
         </div>
-
-        
 
         <div class="modal-footer">
 

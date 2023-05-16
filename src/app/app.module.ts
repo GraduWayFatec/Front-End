@@ -20,6 +20,9 @@ import { UserSimpleComponent } from './user-simple/user-simple.component';
 import { FilterComponent } from './dashboard/filter/filter.component';
 import { YearComponent } from './dashboard/filter/year/year.component';
 import { AcademicEducationComponent } from './academic-education/academic-education.component';
+import { EducationLevelComponent } from './academic-education/education-level/education-level.component';
+import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
+import { CompanyCategoryComponent } from './professional-experience/company-category/company-category.component';
 
 import { CookiesComponent } from './cookies/cookies.component';
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -42,6 +45,9 @@ import { RegisterComponent } from './pages/register/register.component';
     FilterComponent,
     YearComponent,
     AcademicEducationComponent,
+    EducationLevelComponent,
+    ProfessionalExperienceComponent,
+    CompanyCategoryComponent,
     ExitComponent,
     DeleteComponent,
     AddClassComponent,
