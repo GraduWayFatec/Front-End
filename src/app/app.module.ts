@@ -16,6 +16,7 @@ import { EditAdmProfileComponent } from './edit-adm-profile/edit-adm-profile.com
 import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { MessageComponent } from './message/message.component';
 import { SaveComponent } from './save/save.component';
+import { UserSimpleComponent } from './user-simple/user-simple.component';
 
 import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -41,6 +42,7 @@ import { RegisterComponent } from './pages/register/register.component';
     EditAdmProfileComponent,
     MessageComponent,
     SaveComponent,
+    UserSimpleComponent,
     AdmProfileComponent,
     CookiesComponent,
     // DashboardComponent,

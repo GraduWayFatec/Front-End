@@ -18,6 +18,7 @@ import { EditAdmProfileComponent } from './edit-adm-profile/edit-adm-profile.com
 import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { MessageComponent } from './message/message.component';
 import { SaveComponent } from './save/save.component';
+import { UserSimpleComponent } from './user-simple/user-simple.component';
 
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: "adm-profile", component: AdmProfileComponent},
   { path: "message", component: MessageComponent},
   { path: "save", component: SaveComponent},
+  { path: "user-simple", component: UserSimpleComponent},
   // { path: "dashboard", component: DashboardComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'user-profile', component: UserProfileComponent },
