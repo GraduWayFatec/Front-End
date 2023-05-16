@@ -12,7 +12,7 @@ import { SearchComponent } from './dashboard/search/search.component';
 import { ExitComponent } from './exit/exit.component';
 import { DeleteComponent } from './delete/delete.component';
 
-// import { CookiesComponent } from './cookies/cookies.component';
+import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 // import { RegisterComponent } from './pages/register/register.component';
 // import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -42,12 +42,13 @@ import { DeleteComponent } from './delete/delete.component';
     // EditUserprofileComponent,
     // LoginComponent,
     // ManagementComponent,
-    // PrivacyComponent
+    // PrivacyComponent,
+    CookiesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
