@@ -11,6 +11,7 @@ import { CardsComponent } from './dashboard/cards/cards.component';
 import { SearchComponent } from './dashboard/search/search.component';
 import { ExitComponent } from './exit/exit.component';
 import { DeleteComponent } from './delete/delete.component';
+import { AddClassComponent } from './add-class/add-class.component';
 
 import { CookiesComponent } from './cookies/cookies.component';
 // import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -33,6 +34,7 @@ import { CookiesComponent } from './cookies/cookies.component';
     SearchComponent,
     ExitComponent,
     DeleteComponent,
+    AddClassComponent,
     // CookiesComponent,
     // DashboardComponent,
     // RegisterComponent,

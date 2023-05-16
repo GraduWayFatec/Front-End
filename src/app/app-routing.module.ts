@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 // import { Register3Component } from './pages/register3/register3.component';
 import { MenuComponent } from './menu/menu.component';
 import { DeleteComponent } from './delete/delete.component';
+import { AddClassComponent } from './add-class/add-class.component';
 
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -23,6 +24,7 @@ const routes: Routes = [
   // -----ROTAS DO PORTAL --------
   { path: "menu", component: MenuComponent},
   { path: "delete", component: DeleteComponent},
+  { path: "add-class", component: AddClassComponent},
   // { path: "dashboard", component: DashboardComponent},
   // { path: 'register', component: RegisterComponent },
   // { path: 'user-profile', component: UserProfileComponent },
