@@ -124,7 +124,7 @@ img.img-icon{
     background: rgba(255, 255, 255, 0.01);
     color: var(--color-4);
     border-color: transparent;
-    transition: 0.4s;
+    transition: 0.1s;
     font-weight: 400;
     font-size: 13px;
 }
@@ -132,6 +132,14 @@ img.img-icon{
 .btn:hover{
     border: 1.3px #FFF solid;
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+    color: #9EFFCA;
+}
+
+.btn:disabled{
+    border: 1.3px #FFF solid;
+    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+    color: #9EFFCA;
+    opacity: 1;
 }
 
 .btn.selected {
