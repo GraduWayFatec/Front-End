@@ -24,10 +24,17 @@ export class BodyManagementComponent  implements AfterViewInit{
 
   onAllCardClick() {
     this.cards.forEach(component => {
-      component.onCardClick();
+      if(component.isChecked == false){
+        component.onCardClick();
+      }
     })
   }
 
+  ContChecked(){
+    alert(this.cards.filter(component => component.isChecked).length)
+  }
+
+  
   ngAfterViewInit(): void {
     
   }
