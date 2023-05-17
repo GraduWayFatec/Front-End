@@ -23,6 +23,7 @@ import { AcademicEducationComponent } from './academic-education/academic-educat
 import { EducationLevelComponent } from './academic-education/education-level/education-level.component';
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
 import { CompanyCategoryComponent } from './professional-experience/company-category/company-category.component';
+import { CourseComponent } from './dashboard/filter/course/course.component';
 
 import { CookiesComponent } from './cookies/cookies.component';
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
@@ -50,6 +51,7 @@ import { CardEditStudentComponent } from './edit-classroom/card-edit-student/car
     SearchComponent,
     FilterComponent,
     YearComponent,
+    CourseComponent,
     AcademicEducationComponent,
     EducationLevelComponent,
     ProfessionalExperienceComponent,
@@ -81,6 +83,7 @@ import { CardEditStudentComponent } from './edit-classroom/card-edit-student/car
     EditClassroomComponent,
     CardEditStudentComponent
   ],
+  
   imports: [
     BrowserModule,
     ModalModule.forRoot(),

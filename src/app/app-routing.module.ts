@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { FilterComponent } from './dashboard/filter/filter.component';
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { RegisterComponent } from './pages/register/register.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -27,6 +28,7 @@ import { ProfessionalExperienceComponent } from './professional-experience/profe
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
+  { path: "filter", component: FilterComponent},
   { path: "professional-experience", component: ProfessionalExperienceComponent},
   { path: "academic-education", component: AcademicEducationComponent},
   { path: "menu", component: MenuComponent},

@@ -1,50 +1,53 @@
-<div class="filter">
-    <div class="dropdown" id="dropdown">
-        <label for="dropdown-filter" class="dropdown-active button">
-            <img src="../../../assets/img/Vector.svg" alt="">
-            <span id="dropdown-selected" class="text" style="color: black">Btn</span>
-        </label>
-        <input class="dropdown-filter" type="checkbox" name="dropdown-filter" id="dropdown-filter" aria-controls="dropdown-list">
-        <ul class="dropdown-list" id="dropdown-list">
-            <li class="button-filter">Filtros</li>
-            <li class="button">
-              <div class="curso">
-                <div class="dropdown-btn" id="dropdown-btn">
-                    <label for="dropdown-curso" class="dropdown-active-button">
-  
-                      <div><span id="dropdown-selected" class="btn" >Cursos</span></div>
-  
-                      <div class="img"><img src="../../../assets/img/dropdown.svg" alt=""></div>  
-                      
-                    </label>
-                    <input class="dropdown-curso" type="checkbox" name="dropdown-curso" id="dropdown-curso" aria-controls="dropdown-list-modal1">
-                    <ul class="dropdown-list-modal1" id="dropdown-list-modal1">
-                        
-                         <!--  criar o dropdwon cursos -->
-                       
-                    </ul>
-                </div>
-              </div>
-            </li>
-            <li class="button">
-               <div class="ano">
-                <div class="dropdown-btn" id="dropdown-btn">
-                    <label for="dropdown-ano" class="dropdown-active-button">
-  
-                     <span id="dropdown-selected" class="btn">Ano</span>
-  
-                      <div class="img"> <img src="../../../assets/img/dropdown.svg" alt=""></div>
-                       
-                    </label>
-                    <input class="dropdown-ano" type="checkbox" name="dropdown-ano" id="dropdown-ano" aria-controls="dropdown-list-modal2">
-                    <ul class="dropdown-list-modal2" id="dropdown-list-modal2">
-                        
-                      <app-year></app-year>
-                        
-                    </ul>
-                </div>
-              </div>
-            </li>
-        </ul>  
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+  <div class="modal-content">
+
+    <div class="modal-header">
+
+      <div class="h-left">
+
+        <h1 class="title" id="staticBackdropLabel">Filtros</h1>
+
+      </div>
+
     </div>
-  </div> 
+
+    <div class="modal-body">
+
+      <form>
+
+        <div class="first-line">
+
+          <div class="class">
+
+            <p class="title">Curso</p>
+            <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
+            <label class="fieldlabel" for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+            <div class="dropdown-content">
+              <app-course></app-course>
+            </div>
+          
+          </div>
+
+        </div>
+
+        <div class="second-line">
+
+        <div class="class">
+
+          <p class="title">Ano Formatura</p>
+          <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
+          <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+          <div class="dropdown-content2">
+            <app-year></app-year>
+          </div>
+        
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="add">Filtrar</button>
+
+        </div>
+
+    </div>
