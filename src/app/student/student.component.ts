@@ -1,7 +1,8 @@
-import { Component,AfterViewInit, ViewChildren,QueryList } from '@angular/core';
+import { Component } from '@angular/core';
+import { AfterViewInit, ViewChildren,QueryList } from '@angular/core';
 import { InfoPerson } from '../shared/card-person.model';
 import { CardStudentComponent } from './card-student/card-student.component';
-
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 
 @Component({
@@ -45,5 +46,11 @@ export class StudentComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     
+  }
+
+  constructor(public modalRef: BsModalRef) {}
+
+  fecharModal() {
+    this.modalRef.hide();
   }
 }
