@@ -31,6 +31,12 @@ export class SearchComponent implements AfterViewInit {
     });
   }
 
+  ContChecked(){
+    alert(this.cardsComponents.filter(component => component.isChecked).length)
+  }
+  
+
 
   ngAfterViewInit(): void {}
+
 }
