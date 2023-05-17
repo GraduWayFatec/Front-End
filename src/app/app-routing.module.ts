@@ -20,6 +20,7 @@ import { AdmProfileComponent } from './adm-profile/adm-profile.component';
 import { MessageComponent } from './message/message.component';
 import { SaveComponent } from './save/save.component';
 import { UserSimpleComponent } from './user-simple/user-simple.component';
+import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 import { AcademicEducationComponent } from './academic-education/academic-education.component';
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component'
 
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: "management", component: ManagementComponent},
   { path: 'privacy', component: PrivacyComponent },
+  { path: 'edit-classroom', component: EditClassroomComponent },
   { path: 'register2', component: Register2Component },
   { path: 'register3', component: Register3Component }
 ];
