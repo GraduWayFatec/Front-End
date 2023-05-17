@@ -4,7 +4,7 @@
   align-items: center;
 
   width: 380px;
-  height: 55vh;
+  height: 53vh;
   background-color: var(--color-1);
   box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
 
@@ -256,7 +256,7 @@
 
 .dropdown-checkbox:checked ~ .dropdown-content {
   display: block;
-  margin-left: 100px;
+  margin-left: 0px;
 }
 .dropdown-checkbox2 {
   display: none;
@@ -266,9 +266,9 @@
   display: none;
 }
 
-.dropdown-checkbox:checked ~ .dropdown-content2 {
+#dropdown2:checked ~ .dropdown-content2 {
   display: block;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 
 
