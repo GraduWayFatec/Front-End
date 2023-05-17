@@ -132,14 +132,13 @@ img.img-icon{
 .btn:hover{
     border: 1.3px #FFF solid;
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
-    color: #9EFFCA;
 }
 
 .btn:disabled{
     border: 1.3px #FFF solid;
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
-    color: #9EFFCA;
     opacity: 1;
+    background-color: #60837b;
 }
 
 .btn.selected {
