@@ -27,7 +27,9 @@ export class SearchComponent implements AfterViewInit {
 
   onCardClickAll() {
     this.cardsComponents.forEach(component => {
-      component.onCardClick();
+      if(component.isChecked == false){
+        component.onCardClick();
+      }
     });
   }
 
