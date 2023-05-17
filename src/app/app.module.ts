@@ -41,6 +41,7 @@ import { StudentComponent } from './student/student.component';
 import { CardStudentComponent } from './student/card-student/card-student.component';
 import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 import { CardEditStudentComponent } from './edit-classroom/card-edit-student/card-edit-student.component';
+import { ClassNumberComponent } from './add-class/class-number/class-number.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { CardEditStudentComponent } from './edit-classroom/card-edit-student/car
     StudentComponent,
     CardStudentComponent,
     EditClassroomComponent,
-    CardEditStudentComponent
+    CardEditStudentComponent,
+    ClassNumberComponent
   ],
   
   imports: [
