@@ -307,7 +307,7 @@ hr{
   
   
   .fieldlabel {
-    width: 280px;
+    width: 320px;
     height: 20px;
   
     border-radius: 0px 0px 12px 0px;
@@ -333,7 +333,7 @@ hr{
   
   
   .fieldlabel2 {
-    width: 280px;
+    width: 320px;
     height: 20px;
   
     border-radius: 0px 0px 12px 0px;
@@ -358,5 +358,43 @@ hr{
   }
   
   .arrow {
-    margin-left: 240px;
+    margin-left: 280px;
+  }
+
+
+
+  .class {
+    position: relative;
+  }
+  
+  .dropdown-content2 {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+    
+  }
+  
+  .field2:checked ~ .dropdown-content2 {
+    display: block;
+  }
+
+  .course {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+    
+  }
+  
+  .field:checked ~ .dropdown-content {
+    display: block;
   }
