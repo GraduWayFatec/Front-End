@@ -23,17 +23,23 @@
                     <div class="course">
 
                         <p class="title">Curso</p>
-                        <input class="field" type="text" placeholder="Big Data no Agronegócio" value="">
-                        <button><img src="../../assets/img/Arrow.svg" alt=""></button>
-
+                        <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
+                            <label class="fieldlabel" for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                            <div class="dropdown-content">
+                              <app-course></app-course>
+                            </div>            
+                        
                     </div>
 
                     <div class="class">
 
                         <p class="title">Turma</p>
-                        <input class="field" type="text" placeholder="13ª turma" value="">
-                        <button><img src="../../assets/img/Arrow.svg" alt=""></button>
-
+                        <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
+                        <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <div class="dropdown-content2">
+                            <app-class-number></app-class-number>
+                        </div>
+    
                     </div>
 
                 </div>

@@ -1,37 +1,38 @@
+
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
 
   left: -9999px;
   opacity: 0;
   pointer-events: none;
-  background-color: #383448;
 
 }
 
 $grey: #9EFFCA;
 
-.card-check {
-  padding: 10px 7px 0px 0;
-  height: auto;
-  width: 180px;
-  background-color: #383448;
-  border-radius: 28px;
-  box-sizing: border-box;
-  position: absolute;
-  box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
-  text-align: center;
-  z-index: 1;
-  
+.checkbox{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+   
 }
 
-.checkbox{
-    display: flex;  
-    gap: 25px;  
-
+.card{
+    background-color: #383448;
+    border-radius: 28px;
+    width: 160px;
+    height: auto;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    text-align: justify;
+    align-items: flex-start;
+    box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
 }
 
   .mcui-checkbox {
-    padding: 2px 0 0 20px; 
+    padding: 10px 0 0 20px;
+
 
     input[type="checkbox"] + div{
       border: 2px solid $grey;
@@ -41,8 +42,6 @@ $grey: #9EFFCA;
       border-radius: 2px;
       position: absolute;
       display: flex;
-      
-
 // aqui traz a check box, tranforma em quadrado, o tamanho e etc
     }
   
@@ -55,7 +54,8 @@ $grey: #9EFFCA;
   }
   
   .mcui-check {
-
+    height: 100%;
+    width: 100%;
     transform: scale(1);
     color: #383448;
     opacity: 0;
@@ -71,10 +71,10 @@ $grey: #9EFFCA;
     }
   }
 
-.years {
-  font-family: 'Poppins', sans-serif; 
-  color: white;
-  width: 100%;
-  margin-left: -10px;
-  font-size: 16px;
-}
+  .school {
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    width: 100%;
+    margin-left: 20px;
+    font-size: 14px;
+  }

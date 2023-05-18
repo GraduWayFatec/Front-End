@@ -4,7 +4,7 @@
     align-items: center;
 
     width: 888px;
-    height: 76vh;
+    height: 60vh;
     background-color: var(--color-1);
     box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
 
@@ -222,3 +222,109 @@
     border: 0.5px #FFF solid;
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
 }
+
+
+.dropdown-checkbox {
+    display: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+  }
+  
+  .dropdown-checkbox:checked ~ .dropdown-content {
+    display: block;
+    margin-left: 0px;
+  }
+  
+  .fieldlabel {
+    width: 320px;
+    height: 20px;
+  
+    border-radius: 0px 0px 12px 0px;
+    border-bottom: 1px solid var(--color-2);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 8px;
+    text-align: left;
+    color: #FFFFFF;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px;
+    
+    background: var(--color-1);
+  }
+    
+  .arrow {
+    margin-left: 290px;
+  }
+
+
+  .modal-dialog .modal-content .modal-body .field2 {
+    width: 270px;
+    height: 20px;
+  
+    border-radius: 0px 0px 12px 0px;
+    border-bottom: 1px solid var(--color-2);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 8px;
+    text-align: left;
+    color: #FFFFFF;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px;
+    
+    background: var(--color-1);
+  }
+  .dropdown-checkbox2 {
+    display: none;
+  }
+  
+  .dropdown-content2 {
+    display: none;
+  }
+  
+  #dropdown2:checked ~ .dropdown-content2 {
+    display: block;
+    margin-left: 100px;
+  }
+
+  .fieldlabel2 {
+    width: 320px;
+    height: 20px;
+  
+    border-radius: 0px 0px 12px 0px;
+    border-bottom: 1px solid var(--color-2);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 8px;
+    text-align: left;
+    color: #FFFFFF;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px;
+    
+    background: var(--color-1);
+  }
