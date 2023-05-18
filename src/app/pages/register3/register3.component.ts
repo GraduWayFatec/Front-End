@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { PrivacyComponent } from '../../privacy/privacy.component';
 
 @Component({
   selector: 'app-register3',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./register3.component.scss']
 })
 export class Register3Component {
+  modalRef!: BsModalRef;
 
+  constructor(private modalService: BsModalService) {}
+
+  abrirModal() {
+    this.modalRef = this.modalService.show(PrivacyComponent);
+  }
+
+  fecharModal() {
+    this.modalRef.hide();
+  }
 }

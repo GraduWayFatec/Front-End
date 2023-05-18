@@ -1,6 +1,9 @@
 import { Component,AfterViewInit, ViewChildren,QueryList } from '@angular/core';
 import { InfoPerson } from '../shared/card-person.model';
 import { CardEditStudentComponent } from './card-edit-student/card-edit-student.component';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { SaveComponent } from '../save/save.component';
+import { DeleteComponent } from '../delete/delete.component';
 
 @Component({
   selector: 'app-edit-classroom',
@@ -32,7 +35,6 @@ export class EditClassroomComponent implements AfterViewInit{
     new InfoPerson("dadafafs fsdgrgewgw")
   ]
 
-  constructor() {}
   @ViewChildren(CardEditStudentComponent)
   cardStudent!: QueryList<CardEditStudentComponent>;
 
@@ -44,5 +46,22 @@ export class EditClassroomComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     
+  }
+
+  constructor(private modalService: BsModalService) {}
+
+  modalRef!: BsModalRef;
+ 
+
+  abrirModalSave() {
+    this.modalRef = this.modalService.show(SaveComponent);
+  }
+
+  abrirModalDelete() {
+    this.modalRef = this.modalService.show(DeleteComponent);
+  }
+
+  fecharModal() {
+    this.modalRef.hide();
   }
 }

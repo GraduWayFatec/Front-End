@@ -10,7 +10,7 @@ import { EditUserprofileComponent } from '../edit-userprofile/edit-userprofile.c
 export class UserProfileComponent {
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService) { }
 
   abrirModal() {
     this.modalRef = this.modalService.show(EditUserprofileComponent);

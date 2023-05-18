@@ -1,6 +1,10 @@
 import { Component, ViewChildren, AfterViewInit, QueryList } from '@angular/core';
 import { CardManagementComponent } from '../card-management/card-management.component';
 import { InfoCard } from 'src/app/shared/card.model';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { AddClassComponent } from '../../add-class/add-class.component';
+import { DeleteComponent } from '../../delete/delete.component';
+
 @Component({
   selector: 'app-body-management',
   templateUrl: './body-management.component.html',
@@ -16,8 +20,8 @@ export class BodyManagementComponent  implements AfterViewInit{
     new InfoCard(15, "Big Data no Agronegócio", 2022, 10, "../../../assets/img/Big Data.svg"),
     new InfoCard(15, "Mecanização Agronegócio", 2023, 21, "../../../assets/img/MAP.svg")
   ]
-  
-  constructor(){}
+
+  constructor(private modalService: BsModalService) {}
 
   @ViewChildren(CardManagementComponent)
   cards!: QueryList<CardManagementComponent>;
@@ -30,5 +34,20 @@ export class BodyManagementComponent  implements AfterViewInit{
 
   ngAfterViewInit(): void {
     
+  }
+
+  modalRef!: BsModalRef;
+ 
+
+  abrirModal() {
+    this.modalRef = this.modalService.show(AddClassComponent);
+  }
+
+  abrirModal2() {
+    this.modalRef = this.modalService.show(DeleteComponent);
+  }
+
+  fecharModal() {
+    this.modalRef.hide();
   }
 }

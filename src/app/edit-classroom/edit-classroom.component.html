@@ -37,7 +37,7 @@
             </div>
             <div class="modal-right">
                 <div class="modal-footer-right-top">
-                    <button type="button" class="delete" data-bs-dismiss="modal">Excluir</button>
+                    <button type="button" class="delete" data-bs-dismiss="modal" (click)="abrirModalDelete()">Excluir</button>
                     <div class="modal-footer-buttons">
                         <button type="button" class="select" (click)="onCardClickAll()">Selecionar Todos</button>
                         <button type="button" class="import">Importar Alunos</button>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="modal-footer-right-bottom">
                     <button type="button" class="cancel" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="save">Salvar</button>
+                    <button type="button" class="save" (click)="abrirModalSave()">Salvar</button>
                 </div>
             </div>
         </div>

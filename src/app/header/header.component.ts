@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, LOCALE_ID } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { UserProfileComponent } from '../user-profile/user-profile.component';
 
@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
 
   abrirModal() {
-    this.modalRef = this.modalService.show(UserProfileComponent);
+    this.modalRef = this.modalService.show(UserProfileComponent, {class: "my-big-modal"});
   }
 
   fecharModal() {
