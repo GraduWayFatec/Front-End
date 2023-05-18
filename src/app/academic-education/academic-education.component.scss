@@ -406,4 +406,20 @@ margin-right:140px;
   .arrow {
     margin-left: 290px;
   }
+
+  .course {
+    position: relative;
+  }
   
+  .dropdown-content {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+  }
+  
+  .field:checked ~ .dropdown-content {
+    display: block;
+  }
