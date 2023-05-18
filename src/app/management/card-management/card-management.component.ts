@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { InfoCard } from 'src/app/shared/card.model';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { DeleteComponent } from '../../delete/delete.component';
+import { EditClassroomComponent } from '../../edit-classroom/edit-classroom.component';
 
 @Component({
   selector: 'app-card-management',
@@ -7,9 +10,9 @@ import { InfoCard } from 'src/app/shared/card.model';
   styleUrls: ['./card-management.component.scss']
 })
 export class CardManagementComponent implements OnInit {
-  @Input() itens!: InfoCard;
+  constructor(private modalService: BsModalService) {}
   
-
+  @Input() itens!: InfoCard;
 
   isChecked: boolean = false;
 
@@ -17,5 +20,19 @@ export class CardManagementComponent implements OnInit {
 
   onCardClick() {
     this.isChecked = !this.isChecked;
+  }
+
+  modalRef!: BsModalRef;
+ 
+  abrirModal() {
+    this.modalRef = this.modalService.show(DeleteComponent);
+  }
+
+  abrirModal2() {
+    this.modalRef = this.modalService.show(EditClassroomComponent);
+  }
+
+  fecharModal() {
+    this.modalRef.hide();
   }
 }

@@ -1,8 +1,10 @@
-import { Component,AfterViewInit, ViewChildren,QueryList } from '@angular/core';
+import { Component } from '@angular/core';
+import { AfterViewInit, ViewChildren,QueryList } from '@angular/core';
 import { InfoPerson } from '../shared/card-person.model';
 import { CardStudentComponent } from './card-student/card-student.component';
-
-
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { UserSimpleComponent } from '../user-simple/user-simple.component';
+import { MessageComponent } from '../message/message.component';
 
 @Component({
   selector: 'app-student',
@@ -13,8 +15,8 @@ export class StudentComponent implements AfterViewInit{
 
   InfoPerson: InfoPerson[] = [
     new InfoPerson("Daniel Matunoshita"),
-    new InfoPerson("Matheus Resende"),
-    new InfoPerson("Jaqueline Nakagawa"),
+    new InfoPerson("Matheus Rezende"),
+    new InfoPerson("Jacqueline Nakagawa"),
     new InfoPerson("Gabriel Calil"),
     new InfoPerson("Luis Ricardo"),
     new InfoPerson("Nao sei quem mais"),
@@ -45,5 +47,21 @@ export class StudentComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     
+  }
+
+  modalRef!: BsModalRef;
+
+  constructor(private modalService: BsModalService) {}
+
+  abrirModal() {
+    this.modalRef = this.modalService.show(UserSimpleComponent);
+  }
+
+  abrirModal2() {
+    this.modalRef = this.modalService.show(MessageComponent);
+  }
+
+  fecharModal() {
+    this.modalRef.hide();
   }
 }

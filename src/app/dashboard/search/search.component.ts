@@ -1,7 +1,10 @@
-import { AfterViewInit, Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { AfterViewInit, ViewChildren, QueryList } from '@angular/core';
 import { CardsComponent } from '../cards/cards.component';
 import { InfoCard } from 'src/app/shared/card.model';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
+import { Component } from '@angular/core';
+import { MessageComponent } from '../../message/message.component';
 
 @Component({
   selector: 'app-search',
@@ -33,4 +36,17 @@ export class SearchComponent implements AfterViewInit {
 
 
   ngAfterViewInit(): void {}
+
+
+  modalRef!: BsModalRef;
+
+  constructor(private modalService: BsModalService) {}
+
+  abrirModal() {
+    this.modalRef = this.modalService.show(MessageComponent);
+  }
+
+  fecharModal() {
+    this.modalRef.hide();
+  }
 }

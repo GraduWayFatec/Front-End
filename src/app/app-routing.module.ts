@@ -21,13 +21,15 @@ import { MessageComponent } from './message/message.component';
 import { SaveComponent } from './save/save.component';
 import { UserSimpleComponent } from './user-simple/user-simple.component';
 import { AcademicEducationComponent } from './academic-education/academic-education.component';
-import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component'
+import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
+import { StudentComponent } from './student/student.component';
 
 //IMPORTS DOS COMPONENTES DO PORTAL
 
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
+  { path: "student", component: StudentComponent},
   { path: "filter", component: FilterComponent},
   { path: "professional-experience", component: ProfessionalExperienceComponent},
   { path: "academic-education", component: AcademicEducationComponent},

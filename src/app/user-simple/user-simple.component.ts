@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-user-simple',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-simple.component.scss']
 })
 export class UserSimpleComponent {
+  constructor(public modalRef: BsModalRef) {}
 
+  fecharModal() {
+    this.modalRef.hide();
+  }
 }
