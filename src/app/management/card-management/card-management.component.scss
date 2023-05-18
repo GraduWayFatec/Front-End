@@ -17,6 +17,16 @@
   h1{
     color: #9EFFCA
   }
+  .img_desactive{
+    opacity:0;
+  }
+  .img_active{
+    opacity: 1;
+  }
+  hr{
+    opacity: 1;
+    background: radial-gradient(50% 50% at 50% 50%, #9EFFCA 44.79%, rgba(139, 130, 181, 0) 100%);
+  }
 
 }
 
@@ -139,14 +149,7 @@ hr {
 }
 
 .bottom .config button{
-    background-color: transparent;
-    border-radius: 8px;
-    border-color: transparent;
-}
-
-.bottom .config button:hover{
-    border: 1.3px #FFF solid;
-    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+    
 }
 
  
@@ -202,4 +205,39 @@ $grey: #9EFFCA;
     stroke: currentcolor;
   //   faz o ícone de dentro do quadrado ser uma check
   }
+}
+
+.img_active{
+  position: absolute;
+  left: 24px;
+  opacity: 0;
+}
+
+.config button{
+  padding: 6px;
+  background-color: transparent;
+  border-radius: 8px;
+  border-color: transparent;
+}
+
+.config button .active{
+  position: absolute;
+  opacity: 0;
+}
+
+.config button .edit_active{
+  left: 207px;
+}
+
+.config button:hover{
+  .desactive{
+    opacity: 0;
+  }
+  .active{
+    opacity: 1;
+  }
+}
+
+.config button .delete_active{
+  left: 256px;
 }

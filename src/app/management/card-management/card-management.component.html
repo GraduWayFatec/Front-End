@@ -29,17 +29,20 @@
         </div>
         <div class="bottom">
             <div class="curse">
-                <img src="{{ itens.img }}" alt="">
+                <img src="{{ itens.img }}" alt="" class="img_desactive">
+                <img src="{{ itens.img_active }}" alt=""  class="img_active">
             </div>
             <div class="config">
                 <div class="edit">
                     <button routerLink="">
-                        <img src="../../../assets/img/edit.svg" alt="">
+                        <img src="../../../assets/img/Edit.svg" alt="" class="edit_desactive desactive">
+                        <img src="../../../assets/img/edit_active.svg" alt="" class="edit_active active">
                     </button>
                 </div>
                 <div class="delete">
                     <button routerLink="">
-                        <img src="../../../assets/img/Delete.svg" alt="">
+                        <img src="../../../assets/img/Delete.svg" alt="" class="delete_desactive desactive">
+                        <img src="../../../assets/img/delete_active.svg" alt="" class="delete_active active">
                     </button>
                 </div>
             </div>
