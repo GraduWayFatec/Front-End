@@ -124,7 +124,7 @@ img.img-icon{
     background: rgba(255, 255, 255, 0.01);
     color: var(--color-4);
     border-color: transparent;
-    transition: 0.1s;
+    transition: 0.4s;
     font-weight: 400;
     font-size: 13px;
 }
@@ -132,6 +132,13 @@ img.img-icon{
 .btn:hover{
     border: 1.3px #FFF solid;
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+    color: var(--color-2);
+    .active{
+        opacity: 1;
+    }
+    .desactive{
+        opacity: 0;
+    }
 }
 
 .btn:disabled{
@@ -174,10 +181,15 @@ img.img-icon{
 
     background: rgba(255, 255, 255, 0.03);
     border-radius: 12px;
-    color: var(--color-4);
+    color: #FFF;
 
     font-weight: 400;
     font-size: 13px;
+    transition: 0.4s;
+}
+
+.exists .btn.btn-exit:hover{
+    color: #9EFFCA;
 }
 
 .exists .btn p{
@@ -186,4 +198,13 @@ img.img-icon{
     font-weight: 500px;
     font-size: 13px;
     line-height: 130%;
+}
+
+.active{
+    position: absolute;
+    opacity: 0;
+}
+
+.exit_active{
+    left: 72px;
 }
