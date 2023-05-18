@@ -31,7 +31,7 @@ export class BodyManagementComponent  implements AfterViewInit{
   }
 
   ContChecked(){
-    alert(this.cards.filter(component => component.isChecked).length)
+    // alert(this.cards.filter(component => component.isChecked).length)
   }
 
   

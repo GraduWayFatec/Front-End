@@ -34,7 +34,7 @@ export class SearchComponent implements AfterViewInit {
   }
 
   ContChecked(){
-    alert(this.cardsComponents.filter(component => component.isChecked).length)
+    // alert(this.cardsComponents.filter(component => component.isChecked).length)
   }
   
 
