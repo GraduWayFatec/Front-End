@@ -16,6 +16,16 @@
   h1{
     color: #9EFFCA
   }
+  .img_desactive{
+    opacity:0;
+  }
+  .img_active{
+    opacity: 1;
+  }
+  hr{
+    background: radial-gradient(50% 50% at 50% 50%, #9EFFCA 44.79%, rgba(139, 130, 181, 0) 100%);
+    opacity: 1; 
+  }
 
 }
 
@@ -182,4 +192,10 @@ $grey: #9EFFCA;
     stroke: currentcolor;
   //   faz o ícone de dentro do quadrado ser uma check
   }
+}
+
+.img_active{
+  position: absolute;
+  left: 24px;
+  opacity: 0;
 }

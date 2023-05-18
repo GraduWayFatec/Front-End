@@ -141,3 +141,17 @@ img{
     background: #9EFFCA;
     border-radius: 12px;
 }
+
+.btn-filter .filter_active{
+    position:absolute;
+    opacity: 0;
+}
+ 
+.btn-filter:hover{
+    .filter_active{
+        opacity: 1;
+    }
+    .filter{
+        opacity: 0;
+    }
+}

@@ -71,4 +71,26 @@ nav{
     outline: revert;
 }
 
+button{
+    color: transparent;
+    background-color: transparent;
+    border: transparent;
+}
+
+
+.perfil:hover{
+    .perfil_desactive{
+        opacity: 0;
+    }
+    .perfil_active{
+        opacity: 1;
+    }
+}
+
+.perfil_active{
+    position: relative;
+    right: 23px;
+    top: 0px;
+    opacity: 0;
+}
 

@@ -8,7 +8,7 @@
             </div>
             <div class="right">
                 <label class="mcui-checkbox">
-                    <input type="checkbox" (click)="onCardClick()" [checked]="isChecked">
+                    <input type="checkbox" class="checkbox" (click)="onCardClick()" [checked]="isChecked">
                     <div>
                     <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true" >
                         <title>checkmark-circle</title>
@@ -28,7 +28,8 @@
             <h4 class="description">{{ itens.student }}</h4>
         </div>
         <div class="curse">
-            <img src="{{ itens.img }}" alt="">
+            <img src="{{ itens.img }}" alt="" class="img_desactive">
+            <img src="{{ itens.img_active }}" alt="" class="img_active">
         </div>
     </div>
 </div>

@@ -11,9 +11,11 @@
                 </p>
             </div>
             <div class="right">
-                <a (click)="abrirModal()">
-                    <img src="../../assets/img/Perfil.svg" alt="">
-                </a>
+                
+                <button (click)="abrirModal()" class="perfil">
+                    <img src="../../assets/img/Perfil.svg" alt="" class="perfil_desactive">
+                    <img src="../../assets/img/Perfil_active.svg" alt="" class="perfil_active">
+                </button>
             </div>
         </nav>
     </div>
