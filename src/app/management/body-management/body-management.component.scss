@@ -108,9 +108,22 @@ img{
 .btn-mensager{
     width: 167px;
     height: 40px;
-    
+}
+
+.btn-filter .filter_active{
+    position:absolute;
+    opacity: 0;
 }
  
+.btn-filter:hover{
+    .filter_active{
+        opacity: 1;
+    }
+    .filter{
+        opacity: 0;
+    }
+}
+
 .info{
     display: flex;
     justify-content:space-between;
