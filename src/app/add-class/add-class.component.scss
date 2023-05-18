@@ -321,3 +321,40 @@
     
     background: var(--color-1);
   }
+
+  
+  .class {
+    position: relative;
+  }
+  
+  .dropdown-content2 {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+    
+  }
+  
+  .field2:checked ~ .dropdown-content2 {
+    display: block;
+  }
+
+  .course {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+    
+  }
+  
+  .field:checked ~ .dropdown-content {
+    display: block;
+  }
