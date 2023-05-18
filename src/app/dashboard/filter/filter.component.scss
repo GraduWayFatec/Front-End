@@ -4,7 +4,7 @@
   align-items: center;
 
   width: 450px;
-  height: 53vh;
+  height: 54vh;
   background-color: var(--color-1);
   box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
 
@@ -325,4 +325,41 @@
 
 .arrow {
   margin-left: 240px;
+}
+
+
+.class {
+  position: relative;
+}
+
+.dropdown-content2 {
+  position: fixed;
+  top: 40;
+  left: 80;
+  display: none;
+  /* Estilize o dropdown conforme necessário */
+  z-index: 9999;
+  
+}
+
+.field2:checked ~ .dropdown-content2 {
+  display: block;
+}
+
+.course {
+  position: relative;
+}
+
+.dropdown-content {
+  position: fixed;
+  top: 40;
+  left: 80;
+  display: none;
+  /* Estilize o dropdown conforme necessário */
+  z-index: 9999;
+  
+}
+
+.field:checked ~ .dropdown-content {
+  display: block;
 }
