@@ -46,7 +46,7 @@ export class BodyManagementComponent  implements AfterViewInit{
  
 
   abrirModal() {
-    this.modalRef = this.modalService.show(AddClassComponent);
+    this.modalRef = this.modalService.show(AddClassComponent, {class: "add-class-modal"});
   }
 
   abrirModal2() {

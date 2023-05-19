@@ -36,7 +36,27 @@
 /* Importing Bootstrap SCSS file. */
 @import "./node_modules/bootstrap/scss/bootstrap";
 
-.my-big-modal {
+.user-profile-modal {
     --bs-modal-margin: 0;
-    --bs-modal-width: 5000px;
+    --bs-modal-width: 888px;
+}
+
+.edit-user-profile-modal {
+    --bs-modal-margin: 0;
+    --bs-modal-width: 888px;
+}
+
+.classroom-modal {
+    --bs-modal-margin: 0;
+    --bs-modal-width: 100vw;
+}
+
+.add-class-modal {
+    --bs-modal-margin: 0;
+    --bs-modal-width: 100vw;
+}
+
+.edit-classroom-modal {
+    --bs-modal-margin: 0;
+    --bs-modal-width: 100vw;
 }

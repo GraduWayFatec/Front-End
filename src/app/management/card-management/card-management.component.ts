@@ -29,7 +29,7 @@ export class CardManagementComponent implements OnInit {
   }
 
   abrirModal2() {
-    this.modalRef = this.modalService.show(EditClassroomComponent);
+    this.modalRef = this.modalService.show(EditClassroomComponent, {class: "edit-classroom-modal"});
   }
 
   fecharModal() {
