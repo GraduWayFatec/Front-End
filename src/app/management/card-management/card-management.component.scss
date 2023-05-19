@@ -5,6 +5,7 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
   box-shadow: 5px 40px 64px rgba(41, 15, 0, 0.4);
   backdrop-filter: blur(80px);
+  padding: 10px;
   
   border-radius: 28px;
   color:white;
@@ -35,6 +36,7 @@
     color: var(--color-4);
     background-color: var(--color-1);
     border-radius: 25px;
+    padding: 23px;
   }
 }
 
@@ -44,14 +46,12 @@
     align-items: center;
 }
 
-
 .checkbox{
     width: 18px;
     height: 18px;
     position: relative;
     display: flex;
     align-items: center;
-    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
 
     label {
       width: 18px;
@@ -94,7 +94,7 @@
 
 .card h1{
   font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 20px;
 }
@@ -102,7 +102,7 @@
 .card h2{
   font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 20px;
 }
 
@@ -115,7 +115,7 @@ hr {
 
 .sub{
   font-family: 'Poppins', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 20px;
     color: rgba(255, 255, 255, 0.5);
@@ -124,7 +124,7 @@ hr {
 
 .description{
   font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 0;
@@ -173,7 +173,7 @@ $grey: #9EFFCA;
     height: 1.5em;
     width: 1.5em;
     box-sizing: border-box;
-    border-radius: 2px;
+    border-radius: 5px;
     display: flex;
 // aqui traz a check box, tranforma em quadrado, o tamanho e etc
   }
