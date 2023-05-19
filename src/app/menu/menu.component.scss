@@ -127,6 +127,18 @@ img.img-icon{
     font-size: 13px;
 }
 
+.btn{
+    transition: 0.3s;
+}
+
+.active{
+    transition: 0.3s;
+}
+
+.desactive{
+    transition: 0.3s;
+}
+
 .btn:hover{
     border: 1.3px #FFF solid;
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
@@ -187,14 +199,6 @@ img.img-icon{
 
 .exists .btn.btn-exit:hover{
     color: #9EFFCA;
-}
-
-.exists .btn p{
-    width: 50vw;
-    height: 16px;
-    font-weight: 500px;
-    font-size: 13px;
-    line-height: 130%;
 }
 
 .active{
