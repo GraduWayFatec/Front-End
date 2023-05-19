@@ -44,7 +44,7 @@ import { CardStudentComponent } from './student/card-student/card-student.compon
 import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 import { CardEditStudentComponent } from './edit-classroom/card-edit-student/card-edit-student.component';
 import { ClassNumberComponent } from './add-class/class-number/class-number.component';
-
+import { GenderComponent } from './edit-userprofile/gender/gender.component';
 registerLocaleData(localePT);
 
 @NgModule({
@@ -87,7 +87,8 @@ registerLocaleData(localePT);
     CardStudentComponent,
     EditClassroomComponent,
     CardEditStudentComponent,
-    ClassNumberComponent
+    ClassNumberComponent,
+    GenderComponent,
   ],
   
   imports: [
