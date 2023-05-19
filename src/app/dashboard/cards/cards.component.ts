@@ -19,6 +19,11 @@ export class CardsComponent implements OnInit{
   onCardClick() {
     this.isChecked = !this.isChecked;
   }
+
+  evitarAbrirModal(event: Event) {
+    event.stopPropagation();
+  }
+
   @Input() outCheck: boolean = false;
 
   onChange(){}
@@ -34,4 +39,6 @@ export class CardsComponent implements OnInit{
   fecharModal() {
     this.modalRef.hide();
   }
+
+  
 }
