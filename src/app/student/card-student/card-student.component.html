@@ -4,7 +4,7 @@
         <h2>{{ itens.name }}</h2>
     </div>
     <div class="rigth">
-        <label class="mcui-checkbox">
+        <label class="mcui-checkbox" (click)="evitarAbrirModal($event)">
             <input type="checkbox" (click)="onCardClick()" [checked]="isChecked">
             <div>
             <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true" >
