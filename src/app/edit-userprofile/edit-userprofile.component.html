@@ -66,22 +66,28 @@
                 </div>
 
                 <div class="third-line">
-                    
                     <div class="class">
-
+                    
                         <p class="title">Turma</p>
-                        <input class="field" type="text" placeholder="13ª Turma" value="">
-
-                    </div>
-
-                    <div class="course">
-
-                        <p class="title">Curso</p>
-                        <input class="field" type="text" placeholder="Big Data no Agronegócio" value="">
-
+                        <input class="field3" type="checkbox" id="dropdown3" class="dropdown-checkbox3">
+                        <label class="fieldlabel3" for="dropdown3" id="dropdown-btn3"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <div class="dropdown-content3">
+                            <app-class-number></app-class-number>
+                        </div>
                     </div>
                     
-                </div>
+                    
+                    <div class="course">
+                    
+                        <p class="title">Curso</p>
+                        <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
+                        <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <div class="dropdown-content2">
+                            <app-course></app-course>
+                        </div>
+                    
+                    </div>
+                </div>   
 
                 <div class="fourth-line">
                     
@@ -95,8 +101,12 @@
                     <div class="gender">
 
                         <p class="title">Sexo</p>
-                        <input class="field" type="text" placeholder="Masculino" value="">
-                        <app-gender></app-gender>
+                        <input class="field" type="checkbox"  id="dropdown" class="dropdown-checkbox">
+                        <label for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <div class="dropdown-content">
+                            <app-gender></app-gender>
+                        </div>
+                        
                     </div>
                     
                 </div>
