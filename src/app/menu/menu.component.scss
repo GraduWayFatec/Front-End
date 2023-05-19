@@ -70,25 +70,6 @@ img.img-icon{
     padding: 24px 0;
 }
 
-// .btn.btn-primary {
-//     display: flex;
-//     align-items: center;
-//     justify-items: space-between;
-//     padding: 16px 8px;
-//     gap: 8px;
-//     isolation: isolate;
-
-//     width: 171px;
-//     height: 40px;
-
-//     border-radius: 12px;
-//     background: rgba(255, 255, 255, 0.01);
-//     border-color: transparent;
-//   
-//     font-weight: 500;
-//     font-size: 13px;
-// }
-
 .btn.btn-dashboard {
     display: flex;
     align-items: center;
@@ -101,7 +82,7 @@ img.img-icon{
     height: 40px;
 
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.03);
     color: var(--color-4);
     border-color: transparent;
     font-weight: 400;
@@ -120,7 +101,7 @@ img.img-icon{
     height: 40px;
 
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.03);
     color: var(--color-4);
     border-color: transparent;
     font-weight: 400;

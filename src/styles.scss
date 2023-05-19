@@ -26,6 +26,7 @@
 *::-webkit-scrollbar-track {
     background: linear-gradient(270deg, rgba(158, 255, 202, 0.2) 0%, rgba(158, 255, 202, 0) 97.91%);
     box-shadow: 0px 0px 12px #9EFFCA;
+    border-radius: 12px;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -67,6 +68,11 @@
 }
 
 .professional-experience-modal {
+    --bs-modal-margin: 0;
+    --bs-modal-width: 100vw;
+}
+
+.privacy-modal {
     --bs-modal-margin: 0;
     --bs-modal-width: 100vw;
 }

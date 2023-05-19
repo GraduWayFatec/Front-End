@@ -12,7 +12,13 @@
 
 .card:hover{
   cursor: pointer;
-  border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+  border-radius: 28px;
+  padding: 3px;
+  border: none;
+
+
+  background-image: linear-gradient(45deg, var(--color-1), var(--color-2), var(--color-1), var(--color-2));
+
   h1{
     color: #9EFFCA
   }
@@ -25,6 +31,12 @@
   hr{
     background: radial-gradient(50% 50% at 50% 50%, #9EFFCA 44.79%, rgba(139, 130, 181, 0) 100%);
     opacity: 1; 
+  }
+  .card-body {
+    color: var(--color-4);
+    background-color: var(--color-1);
+
+    border-radius: 25px;
   }
 
 }
@@ -47,7 +59,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
 
     label {
       width: 18px;
@@ -74,7 +85,6 @@
       }
       &:hover::after {
         opacity: 0.3;
-
       }
     }
     input[type=checkbox] {
@@ -126,7 +136,6 @@ hr {
     margin-bottom: 0;
 }
 
-
 .date{
   margin-bottom: 16px;
 }
@@ -166,6 +175,7 @@ $grey: #9EFFCA;
     .mcui-check {
       opacity: 1;
       background-color: #9EFFCA;
+      box-shadow: 0px 0px 10px #9EFFCA;
     }
   }
 
