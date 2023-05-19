@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
 
   abrirModal() {
-    this.modalRef = this.modalService.show(UserProfileComponent, {class: "my-big-modal"});
+    this.modalRef = this.modalService.show(UserProfileComponent, {class: "user-profile-modal"});
   }
 
   fecharModal() {
