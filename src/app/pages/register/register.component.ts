@@ -13,7 +13,7 @@ export class RegisterComponent {
   constructor(private modalService: BsModalService) {}
 
   abrirModal() {
-    this.modalRef = this.modalService.show(PrivacyComponent);
+    this.modalRef = this.modalService.show(PrivacyComponent, {class:"privacy-modal"});
   }
 
   fecharModal() {

@@ -204,12 +204,11 @@
 
 .body .b-right .content .forms .terms label {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 12px;
     line-height: 112%;
 
     text-align: center;
-    letter-spacing: -1px;
 
     color: var(--color-4);
 }
@@ -232,12 +231,12 @@
     border-radius: 3px;
     outline: none;
     cursor: pointer;
-    box-shadow: 0px 0px 10px #9EFFCA;
   }
   
   .body .b-right .content .forms .terms .checkbox:checked {
     background-color: var(--color-2);
     border-color: var(--color-2);
+    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .b-right .content .button .btn-btn-primary {
