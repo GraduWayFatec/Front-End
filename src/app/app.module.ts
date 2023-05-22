@@ -1,7 +1,9 @@
 import { AppRoutingModule } from './app-routing.module';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { registerLocaleData } from '@angular/common';
+import localePT from '@angular/common/locales/pt'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -41,7 +43,13 @@ import { StudentComponent } from './student/student.component';
 import { CardStudentComponent } from './student/card-student/card-student.component';
 import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 import { CardEditStudentComponent } from './edit-classroom/card-edit-student/card-edit-student.component';
+<<<<<<< HEAD
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
+=======
+import { ClassNumberComponent } from './add-class/class-number/class-number.component';
+import { GenderComponent } from './edit-userprofile/gender/gender.component';
+registerLocaleData(localePT);
+>>>>>>> a379998e0f7744bbe1676ae9badb3b39b1699e79
 
 @NgModule({
   declarations: [
@@ -83,15 +91,23 @@ import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-pa
     CardStudentComponent,
     EditClassroomComponent,
     CardEditStudentComponent,
+<<<<<<< HEAD
     ForgotPasswordComponent
+=======
+    ClassNumberComponent,
+    GenderComponent,
+>>>>>>> a379998e0f7744bbe1676ae9badb3b39b1699e79
   ],
   
   imports: [
     BrowserModule,
     ModalModule.forRoot(),
     AppRoutingModule,
+
   ],
-  providers: [],
+  providers: [ 
+    {provide: LOCALE_ID, useValue: 'pt-br'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

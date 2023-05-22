@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row"> 
         <div class="top">
-            <a href="" class="icon">  
+            <a href="/dashboard" class="icon">  
                 <img src="../../assets/img/Logo.svg" alt="" class="img-icon">
             </a> 
             <hr class="hr">
@@ -9,17 +9,21 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <div class="content">
-                            <button routerLink="/dashboard" class="btn btn-primary dashboard">
+                            <!-- <button routerLink="/dashboard" class="btn btn-dashboard" [ngClass]="{ 'selected': isButtonSelected }" (click)="toggleButtonSelection()"> -->
+                            <button routerLink="/dashboard" class="btn btn-dashboard" [disabled]="btn_disable">
                                 <!-- <img src="../../assets/img/{{ menu.img }}" alt=""> -->
-                                <img src="../../assets/img/01botton.svg" alt="" class="dashboard">
+                                <img src="../../assets/img/01botton.svg" alt="" class="dashboard desactive">
+                                <img src="../../assets/img/dashboard_active.svg" alt="" class="dashboard active">
                                 Painel de Turmas
                             </button>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="content">
-                            <button routerLink="/management" href="" class="btn btn-primary management">
-                                <img src="../../assets/img/Gerenciamento.svg" alt="" class="management">
+                            <!-- <button routerLink="/management" href="" class="btn btn-management" [ngClass]="{ 'selected': isButtonSelected }" (click)="toggleButtonSelection()"> -->
+                            <button routerLink="/management" href="" class="btn btn-management" [disabled]="btn_disable2">
+                                <img src="../../assets/img/Gerenciamento.svg" alt="" class="management desactive">
+                                <img src="../../assets/img/management_active.svg" alt="" class="management active">
                                 Gerenciamento
                             </button>
                         </div>
@@ -31,8 +35,9 @@
         <div class="bottom">
             <hr class="hr">
             <div class="exists">
-                <button class="btn btn-primary" (click)="abrirModal()">
-                    <img src="../../assets/img/Sair.svg" alt="">
+                <button class="btn btn-exit" (click)="abrirModal()">
+                    <img src="../../assets/img/Sair.svg" alt="" class="desactive">
+                    <img src="../../assets/img/exit_active.svg" alt="" class="exit_active active">
                     Sair
                 </button>
             </div>

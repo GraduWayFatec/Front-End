@@ -15,6 +15,10 @@ export class CardStudentComponent implements OnInit {
     
   }
 
+  evitarAbrirModal(event: Event) {
+    event.stopPropagation();
+  }
+
   onCardClick() {
     this.isChecked = !this.isChecked;
   }

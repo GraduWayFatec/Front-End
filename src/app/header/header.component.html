@@ -1,21 +1,22 @@
 <div class="container">
     <div class="img-grad">
-        <img src="../../assets/img/Gradiente.svg" alt="" class="gradiante">
-    </div>    
+        <img src="../../assets/img/Gradiente1.svg" alt="" class="gradiante">
+    </div>
     <div class="nav">
         <nav>
             <div class="left">
-                <p class="date"> Sábado, 23 Abril 2023</p>
+                <p class="date">{{ currentDate | date: 'EEEE, dd MMM yyyy' }}</p>
                 <p class="info">
                     Olá, {{ nameList }}! O que Deseja realizar?
                 </p>
             </div>
             <div class="right">
-                <a href="#">
-                    <img src="../../assets/img/Perfil.svg" alt="">
-                    
-                </a>
+                
+                <button (click)="abrirModal()" class="perfil">
+                    <img src="../../assets/img/Perfil.svg" alt="" class="perfil_desactive">
+                    <img src="../../assets/img/Perfil_active.svg" alt="" class="perfil_active">
+                </button>
             </div>
         </nav>
-    </div>    
+    </div>
 </div>

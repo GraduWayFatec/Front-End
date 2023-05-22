@@ -18,18 +18,18 @@
             </div>
         </div>
         <div class="right">
-            <button class="mensager">
+            <button class="mensager" (click)="abrirModal2()">
                 <img src="../../assets/img/Mensagem.svg" alt="" class="mensager-img">
                 Enviar Mensagem
             </button>
             <button class="select" (click)="onCardClickAll()">
-                Selecionar Todos
+                {{ selectAll ? 'Deselecionar Todos' : 'Selecionar Todos' }}
             </button>
         </div>
     </div>
     <hr>
     <div class="bottom">
-        <div class="cards" *ngFor="let i of InfoPerson">
+        <div class="cards" *ngFor="let i of InfoPerson" (click)="abrirModal()">
             <app-card-student [itens]="i"></app-card-student>
         </div>
     </div>

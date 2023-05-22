@@ -1,11 +1,11 @@
 .card{
-  width: 305px;
-  height: 300px;
+  width: 310px;
+  height: 290px;
   box-sizing: border-box;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
-  box-shadow: 5px 5px 64px rgba(41, 15, 0, 0.4);
+  box-shadow: 5px 40px 64px rgba(41, 15, 0, 0.4);
   backdrop-filter: blur(80px);
-  /* Note: backdrop-filter has minimal browser support */
+  padding: 10px;
   
   border-radius: 28px;
   color:white;
@@ -13,24 +13,38 @@
 
 .card:hover{
   cursor: pointer;
-  border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
+  border-radius: 28px;
+  padding: 3px;
+  border: none;
+
+  background-image: linear-gradient(45deg, var(--color-1), var(--color-2), var(--color-1), var(--color-2));
+  
   h1{
     color: #9EFFCA
   }
-
-}
-
-.card-body{
-  padding: 24px;
+  .img_desactive{
+    opacity:0;
+  }
+  .img_active{
+    opacity: 1;
+  }
+  hr{
+    opacity: 1;
+    background: radial-gradient(50% 50% at 50% 50%, #9EFFCA 44.79%, rgba(139, 130, 181, 0) 100%);
+  }
+  .card-body {
+    color: var(--color-4);
+    background-color: var(--color-1);
+    border-radius: 25px;
+    padding: 23px;
+  }
 }
 
 .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-
 
 .checkbox{
     width: 18px;
@@ -38,7 +52,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
 
     label {
       width: 18px;
@@ -81,7 +94,7 @@
 
 .card h1{
   font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 20px;
 }
@@ -89,7 +102,7 @@
 .card h2{
   font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 20px;
 }
 
@@ -102,7 +115,7 @@ hr {
 
 .sub{
   font-family: 'Poppins', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 20px;
     color: rgba(255, 255, 255, 0.5);
@@ -111,7 +124,7 @@ hr {
 
 .description{
   font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 0;
@@ -138,18 +151,6 @@ hr {
     gap: 16px;
 }
 
-.bottom .config button{
-    background-color: transparent;
-    border-radius: 8px;
-    border-color: transparent;
-}
-
-.bottom .config button:hover{
-    border: 1.3px #FFF solid;
-    border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
-}
-
- 
 $main: #9EFFCA; //#008cff;
 $grey: #9EFFCA;
   
@@ -172,7 +173,7 @@ $grey: #9EFFCA;
     height: 1.5em;
     width: 1.5em;
     box-sizing: border-box;
-    border-radius: 2px;
+    border-radius: 5px;
     display: flex;
 // aqui traz a check box, tranforma em quadrado, o tamanho e etc
   }
@@ -181,9 +182,9 @@ $grey: #9EFFCA;
     .mcui-check {
       opacity: 1;
       background-color: #9EFFCA;
+      box-shadow: 0px 0px 10px #9EFFCA;
     }
   }
-
 }
 
 .mcui-check {
@@ -202,4 +203,39 @@ $grey: #9EFFCA;
     stroke: currentcolor;
   //   faz o ícone de dentro do quadrado ser uma check
   }
+}
+
+.img_active{
+  position: absolute;
+  left: 24px;
+  opacity: 0;
+}
+
+.config button{
+  padding: 6px;
+  background-color: transparent;
+  border-radius: 8px;
+  border-color: transparent;
+}
+
+.config button .active{
+  position: absolute;
+  opacity: 0;
+}
+
+.config button .edit_active{
+  left: 207px;
+}
+
+.config button:hover{
+  .desactive{
+    opacity: 0;
+  }
+  .active{
+    opacity: 1;
+  }
+}
+
+.config button .delete_active{
+  left: 256px;
 }

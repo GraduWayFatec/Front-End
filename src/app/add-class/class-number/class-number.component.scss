@@ -1,0 +1,83 @@
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+$grey: #9EFFCA;
+
+.checkbox{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+   
+}
+
+.card{
+    background-color: #383448;
+    border-radius: 28px;
+    width: 160px;
+    height: auto;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    text-align: justify;
+    align-items: flex-start;
+    box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
+    margin-left: 50px;
+    padding-bottom: 10px;
+}
+
+  .mcui-checkbox {
+    padding: 10px 0 0 20px;
+    
+
+
+    input[type="checkbox"] + div{
+      border: 2px solid $grey;
+      height: 1.2em;
+      width: 1.2em;
+      box-sizing: border-box;
+      border-radius: 2px;
+      position: absolute;
+      display: flex;
+// aqui traz a check box, tranforma em quadrado, o tamanho e etc
+    }
+  
+    input[type="checkbox"]:checked + div {
+      .mcui-check {
+        opacity: 1;
+        background-color: #9EFFCA;
+      }
+    }
+  }
+  
+  .mcui-check {
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    color: #383448;
+    opacity: 0;
+    // cor do check do quadrado
+  
+    polyline {
+      fill: none;
+      transform-origin: 50% 50%;
+      stroke-width: 5px;
+      stroke-dasharray: 22.771367900227325;
+      stroke: currentcolor;
+    //   faz o ícone de dentro do quadrado ser uma check
+    }
+  }
+
+  .school {
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    width: 100%;
+    margin-left: 20px;
+    font-size: 14px;
+  }

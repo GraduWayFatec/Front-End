@@ -1,14 +1,14 @@
-<div class="card-body" (click)="onCardClick()">
+<div class="card-body">
     <div class="left">
         <img src="../../../assets/img/perfil-student.svg" alt="">
         <h2>{{ itens.name }}</h2>
     </div>
     <div class="right">
         <div class="buttons">
-            <button class="edit">
-                <img src="../../../assets/img/edit.svg" alt="">
+            <button class="edit" (click)="abrirModalEdit()">
+                <img src="../../../assets/img/Edit.svg" alt="">
             </button>
-            <button class="delete">
+            <button class="delete" (click)="abrirModalDelete()">
                 <img src="../../../assets/img/Delete.svg" alt="">
             </button>
         </div>

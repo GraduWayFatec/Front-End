@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./management.component.scss']
 })
 export class ManagementComponent {
-
+  btn_disable = false;
+  btn_disable2 = true;
 }

@@ -7,9 +7,10 @@
                 </form>
             </div>
             <div class="right">
-                <button class="btn-select-all" (click)="onAllCardClick()">Selecionar Todos</button>
+                <button class="btn-select-all" (click)="onAllCardClick()">{{ selectAll ? 'Deselecionar Todos' : 'Selecionar Todos' }}</button>
                 <button class="btn-filter">
                     <img src="../../../assets/img/Vector.svg" alt="" class="filter">
+                    <img src="../../../assets/img/filter_active.svg" alt="" class="filter_active">
                 </button>
             </div>
         </div>
@@ -18,8 +19,8 @@
         <div class="info">
             <h1>Turmas</h1>
             <div class="buttons">
-                <button class="delete">Excluir selecionados</button>
-                <button class="add">Adicionar</button>
+                <button class="delete" (click)="abrirModal2()" (click)="ContChecked()">Excluir selecionados</button>
+                <button class="add" (click)="abrirModal()">Adicionar</button>
             </div>
         </div>
         <div class="container-cards">

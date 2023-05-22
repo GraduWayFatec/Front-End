@@ -9,7 +9,7 @@
             </div> 
 
             <div class="h-right">
-                <p>Já possui conta? <button>Entre</button></p>
+                <p>Já possui conta? <button routerLink="/login">Entre</button></p>
             </div>
             
         </div>
@@ -54,7 +54,7 @@
 
                     <div class="button">
 
-                        <button type="submit" class="btn-btn-primary">Continuar</button>
+                        <button type="submit" class="btn-btn-primary" routerLink="/register2">Continuar</button>
 
                     </div>
 
@@ -74,7 +74,7 @@
 
         <div class="footer">
 
-            <p>Ao criar uma conta, você concorda com os <button>Termos de Privacidade.</button></p>
+            <p>Ao criar uma conta, você concorda com os <button (click)="abrirModal()">Termos de Privacidade.</button></p>
 
         </div>
 

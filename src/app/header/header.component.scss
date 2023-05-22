@@ -4,7 +4,7 @@
     top: 8px;
 }
 .container{
-    max-height: 30vh;
+    max-height: 28vh;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;;
     width: 100%;
 }
@@ -26,7 +26,7 @@ img.gradiante{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    margin-top: 12px;
 }
 
 nav{
@@ -34,11 +34,10 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 93%;
-    height: 129px;
-    top: -90px;
+    width: 92%;
+    height: 120px;
+    top: -100px;
 
-    
     box-sizing: border-box;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #8B82B5;
     box-shadow: 10px 10px 64px rgba(41, 15, 0, 0.56);
@@ -46,26 +45,52 @@ nav{
     /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 28px;
-    gap: 1rem;
+    gap: 450px;
 }
 
 .date{
     color: #FFFFFF;
-    margin-bottom: 24px;    
+    margin-bottom: 20px;    
 }
 .info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     font-weight: 500;
     font-size: 20px;
     // line-height: 20px;
 
     color: #FFFFFF; 
-    text-shadow: 0px 0px 16px #FFFFFF;
+    // text-shadow: 0px 0px 30px #FFFFFF;
+}
+
+.right a {
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+}
+
+button{
+    color: transparent;
+    background-color: transparent;
+    border: transparent;
 }
 
 
-// .right{
-//     padding-bottom: 30px;
-// }
+.perfil:hover{
+    .perfil_desactive{
+        opacity: 0;
+    }
+    .perfil_active{
+        opacity: 1;
+    }
+}
 
+.perfil_active{
+    position: relative;
+    right: 23px;
+    top: 0px;
+    opacity: 0;
+}
 

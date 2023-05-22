@@ -4,20 +4,21 @@
         <div class="search">
             <div class="left">
                 <form class="forms">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Pesquisar">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Pesquisar" style="font-size: 14px; font-weight: 400;">
                 </form>
             </div>
             <div class="right">
-                <button>
+                <button class="btn-mensager" (click)="abrirModal()" (click)="ContChecked()">
                     <img src="../../../assets/img/Mensagem.svg" alt="">
                     Enviar Mensagem
                 </button>
-                <button class="btn-select-all"  class="btn-mensager" (click)="onCardClickAll()">
+                <button class="btn-select-all"  class="btn-select" (click)="onCardClickAll()">
                 <!-- <button class="btn-select-all"  class="btn-mensager"> -->
-                    Selecionar Todos
+                    {{ selectAll ? 'Deselecionar Todos' : 'Selecionar Todos' }}
                 </button>
                 <button class="btn-filter">
                     <img src="../../../assets/img/Vector.svg" alt="" class="filter">
+                    <img src="../../../assets/img/filter_active.svg" alt="" class="filter_active">
                 </button>
             </div>
         </div>
