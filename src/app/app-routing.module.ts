@@ -22,6 +22,7 @@ import { SaveComponent } from './save/save.component';
 import { UserSimpleComponent } from './user-simple/user-simple.component';
 import { AcademicEducationComponent } from './academic-education/academic-education.component';
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component'
+import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
 
 //IMPORTS DOS COMPONENTES DO PORTAL
 
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: "management", component: ManagementComponent},
   { path: 'privacy', component: PrivacyComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'register2', component: Register2Component },
   { path: 'register3', component: Register3Component }
 ];
