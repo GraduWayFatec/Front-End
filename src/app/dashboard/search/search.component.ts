@@ -5,6 +5,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { Component } from '@angular/core';
 import { MessageComponent } from '../../message/message.component';
+import { every, zipAll } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -30,8 +31,10 @@ export class SearchComponent implements AfterViewInit {
 
   onCardClickAll() {
     this.cardsComponents.forEach(component => {
-      if(component.isChecked == false){
+      if(component.isChecked === false){
         component.onCardClick();
+      }else if(component.isChecked === true){
+        component.onCardClick()
       }
     });
   }
