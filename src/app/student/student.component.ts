@@ -39,12 +39,22 @@ export class StudentComponent implements AfterViewInit{
   @ViewChildren(CardStudentComponent)
   cardStudent!: QueryList<CardStudentComponent>;
 
-  onCardClickAll(){
-    this.cardStudent.forEach(component => {
-      component.onCardClick();
-    })
-  }
+  selectAll: boolean = false;
 
+  onCardClickAll() {
+    if (this.selectAll) {
+      // Todos estão selecionados, então vamos deselecionar todos
+      this.cardStudent.forEach(component => {
+        component.isChecked = false;
+      });
+    } else {
+      // Nem todos estão selecionados, então vamos selecionar todos
+      this.cardStudent.forEach(component => {
+        component.isChecked = true;
+      });
+    }
+    this.selectAll = !this.selectAll;
+  }
   ngAfterViewInit(): void {
     
   }

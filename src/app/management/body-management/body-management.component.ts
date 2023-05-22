@@ -26,13 +26,23 @@ export class BodyManagementComponent  implements AfterViewInit{
   @ViewChildren(CardManagementComponent)
   cards!: QueryList<CardManagementComponent>;
 
+  selectAll: boolean = false;
+
   onAllCardClick() {
-    this.cards.forEach(component => {
-      if(component.isChecked == false){
-        component.onCardClick();
-      }
-    })
+    if (this.selectAll) {
+      // Todos estão selecionados, então vamos deselecionar todos
+      this.cards.forEach(component => {
+        component.isChecked = false;
+      });
+    } else {
+      // Nem todos estão selecionados, então vamos selecionar todos
+      this.cards.forEach(component => {
+        component.isChecked = true;
+      });
+    }
+    this.selectAll = !this.selectAll;
   }
+  
   ContChecked(){
     // alert(this.cards.filter(component => component.isChecked).length)
   }

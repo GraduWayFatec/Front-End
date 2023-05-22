@@ -29,14 +29,21 @@ export class SearchComponent implements AfterViewInit {
   @ViewChildren(CardsComponent)
   cardsComponents!: QueryList<CardsComponent>;
 
+  selectAll: boolean = false;
+
   onCardClickAll() {
-    this.cardsComponents.forEach(component => {
-      if(component.isChecked === false){
-        component.onCardClick();
-      }else if(component.isChecked === true){
-        component.onCardClick()
-      }
-    });
+    if (this.selectAll) {
+      // Todos estão selecionados, então vamos deselecionar todos
+      this.cardsComponents.forEach(component => {
+        component.isChecked = false;
+      });
+    } else {
+      // Nem todos estão selecionados, então vamos selecionar todos
+      this.cardsComponents.forEach(component => {
+        component.isChecked = true;
+      });
+    }
+    this.selectAll = !this.selectAll;
   }
 
   ContChecked(){
