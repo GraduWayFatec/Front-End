@@ -22,13 +22,10 @@ import { SaveComponent } from './save/save.component';
 import { UserSimpleComponent } from './user-simple/user-simple.component';
 import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 import { AcademicEducationComponent } from './academic-education/academic-education.component';
-<<<<<<< HEAD
-import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component'
-import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
-=======
+import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component'
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
 import { StudentComponent } from './student/student.component';
->>>>>>> a379998e0f7744bbe1676ae9badb3b39b1699e79
+
 
 //IMPORTS DOS COMPONENTES DO PORTAL
 
@@ -56,11 +53,8 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: "management", component: ManagementComponent},
   { path: 'privacy', component: PrivacyComponent },
-<<<<<<< HEAD
   { path: 'forgot-password', component: ForgotPasswordComponent },
-=======
   { path: 'edit-classroom', component: EditClassroomComponent },
->>>>>>> a379998e0f7744bbe1676ae9badb3b39b1699e79
   { path: 'register2', component: Register2Component },
   { path: 'register3', component: Register3Component }
 ];

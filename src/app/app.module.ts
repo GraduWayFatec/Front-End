@@ -43,13 +43,12 @@ import { StudentComponent } from './student/student.component';
 import { CardStudentComponent } from './student/card-student/card-student.component';
 import { EditClassroomComponent } from './edit-classroom/edit-classroom.component';
 import { CardEditStudentComponent } from './edit-classroom/card-edit-student/card-edit-student.component';
-<<<<<<< HEAD
+
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
-=======
 import { ClassNumberComponent } from './add-class/class-number/class-number.component';
 import { GenderComponent } from './edit-userprofile/gender/gender.component';
 registerLocaleData(localePT);
->>>>>>> a379998e0f7744bbe1676ae9badb3b39b1699e79
+
 
 @NgModule({
   declarations: [
@@ -91,13 +90,11 @@ registerLocaleData(localePT);
     CardStudentComponent,
     EditClassroomComponent,
     CardEditStudentComponent,
-<<<<<<< HEAD
-    ForgotPasswordComponent
-=======
+
+    ForgotPasswordComponent,
     ClassNumberComponent,
     GenderComponent,
->>>>>>> a379998e0f7744bbe1676ae9badb3b39b1699e79
-  ],
+],
   
   imports: [
     BrowserModule,
