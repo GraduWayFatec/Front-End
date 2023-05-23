@@ -28,7 +28,7 @@ export class CardEditStudentComponent {
  
 
   abrirModalEdit() {
-    this.modalRef = this.modalService.show(EditUserprofileComponent);
+    this.modalRef = this.modalService.show(EditUserprofileComponent, {class: "edit-user-profile-modal"});
   }
 
   abrirModalDelete() {
