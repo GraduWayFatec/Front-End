@@ -5,7 +5,8 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { Component } from '@angular/core';
 import { MessageComponent } from '../../message/message.component';
-import { every, zipAll } from 'rxjs';
+import { count, every, zipAll } from 'rxjs';
+import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-service.service';
 
 @Component({
   selector: 'app-search',
@@ -57,7 +58,7 @@ export class SearchComponent implements AfterViewInit {
 
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, private checkboxService: CheckboxCountServiceService) {}
 
   abrirModal() {
     this.modalRef = this.modalService.show(MessageComponent);
@@ -66,4 +67,11 @@ export class SearchComponent implements AfterViewInit {
   fecharModal() {
     this.modalRef.hide();
   }
+
+  onChangeCheckbox() {
+    const count = this.cardsComponents.filter(component => component.isChecked).length
+    this.checkboxService.setCheckboxCount(count)
+  }
+
+
 }
