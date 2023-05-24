@@ -92,10 +92,20 @@
 .body .b-left {
     width: 402px;
     height: 150px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .body .b-left h1 {
     color: var(--color-4);
+}
+
+.body .b-left .logo-fatec {
+    width: 100px;
+    height: 100px;
 }
 
 .body .b-right {
