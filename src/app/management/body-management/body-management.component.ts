@@ -4,6 +4,7 @@ import { InfoCard } from 'src/app/shared/card.model';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { AddClassComponent } from '../../add-class/add-class.component';
 import { DeleteComponent } from '../../delete/delete.component';
+import { FilterComponent } from '../../dashboard/filter/filter.component';
 
 @Component({
   selector: 'app-body-management',
@@ -60,6 +61,10 @@ export class BodyManagementComponent  implements AfterViewInit{
   }
 
   abrirModal2() {
+    this.modalRef = this.modalService.show(FilterComponent);
+  }
+
+  abrirModal3() {
     this.modalRef = this.modalService.show(DeleteComponent);
   }
 

@@ -8,7 +8,7 @@
             </div>
             <div class="right">
                 <button class="btn-select-all" (click)="onAllCardClick()">{{ selectAll ? 'Deselecionar Todos' : 'Selecionar Todos' }}</button>
-                <button class="btn-filter">
+                <button class="btn-filter" (click)="abrirModal2()">
                     <img src="../../../assets/img/Vector.svg" alt="" class="filter">
                     <img src="../../../assets/img/filter_active.svg" alt="" class="filter_active">
                 </button>
@@ -19,7 +19,7 @@
         <div class="info">
             <h1>Turmas</h1>
             <div class="buttons">
-                <button class="delete" (click)="abrirModal2()" (click)="ContChecked()">Excluir selecionados</button>
+                <button class="delete" (click)="abrirModal3()" (click)="ContChecked()">Excluir selecionados</button>
                 <button class="add" (click)="abrirModal()">Adicionar</button>
             </div>
         </div>
