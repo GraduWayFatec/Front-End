@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { SaveComponent } from '../save/save.component';
 import { DeleteComponent } from '../delete/delete.component';
@@ -34,5 +34,24 @@ export class EditUserprofileComponent {
 
   fecharModal() {
     this.modalRef.hide();
+  }
+
+  dropdownPosition = { top: 0, left: 0 };
+  @ViewChild('buttonRef') buttonRef!: ElementRef;
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    const buttonElement = this.buttonRef.nativeElement;
+    const buttonRect = buttonElement.getBoundingClientRect();
+    this.dropdownPosition = {
+      top: buttonRect.bottom,
+      left: buttonRect.left
+    };
+  }
+
+  isDropdownVisible = false;
+
+  toggleDropdown() {
+    this.isDropdownVisible = !this.isDropdownVisible;
   }
 }

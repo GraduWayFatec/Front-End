@@ -13,20 +13,20 @@ $grey: #9EFFCA;
 .checkbox{   
     display: flex;
     align-items: center;
-    justify-content: space-between ;
+    justify-content: space-between;
    
 }
 
 .card{
     background-color: #383448;
     border-radius: 28px;
-    width: 160px;
+    width: 280px;
     height: auto;
     box-sizing: border-box;
     position: absolute;
     display: block;
-    text-align: justify;
-    align-items: flex-start;
+    text-align: left;
+    align-items: center;
     box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
     margin-left: 50px;
     padding-bottom: 10px;
@@ -64,6 +64,7 @@ $grey: #9EFFCA;
     opacity: 0;
     // cor do check do quadrado
   
+  
     polyline {
       fill: none;
       transform-origin: 50% 50%;
@@ -80,4 +81,10 @@ $grey: #9EFFCA;
     width: 100%;
     margin-left: 20px;
     font-size: 14px;
+  }
+
+  div.checkbox {
+    max-width: 42px;
+    max-height: 24px;
+    display: flex;
   }

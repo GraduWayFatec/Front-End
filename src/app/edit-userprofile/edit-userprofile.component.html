@@ -70,8 +70,8 @@
                     
                         <p class="title">Turma</p>
                         <input class="field3" type="checkbox" id="dropdown3" class="dropdown-checkbox3">
-                        <label class="fieldlabel3" for="dropdown3" id="dropdown-btn3"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
-                        <div class="dropdown-content3">
+                        <label class="fieldlabel3" for="dropdown3" id="dropdown-btn3"><img class="arrow" src="../../assets/img/dropdown.svg" alt="" (click)="toggleDropdown()"></label>
+                        <div class="dropdown-content3" *ngIf="isDropdownVisible" [ngStyle]="{ 'top.px': dropdownPosition.top, 'left.px': dropdownPosition.left }">
                             <app-class-number></app-class-number>
                         </div>
                     </div>
