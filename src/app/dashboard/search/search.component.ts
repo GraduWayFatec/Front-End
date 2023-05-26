@@ -79,6 +79,8 @@ export class SearchComponent implements AfterViewInit, OnInit {
       }
     }
   }
+
+  
   
 
   @ViewChildren(CardsComponent)

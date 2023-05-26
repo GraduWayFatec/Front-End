@@ -40,5 +40,9 @@ export class CardsComponent implements OnInit{
     this.modalRef.hide();
   }
 
+  getYearFromDate(dateString: string): number {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  }
   
 }

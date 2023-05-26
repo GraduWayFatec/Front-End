@@ -35,4 +35,9 @@ export class CardManagementComponent implements OnInit {
   fecharModal() {
     this.modalRef.hide();
   }
+
+  getYearFromDate(dateString: string): number {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  }
 }
