@@ -1,4 +1,4 @@
-import { AfterViewInit, ViewChildren, QueryList } from '@angular/core';
+import { AfterViewInit, ViewChildren, QueryList, OnInit } from '@angular/core';
 import { CardsComponent } from '../cards/cards.component';
 import { InfoCard } from 'src/app/shared/card.model';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
 import { MessageComponent } from '../../message/message.component';
 import { count, every, zipAll } from 'rxjs';
 import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-service.service';
+import { ConectionApiService } from 'src/app/services/conection-api.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements AfterViewInit {
+export class SearchComponent implements AfterViewInit, OnInit {
 
   infocard: InfoCard[] = [
     new InfoCard(12, "Big Data no Agronegócio", 2018, 37, "../../../assets/img/Big Data.svg","../../../assets/img/big_Data_Active.svg"),
@@ -25,6 +26,21 @@ export class SearchComponent implements AfterViewInit {
   ]
 
   
+  constructor(private modalService: BsModalService, 
+    private checkboxService: CheckboxCountServiceService,
+    private conection_api: ConectionApiService
+    ) {}
+
+  ngOnInit(){
+    this.conection_api.getCurso().subscribe(
+      (data) => {
+        console.log(data)
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
+  }
   
 
   @ViewChildren(CardsComponent)
@@ -50,15 +66,13 @@ export class SearchComponent implements AfterViewInit {
   ContChecked(){
     // alert(this.cardsComponents.filter(component => component.isChecked).length)
   }
-  
-
 
   ngAfterViewInit(): void {}
 
 
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService, private checkboxService: CheckboxCountServiceService) {}
+  
 
   abrirModal() {
     this.modalRef = this.modalService.show(MessageComponent);
@@ -72,6 +86,7 @@ export class SearchComponent implements AfterViewInit {
     const count = this.cardsComponents.filter(component => component.isChecked).length
     this.checkboxService.setCheckboxCount(count)
   }
+
 
 
 }
