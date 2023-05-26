@@ -44,5 +44,14 @@ export class CardsComponent implements OnInit{
     const date = new Date(dateString);
     return date.getFullYear();
   }
+
+  extractNumberFromString(string: string): number | null {
+    const numberPattern = /\d+/;
+    const matches = string.match(numberPattern);
+    if (matches && matches.length > 0) {
+      return parseInt(matches[0]);
+    }
+    return null;
+  }
   
 }
