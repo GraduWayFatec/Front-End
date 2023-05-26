@@ -14,8 +14,8 @@ export class EditClassroomComponent implements AfterViewInit{
 
   InfoPerson: InfoPerson[] = [
     new InfoPerson("Daniel Matunoshita"),
-    new InfoPerson("Matheus Resende"),
-    new InfoPerson("Jaqueline Nakagawa"),
+    new InfoPerson("Matheus Rezende"),
+    new InfoPerson("Jacqueline Nakagawa"),
     new InfoPerson("Gabriel Calil"),
     new InfoPerson("Luis Ricardo"),
     new InfoPerson("Nao sei quem mais"),

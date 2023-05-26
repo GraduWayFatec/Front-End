@@ -47,10 +47,19 @@
     gap: 24px;
 }
 
+.modal-dialog .modal-content .modal-header .h-left img {
+    width: 100px;
+    height: 100px;
+}
+
+.modal-dialog .modal-content .modal-header .h-left h1 {
+    font-size: 100px;
+}
+
 .modal-dialog .modal-content .modal-header .h-left .modal-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 30px;
     line-height: 20px;
 }
 
@@ -58,6 +67,11 @@
     all: unset;
     cursor: pointer;
     outline: revert;
+}
+
+.modal-dialog .modal-content .modal-header .h-right button img {
+    width: 24px;
+    height: 24px;
 }
 
 .modal-dialog .modal-content .modal-body {
