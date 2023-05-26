@@ -50,11 +50,17 @@
 
                             <br>
 
-                            <div class="terms">
-                                <input class="checkbox" type="checkbox" value="" id="checkbox" checked>
-                                <label class="checkbox-text" for="checkbox">Eu concordo com os <button (click)="abrirModal()">Termos de Privacidade.</button></label>
-                            </div>
-
+                            <div class="terms" >
+                            <label class="mcui-checkbox" style="display: flex;">
+                                <input type="checkbox">
+                                <div class="check-tipo">
+                                    <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                        <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                    </svg>
+                                </div> 
+                                <p class="agree" style="margin-left: 8px; margin-bottom: 0px;">Eu concordo com os</p><button (click)="abrirModal()" style="margin-left: 6px;">Termos de Privacidade.</button>
+                            </label>
+                        </div>
                         </form>
 
                     </div>

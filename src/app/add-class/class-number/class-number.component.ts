@@ -35,6 +35,12 @@ export class ClassNumberComponent implements OnInit {
     new Number ('24ª'),
     new Number ('25ª'),
     new Number ('26ª'),
+    new Number ('27ª'),
+    new Number ('28ª'),
+    new Number ('29ª'),
+    new Number ('30ª'),
+    new Number ('31ª'),
+    new Number ('32ª'),
 
   ];
 
