@@ -47,6 +47,7 @@ import { CardEditStudentComponent } from './edit-classroom/card-edit-student/car
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
 import { ClassNumberComponent } from './add-class/class-number/class-number.component';
 import { GenderComponent } from './edit-userprofile/gender/gender.component';
+import { LoginADMComponent } from './pages/login-adm/login-adm.component';
 registerLocaleData(localePT);
 
 
@@ -94,6 +95,7 @@ registerLocaleData(localePT);
     ForgotPasswordComponent,
     ClassNumberComponent,
     GenderComponent,
+    LoginADMComponent,
 ],
   
   imports: [

@@ -118,7 +118,6 @@
     justify-content: center;
     align-items: center;
     padding: 16px 8px;
-    z-index: 0;
     
     background: var(--color-1);
 }
@@ -434,12 +433,13 @@
   }
   
   .dropdown-content3 {
-    // display: none;
-    // position: fixed;
-    // top: 40;
-    // left: 80;
-    // display: none;
-    // z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
   }
   
   #dropdown3:checked ~ .dropdown-content3 {

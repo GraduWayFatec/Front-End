@@ -26,13 +26,14 @@ import { AcademicEducationComponent } from './academic-education/academic-educat
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component'
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
 import { StudentComponent } from './student/student.component';
-
+import { LoginADMComponent } from './pages/login-adm/login-adm.component';
 
 //IMPORTS DOS COMPONENTES DO PORTAL
 
 const routes: Routes = [
 
   // -----ROTAS DO PORTAL --------
+  { path: "login-adm", component: LoginADMComponent},
   { path: "student", component: StudentComponent},
   { path: "filter", component: FilterComponent},
   { path: "professional-experience", component: ProfessionalExperienceComponent},
@@ -58,7 +59,7 @@ const routes: Routes = [
   { path: 'class-number', component: ClassNumberComponent },
   { path: 'edit-classroom', component: EditClassroomComponent },
   { path: 'register2', component: Register2Component },
-  { path: 'register3', component: Register3Component }
+  { path: 'register3', component: Register3Component },
 ];
 
 @NgModule({
