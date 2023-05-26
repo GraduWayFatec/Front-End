@@ -10,6 +10,10 @@ export class ConectionApiService {
 
   constructor(private http: HttpClient) { }
 
+  public getTurma(){
+    return this.http.get(this.SERVER_URL + '/turma')
+  }
+
   public getCurso(){
     return this.http.get(this.SERVER_URL + '/curso')
   }

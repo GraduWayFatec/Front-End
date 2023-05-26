@@ -3,8 +3,8 @@
     <div class="card-body">
         <div class="top">
             <div class="left">
-                <h1 class="card-title">Turma {{ itens.classe }}º </h1>
-                <h2 class="card-subtitle">{{ itens.course }}</h2>
+                <h1 class="card-title">Turma {{ itens.turma_nome }}º </h1>
+                <h2 class="card-subtitle">{{ itens.curso_id }}</h2>
             </div>
             <div class="right">
                 <label class="mcui-checkbox">
@@ -21,16 +21,18 @@
         <hr>
         <div class="date">
             <h3 class="sub">Data de Formatura</h3>
-            <h4 class="description">{{ itens.year }}</h4>
+            <h4 class="description">{{ itens.ano_formatura }}</h4>
         </div>
         <div class="student">
             <h3 class="sub">Alunos cadastrados</h3>
-            <h4 class="description">{{ itens.student }}</h4>
+            <h4 class="description">{{ itens.qtd_aln }}</h4>
         </div>
         <div class="bottom">
             <div class="curse">
-                <img src="{{ itens.img }}" alt="" class="img_desactive">
-                <img src="{{ itens.img_active }}" alt=""  class="img_active">
+<!-- <img src="{{ itens.img }}" alt="" class="img_desactive">
+            <img src="{{ itens.img_active }}" alt="" class="img_active"> -->
+            <img src="../../../assets/img/Big Data.svg" alt="" class="img_desactive">
+            <img src="../../../assets/img/big_Data_Active.svg" alt="" class="img_active">
             </div>
             <div class="config">
                 <div class="edit">
