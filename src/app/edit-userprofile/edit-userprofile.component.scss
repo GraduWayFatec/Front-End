@@ -338,16 +338,6 @@
     display: none;
   }
   
-  .dropdown-content {
-    display: none;
-    position: fixed;
-  top: 40;
-  left: 80;
-  display: none;
-  /* Estilize o dropdown conforme necessário */
-  z-index: 9999;
-  }
-  
   .dropdown-checkbox:checked ~ .dropdown-content {
     display: block;
     margin-left: 100px;
@@ -398,16 +388,6 @@
     display: none;
   }
   
-  .dropdown-content2 {
-    display: none;
-    position: fixed;
-    top: 40;
-    left: 80;
-    display: none;
-    /* Estilize o dropdown conforme necessário */
-    z-index: 9999;
-  }
-  
   #dropdown2:checked ~ .dropdown-content2 {
     display: block;
     margin-left: 70px;
@@ -434,6 +414,8 @@
     justify-content: center;
     align-items: center;
     padding: 16px 0;
+    top: 0;
+    left: 0;
     
     background: var(--color-1);
   }
