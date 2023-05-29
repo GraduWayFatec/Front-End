@@ -48,6 +48,7 @@ import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-pa
 import { ClassNumberComponent } from './add-class/class-number/class-number.component';
 import { GenderComponent } from './edit-userprofile/gender/gender.component';
 import { LoginADMComponent } from './pages/login-adm/login-adm.component';
+import { ModalHelpComponent } from './modal-help/modal-help.component';
 registerLocaleData(localePT);
 
 
@@ -96,6 +97,7 @@ registerLocaleData(localePT);
     ClassNumberComponent,
     GenderComponent,
     LoginADMComponent,
+    ModalHelpComponent,
 ],
   
   imports: [

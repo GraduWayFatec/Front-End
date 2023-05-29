@@ -111,7 +111,7 @@
 .body .b-right {
     background-color: var(--color-1);
     width: 496px;
-    height: 480px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,6 +203,41 @@
     border-right: 0;
     background: var(--color-1);
     color: #FFFFFF;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.body .b-right .content .buttonHelp {
+    display: flex;
+    justify-content: center;
+
+    gap: 8px;
+
+    height: 20px;
+
+    color: var(--color-4);
+
+    cursor: pointer;
+    outline: revert;
+}
+
+.body .b-right .content .buttonHelp p {
+    width: 45px;
+    height: 24px;
+
+    font-size: 14px;
+}
+
+.body .b-right .content .buttonHelp img {
+    width: 20px;
+    height: 20px;
 }
 
 .body .b-right .content .button .btn-btn-primary {

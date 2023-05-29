@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { PrivacyComponent } from '../../privacy/privacy.component';
+import { ModalHelpComponent } from '../../modal-help/modal-help.component';
 
 @Component({
   selector: 'app-register',
@@ -14,6 +15,10 @@ export class RegisterComponent {
 
   abrirModal() {
     this.modalRef = this.modalService.show(PrivacyComponent, {class:"privacy-modal"});
+  }
+
+  abrirModal2() {
+    this.modalRef = this.modalService.show(ModalHelpComponent, {class:"help-modal"});
   }
 
   fecharModal() {
