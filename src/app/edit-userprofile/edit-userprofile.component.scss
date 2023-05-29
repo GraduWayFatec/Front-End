@@ -334,11 +334,11 @@
 }
 
 
-.dropdown-checkbox {
+.dropdown-checkbox6 {
     display: none;
   }
   
-  .dropdown-checkbox:checked ~ .dropdown-content {
+  .dropdown-checkbox6:checked ~ .dropdown-content6 {
     display: block;
     margin-left: 100px;
   }
@@ -388,12 +388,12 @@
     display: none;
   }
   
-  #dropdown2:checked ~ .dropdown-content2 {
+  #dropdown5:checked ~ .dropdown-content5 {
     display: block;
     margin-left: 70px;
   }
   
-  .fieldlabel2 {
+  .fieldlabel5 {
     width: 320px;
     height: 20px;
   
@@ -465,4 +465,10 @@
     background: var(--color-1);
   }
 
-  
+  input[type="checkbox"] {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  //   Retira o checkbox original
+  }

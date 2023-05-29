@@ -50,15 +50,15 @@ export class EditUserprofileComponent {
   }
 
   isDropdownVisible1 = false;
-  isDropdownVisible2 = false;
+  isDropdownVisible5 = false;
   isDropdownVisible3 = false;
 
   toggleDropdown1() {
     this.isDropdownVisible1 = !this.isDropdownVisible1;
   }
   
-  toggleDropdown2() {
-    this.isDropdownVisible2 = !this.isDropdownVisible2;
+  toggleDropdown5() {
+    this.isDropdownVisible5 = !this.isDropdownVisible5;
   }
 
   toggleDropdown3() {
