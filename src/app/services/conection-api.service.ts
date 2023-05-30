@@ -17,4 +17,8 @@ export class ConectionApiService {
   public getCurso(){
     return this.http.get(this.SERVER_URL + '/curso')
   }
+
+  public getUser(){
+    return this.http.get(this.SERVER_URL + '/usuario')
+  }
 }

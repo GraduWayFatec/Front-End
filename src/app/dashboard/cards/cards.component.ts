@@ -32,8 +32,11 @@ export class CardsComponent implements OnInit{
 
   constructor(private modalService: BsModalService) {}
 
-  abrirModal() {
-    this.modalRef = this.modalService.show(StudentComponent, {class: "classroom-modal"});
+  abrirModal(infocard: InfoCard) {
+    const initialState = {
+      infocard: infocard
+    }
+    this.modalRef = this.modalService.show(StudentComponent, { initialState, class: "classroom-modal" });
   }
 
   fecharModal() {

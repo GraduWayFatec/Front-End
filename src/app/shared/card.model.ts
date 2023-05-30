@@ -4,7 +4,13 @@ export class InfoCard{
         
     // }
 
-    constructor(public turma_id:number, public turma_nome:string, public qtd_aln: number, public curso_id:number, public ano_formatura: string,public curso_nome: string){
+    constructor(public turma_id:number, 
+        public turma_nome:string, 
+        public qtd_aln: number, 
+        public curso_id:number, 
+        public ano_formatura: string,
+        public curso_nome: string
+        ){
 
     }
 }

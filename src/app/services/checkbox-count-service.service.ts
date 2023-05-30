@@ -8,12 +8,21 @@ export class CheckboxCountServiceService {
   private checkboxCount = 0;
   checkboxCountUpdated: Subject<number> = new Subject<number>();
 
-  setCheckboxCount(count: number) {
+  setCheckboxCountClass(count: number) {
     this.checkboxCount = count;
     this.checkboxCountUpdated.next(this.checkboxCount)
   }
 
-  getCheckboxCount() {
+  getCheckboxCountClass() {
+    return this.checkboxCount;
+  }
+
+  setCheckboxCountStudent(count: number) {
+    this.checkboxCount = count;
+    this.checkboxCountUpdated.next(this.checkboxCount)
+  }
+
+  getCheckboxCountStudent() {
     return this.checkboxCount;
   }
 }

@@ -111,7 +111,6 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
 
   modalRef!: BsModalRef;
-
   
 
   abrirModal() {
@@ -124,7 +123,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
   onChangeCheckbox() {
     const count = this.cardsComponents.filter(component => component.isChecked).length
-    this.checkboxService.setCheckboxCount(count)
+    this.checkboxService.setCheckboxCountClass(count)
   }
 
 
