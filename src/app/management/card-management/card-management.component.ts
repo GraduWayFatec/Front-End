@@ -28,8 +28,12 @@ export class CardManagementComponent implements OnInit {
     this.modalRef = this.modalService.show(DeleteComponent);
   }
 
-  abrirModal2() {
-    this.modalRef = this.modalService.show(EditClassroomComponent, {class: "edit-classroom-modal"});
+
+  abrirModal2(infocard: InfoCard) {
+    const initialState = {
+      infocard: infocard
+    }
+    this.modalRef = this.modalService.show(EditClassroomComponent, { initialState, class: "edit-classroom-modal" });
   }
 
   fecharModal() {

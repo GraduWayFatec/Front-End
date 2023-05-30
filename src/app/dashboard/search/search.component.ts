@@ -17,13 +17,6 @@ import { ConectionApiService } from 'src/app/services/conection-api.service';
 export class SearchComponent implements AfterViewInit, OnInit {
 
   infocard: InfoCard[] = []
-    // new InfoCard(12, "Big Data no Agronegócio", 2018, 37, "../../../assets/img/Big Data.svg","../../../assets/img/big_Data_Active.svg"),
-    // new InfoCard(13, "Big Data no Agronegócio", 2019, 39, "../../../assets/img/Big Data.svg","../../../assets/img/big_Data_Active.svg"),
-    // new InfoCard(13, "Mecanização Agronegócio", 2020, 30, "../../../assets/img/MAP.svg","../../../assets/img/MAP_active.svg"),
-    // new InfoCard(14, "Mecanização Agronegócio", 2021, 20, "../../../assets/img/MAP.svg","../../../assets/img/MAP_active.svg"),
-    // new InfoCard(15, "Big Data no Agronegócio", 2022, 10, "../../../assets/img/Big Data.svg","../../../assets/img/big_Data_Active.svg"),
-    // new InfoCard(15, "Mecanização Agronegócio", 2023, 21, "../../../assets/img/MAP.svg","../../../assets/img/MAP_active.svg")
-  // ]
 
   cursos: any[] = []
   

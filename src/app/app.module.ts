@@ -1,5 +1,5 @@
 import { AppRoutingModule } from './app-routing.module';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { registerLocaleData } from '@angular/common';

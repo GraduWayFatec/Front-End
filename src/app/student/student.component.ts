@@ -18,28 +18,7 @@ export class StudentComponent implements AfterViewInit{
 
   @Input() infocard!: InfoCard
 
-  infoPerson: InfoPerson[] = [
-    // new InfoPerson("Daniel Matunoshita"),
-    // new InfoPerson("Matheus Rezende"),
-    // new InfoPerson("Jacqueline Nakagawa"),
-    // new InfoPerson("Gabriel Calil"),
-    // new InfoPerson("Luis Ricardo"),
-    // new InfoPerson("Nao sei quem mais"),
-    // new InfoPerson("Glaubas"),
-    // new InfoPerson("Douglas"),
-    // new InfoPerson("Jucelino"),
-    // new InfoPerson("ffsafssafsafa"),
-    // new InfoPerson("aaaaaaaaaaaaaaa"),
-    // new InfoPerson("eeeeeeeeeeeeeeeee"),
-    // new InfoPerson("daaaaaaaaaaadadad"),
-    // new InfoPerson("sssssssssssssssss"),
-    // new InfoPerson("dadafafsfsdgrgewgw"),
-    // new InfoPerson("aaaaaaaaaaaaaaa"),
-    // new InfoPerson("eeeeeeeeeeeeeeeee"),
-    // new InfoPerson("daaaaaaaaaaadadad"),
-    // new InfoPerson("sssssssssssssssss"),
-    // new InfoPerson("dadafafsfsdgrgewgw")
-  ]
+  infoPerson: InfoPerson[] = []
 
   @ViewChildren(CardStudentComponent)
   cardStudent!: QueryList<CardStudentComponent>;
@@ -118,6 +97,5 @@ export class StudentComponent implements AfterViewInit{
   onChangeCheckbox() {
     const count = this.cardStudent.filter(component => component.isChecked).length
     this.checkboxService.setCheckboxCountStudent(count)
-    alert(count)
   }
 }

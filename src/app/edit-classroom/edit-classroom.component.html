@@ -13,7 +13,7 @@
                         <div class="first-line">
                             <div class="course">
                                 <p class="title">Curso</p>
-                                <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
+                                <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox" placeholder="{{infocard.curso_nome}}">
                                 <label class="fieldlabel" for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
                                 <div class="dropdown-content">
                                     <app-course></app-course>
@@ -24,7 +24,7 @@
                             
                             <div class="class">
                                 <p class="title">Ano Formatura</p>
-                                <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
+                                <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2" placeholder="{{ infocard.ano_formatura }}">
                                 <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
                                 <div class="dropdown-content2">
                                     <app-year></app-year>
@@ -37,11 +37,11 @@
                         <div class="second-line">
                             <div class="number">
                                 <p class="title">Quantidade de egressos</p>
-                                <input class="field" type="text" placeholder="37" value="">
+                                <input class="field" type="text" placeholder="{{infocard.qtd_aln}}" value="">
                             </div>
                             <div class="date">
                                 <p class="title">Data de formatura</p>
-                                <input class="field" type="text" placeholder="31/12/2023" value="">
+                                <input class="field" type="text" placeholder="{{getYearFromDate(infocard.ano_formatura)}}" value="">
                             </div>
                         </div>
                     </form>
@@ -63,9 +63,11 @@
         </div>
         <hr>
         <div class="modal-bottom">
-            <div class="cards" *ngFor="let i of InfoPerson">
-                <app-card-edit-student [itens]="i"></app-card-edit-student>
-            </div>
+            <ng-container class="cards" *ngFor="let i of infoPerson">
+                <ng-container *ngIf="i.turma_id === infocard.turma_id">
+                    <app-card-edit-student [infocard]="i"></app-card-edit-student>
+                </ng-container>
+            </ng-container>
         </div>
     </div>
 </div>

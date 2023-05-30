@@ -10,7 +10,7 @@ import { DeleteComponent } from '../../delete/delete.component';
   styleUrls: ['./card-edit-student.component.scss']
 })
 export class CardEditStudentComponent {
-  @Input() itens!: InfoPerson;
+  @Input() infocard!: InfoPerson;
 
   isChecked:boolean = false;
 
