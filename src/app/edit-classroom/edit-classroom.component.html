@@ -65,7 +65,7 @@
         <div class="modal-bottom">
             <ng-container class="cards" *ngFor="let i of infoPerson">
                 <ng-container *ngIf="i.turma_id === infocard.turma_id">
-                    <app-card-edit-student [infocard]="i"></app-card-edit-student>
+                    <app-card-edit-student [infoperson]="i"></app-card-edit-student>
                 </ng-container>
             </ng-container>
         </div>

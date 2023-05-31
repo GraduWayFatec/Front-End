@@ -14,14 +14,6 @@ import { ConectionApiService } from 'src/app/services/conection-api.service';
 export class BodyManagementComponent  implements AfterViewInit{
   
   infocard: InfoCard[] = []
-    // new InfoCard(12, "Big Data no Agronegócio", 2018, 37, "../../../assets/img/Big Data.svg","../../../assets/img/big_Data_Active.svg"),
-    // new InfoCard(13, "Big Data no Agronegócio", 2019, 39, "../../../assets/img/Big Data.svg","../../../assets/img/big_Data_Active.svg"),
-    // new InfoCard(13, "Mecanização Agronegócio", 2020, 30, "../../../assets/img/MAP.svg","../../../assets/img/MAP_active.svg"),
-    // new InfoCard(14, "Mecanização Agronegócio", 2021, 20, "../../../assets/img/MAP.svg","../../../assets/img/MAP_active.svg"),
-    // new InfoCard(15, "Big Data no Agronegócio", 2022, 10, "../../../assets/img/Big Data.svg","../../../assets/img/big_Data_Active.svg"),
-    // new InfoCard(15, "Mecanização Agronegócio", 2023, 21, "../../../assets/img/MAP.svg","../../../assets/img/MAP_active.svg")
-  // ]
-
   cursos: any[] = []
   
   constructor(private modalService: BsModalService, 
@@ -42,18 +34,6 @@ export class BodyManagementComponent  implements AfterViewInit{
   }
 
   foreignTurma(){
-    // for (const card of this.infocard){
-    //   const curso_id = card.curso_id
-    //   this.conection_api.getCurso(curso_id).subscribe(
-    //     (cursoData: any) =>{
-    //       console.log(cursoData);
-    //       card.curso_id = cursoData
-    //     },
-    //     (error) =>{
-    //       console.log(error)
-    //     }
-    //   )
-    // }
     this.conection_api.getCurso().subscribe(
       (data: any) => {
         console.log(data);
