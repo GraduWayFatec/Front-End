@@ -1,4 +1,4 @@
-import { Component,AfterViewInit, ViewChildren,QueryList } from '@angular/core';
+import { Component,AfterViewInit, ViewChildren,QueryList, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { InfoPerson } from '../shared/card-person.model';
 import { CardEditStudentComponent } from './card-edit-student/card-edit-student.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -75,4 +75,25 @@ export class EditClassroomComponent implements AfterViewInit{
   fecharModal() {
     this.modalRef.hide();
   }
+
+  
+  dropdownPosition = { top: 0, left: 0 };
+  @ViewChild('buttonRef') buttonRef!: ElementRef;
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    const buttonElement = this.buttonRef.nativeElement;
+    const buttonRect = buttonElement.getBoundingClientRect();
+    this.dropdownPosition = {
+      top: buttonRect.bottom,
+      left: buttonRect.left
+    };
+  }
+
+  isDropdownVisible5 = false;
+
+  toggleDropdown5() {
+    this.isDropdownVisible5 = !this.isDropdownVisible5;
+  }
+
 }

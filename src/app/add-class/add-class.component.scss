@@ -223,18 +223,14 @@
     border-color: #9EFFCA rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) #9EFFCA;
 }
 
-
 .dropdown-checkbox {
-    display: none;
-  }
-  
-  .dropdown-content {
     display: none;
   }
   
   .dropdown-checkbox:checked ~ .dropdown-content {
     display: block;
-    margin-left: 0px;
+    margin-left: 320px;
+    margin-top: -14px;
   }
   
   .fieldlabel {
@@ -266,6 +262,24 @@
     margin-left: 290px;
   }
 
+
+  .course {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+  }
+  
+  .field:checked ~ .dropdown-content {
+    display: block;
+  }
+  
 
   .modal-dialog .modal-content .modal-body .field2 {
     width: 270px;
@@ -301,7 +315,8 @@
   
   #dropdown2:checked ~ .dropdown-content2 {
     display: block;
-    margin-left: 100px;
+    margin-left: 300px;
+    margin-top: -18px;
   }
 
   .fieldlabel2 {
@@ -346,23 +361,5 @@
   }
   
   .field2:checked ~ .dropdown-content2 {
-    display: block;
-  }
-
-  .course {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    position: fixed;
-    top: 40;
-    left: 80;
-    display: none;
-    /* Estilize o dropdown conforme necessário */
-    z-index: 9999;
-    
-  }
-  
-  .field:checked ~ .dropdown-content {
     display: block;
   }

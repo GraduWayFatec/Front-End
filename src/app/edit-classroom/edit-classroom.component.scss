@@ -242,7 +242,6 @@
 
     padding: 16px 24px 16px 24px; 
 
-
     gap: 24px;
 }
 
@@ -287,32 +286,42 @@ hr{
     border-radius: 12px;
 }
 
-
-.dropdown-checkbox {
-    display: none;
+  .arrow {
+    margin-left: 280px;
+  }
+  
+  .course {
+    position: relative;
   }
   
   .dropdown-content {
+    position: fixed;
+    top: 40;
+    left: 80;
     display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
   }
   
+  .field:checked ~ .dropdown-content {
+    display: block;
+  }
+
+  #dropdown:checked ~ .dropdown-content {
+    display: block;
+    margin-left: 350px;
+    margin-top: -14px;
+
+  }
+  
+.dropdown-checkbox {
+    display: none;
+  }
+
   .dropdown-checkbox:checked ~ .dropdown-content {
     display: block;
-    margin-left: -20px;
+    margin-left: 20px;
   }
-  .dropdown-checkbox2 {
-    display: none;
-  }
-  
-  .dropdown-content2 {
-    display: none;
-  }
-  
-  #dropdown2:checked ~ .dropdown-content2 {
-    display: block;
-    margin-left: 70px;
-  }
-  
   
   .fieldlabel {
     width: 320px;
@@ -338,8 +347,29 @@ hr{
     
     background: var(--color-1);
   }
-  
-  
+    
+  .class {
+    position: relative;
+  }
+
+  .dropdown-checkbox2 {
+    display: none;
+  }
+
+  #dropdown2:checked ~ .dropdown-content2 {
+    display: block;
+    margin-left: 130px;
+  }
+
+  .dropdown-content2 {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+  }
+
   .fieldlabel2 {
     width: 320px;
     height: 20px;
@@ -363,46 +393,4 @@ hr{
     padding: 16px 0;
     
     background: var(--color-1);
-  }
-  
-  .arrow {
-    margin-left: 280px;
-  }
-
-
-
-  .class {
-    position: relative;
-  }
-  
-  .dropdown-content2 {
-    position: fixed;
-    top: 40;
-    left: 80;
-    display: none;
-    /* Estilize o dropdown conforme necessário */
-    z-index: 9999;
-    
-  }
-  
-  .field2:checked ~ .dropdown-content2 {
-    display: block;
-  }
-
-  .course {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    position: fixed;
-    top: 40;
-    left: 80;
-    display: none;
-    /* Estilize o dropdown conforme necessário */
-    z-index: 9999;
-    
-  }
-  
-  .field:checked ~ .dropdown-content {
-    display: block;
   }
