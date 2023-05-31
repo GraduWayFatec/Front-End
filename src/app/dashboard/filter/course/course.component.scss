@@ -30,12 +30,12 @@ $grey: #9EFFCA;
   gap: 18px;
 
   margin-right: -24px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
   .mcui-checkbox {
-    padding: 2px 0 0 20px; 
+    padding: 2px 0 0 20px;
 
     input[type="checkbox"] + div{
       border: 2px solid $grey;
@@ -54,7 +54,6 @@ $grey: #9EFFCA;
         opacity: 1;
         background-color: #9EFFCA;
         box-shadow: 0px 0px 10px #9EFFCA;
-        
       }
     }
   }
@@ -81,6 +80,6 @@ $grey: #9EFFCA;
   font-family: 'Poppins', sans-serif; 
   color: white;
   width: 100%;
-  margin-left: -10px;
+  margin-left: -4px;
   font-size: 16px;
 }
