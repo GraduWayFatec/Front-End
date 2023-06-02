@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Number } from 'src/app/shared/class-number.model'
 
 @Component({
@@ -6,43 +6,73 @@ import { Number } from 'src/app/shared/class-number.model'
   templateUrl: './class-number.component.html',
   styleUrls: ['./class-number.component.scss']
 })
-export class ClassNumberComponent implements OnInit {
+export class ClassNumberComponent {
+
 
   checkboxes: Number[] = [
-    new Number ('1ª'),
-    new Number ('2ª'),
-    new Number ('3ª'),
-    new Number ('4ª'),
-    new Number ('5ª'),
-    new Number ('6ª'),
-    new Number ('7ª'),
-    new Number ('8ª'),
-    new Number ('9ª'),
-    new Number ('10ª'),
-    new Number ('11ª'),
-    new Number ('12ª'),
-    new Number ('13ª'),
-    new Number ('14ª'),
-    new Number ('15ª'),
-    new Number ('16ª'),
-    new Number ('17ª'),
-    new Number ('18ª'),
-    new Number ('19ª'),
-    new Number ('20ª'),
-    new Number ('21ª'),
-    new Number ('22ª'),
-    new Number ('23ª'),
-    new Number ('24ª'),
-    new Number ('25ª'),
-    new Number ('26ª'),
+    new Number ('1ª', false),
+    new Number ('2ª', false),
+    new Number ('3ª', false),
+    new Number ('4ª', false),
+    new Number ('5ª', false),
+    new Number ('6ª', false),
+    new Number ('7ª', false),
+    new Number ('8ª', false),
+    new Number ('9ª', false),
+    new Number ('10ª', false),
+    new Number ('11ª', false),
+    new Number ('12ª', false),
+    new Number ('13ª', false),
+    new Number ('14ª', false),
+    new Number ('15ª', false),
+    new Number ('16ª', false),
+    new Number ('17ª', false),
+    new Number ('18ª', false),
+    new Number ('19ª', false),
+    new Number ('20ª', false),
+    new Number ('21ª', false),
+    new Number ('22ª', false),
+    new Number ('23ª', false),
+    new Number ('24ª', false),
+    new Number ('25ª', false),
+    new Number ('26ª', false),
 
   ];
 
-  constructor() {
+  // @Input() value!: string;
+  // @Input() checked!: boolean;
+  // @Output() checkboxChange = new EventEmitter<boolean>()
+
+  // checkboxChanged(){
+  //   this.checkboxChange.emit(this.checked)
+  // }
+
+  // constructor() {
   
-    }
+  //   }
 
-    ngOnInit(): void {
+  //   ngOnInit(): void {
 
+  //   }
+
+  @Output() checkboxChange = new EventEmitter<string[]>();
+
+  checkboxChanged(checkbox: any) {
+    if (checkbox.checked) {
+      this.checkboxes.forEach((c: any) => {
+        if (c !== checkbox) {
+          c.checked = false;
+        }
+      });
     }
+    const checkedValues = this.checkboxes
+      .filter(c => c.checked)
+      .map(c => c.number);
+
+    this.checkboxChange.emit(checkedValues);
+  }
+
+  test(checkbox: any){
+    alert(checkbox)
+  }
 }

@@ -21,4 +21,8 @@ export class ConectionApiService {
   public getUser(){
     return this.http.get(this.SERVER_URL + '/usuario')
   }
+
+  public postTurma(turma: any){
+    return this.http.post(this.SERVER_URL + '/turma', turma)
+  }
 }

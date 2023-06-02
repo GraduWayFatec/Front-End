@@ -31,7 +31,7 @@ export class CardEditStudentComponent {
     const initialState: any = {
       infoperson: infoperson
     }
-    alert(infoperson.user_email)
+    // alert(infoperson.user_email)
     this.modalRef = this.modalService.show(EditUserprofileComponent, { initialState, class: "edit-user-profile-modal"});
   }
 
