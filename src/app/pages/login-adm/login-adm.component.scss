@@ -270,28 +270,6 @@
     text-decoration: underline;
 }
 
-// .body .b-right .content .forms .terms .checkbox input:checked {
-//     display: none;
-//     background-color: var(--color-2);
-// }
-
-.body .b-right .content .forms .terms .checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 1px solid var(--color-2);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  .body .b-right .content .forms .terms .checkbox:checked {
-    background-color: var(--color-2);
-    border-color: var(--color-2);
-}
-
 .body .b-right .content .button .btn-btn-primary {
     display: flex;
     justify-content: center;
@@ -389,3 +367,55 @@
     //   faz o ícone de dentro do quadrado ser uma check
     }
 }
+
+.mcui-checkbox {
+    padding: 0px 0 0 0px; 
+    display: flex;
+    margin-bottom: -20px;
+
+    input[type="checkbox"] + div{
+      border: 2px solid #9EFFCA;
+      height: 1.2em;
+      width: 1.2em;
+      box-sizing: border-box;
+      border-radius: 2px;
+      // position: absolute;
+      display: flex;  
+// aqui traz a check box, tranforma em quadrado, o tamanho e etc
+    }
+  
+    input[type="checkbox"]:checked + div {
+      .mcui-check {
+        opacity: 1;
+        background-color: #9EFFCA;
+  box-shadow: 0px 0px 10px #9EFFCA;
+
+      }
+    }
+  }
+  
+  .mcui-check {
+    transform: scale(1);
+    color: #383448;
+    opacity: 0;
+    // cor do check do quadrado
+    
+  
+    polyline {
+      fill: none;
+      transform-origin: 50% 50%;
+      stroke-width: 5px;
+      stroke-dasharray: 22.771367900227325;
+      stroke: currentcolor;
+    //   faz o ícone de dentro do quadrado ser uma check
+    }
+  }
+
+input[type="checkbox"] {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+//   Retira o checkbox original
+}
+
