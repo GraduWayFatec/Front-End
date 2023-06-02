@@ -13,10 +13,14 @@
                         <div class="first-line">
                             <div class="course">
                                 <p class="title">Curso</p>
-                                <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox" placeholder="{{infocard.curso_nome}}">
-                                <label class="fieldlabel" for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                                <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
+                                <label class="fieldlabel" for="dropdown" id="dropdown-btn">
+                                    <p *ngIf="inputValue_course === ''">{{infocard.curso_nome}}</p>
+                                    <p>{{inputValue_course}}</p>
+                                    <img class="arrow" src="../../assets/img/dropdown.svg" alt="">
+                                </label>
                                 <div class="dropdown-content">
-                                    <app-course></app-course>
+                                    <app-course (checkboxChange)="atualizarInput_course($event)"></app-course>
                                 </div>
                             </div>
                             
@@ -24,10 +28,14 @@
                             
                             <div class="class">
                                 <p class="title">Ano Formatura</p>
-                                <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2" placeholder="{{ infocard.ano_formatura }}">
-                                <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                                <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
+                                <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2">
+                                    <p *ngIf="inputValue_year === ''">{{ getYear(infocard.ano_formatura) }}</p>
+                                    <p>{{inputValue_year}}</p>
+                                    <img class="arrow" src="../../assets/img/dropdown.svg" alt="">
+                                </label>
                                 <div class="dropdown-content2">
-                                    <app-year></app-year>
+                                    <app-year (checkboxChange)="atualizarInput_year($event)"></app-year>
                                 </div>
                             </div>
 

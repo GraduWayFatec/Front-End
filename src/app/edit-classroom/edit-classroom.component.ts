@@ -70,6 +70,11 @@ export class EditClassroomComponent implements AfterViewInit{
     });
   }
 
+  getYear(dateString: string): number {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  }
+
   getYearFromDate(dateString: string): string {
     const date = new Date(dateString);
     const day = this.padZero(date.getDate());
@@ -80,5 +85,16 @@ export class EditClassroomComponent implements AfterViewInit{
 
   padZero(num: number): string {
     return num < 10 ? `0${num}` : num.toString();
+  }
+
+  inputValue_course = '';
+  inputValue_year = ''
+
+  atualizarInput_course(checkedValues_course: string[]) {
+    this.inputValue_course = checkedValues_course.join(', ');
+  }
+
+  atualizarInput_year(checkedValues_year: number[]){
+    this.inputValue_year = checkedValues_year.join('')
   }
 }

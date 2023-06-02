@@ -68,4 +68,13 @@ export class EditUserprofileComponent {
   padZero(num: number): string {
     return num < 10 ? `0${num}` : num.toString();
   }
+
+  inputValue = ''
+  inputValue_course = '';
+  atualizarInput_course(checkedValues_course: string[]) {
+    this.inputValue_course = checkedValues_course.join(', ');
+  }
+  atualizarInput(checkedValues: string[]) {
+    this.inputValue = checkedValues.join(', ');
+  }
 }
