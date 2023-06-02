@@ -26,6 +26,7 @@ import { AcademicEducationComponent } from './academic-education/academic-educat
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component'
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
 import { StudentComponent } from './student/student.component';
+import { CardManagementComponent } from './management/card-management/card-management.component';
 import { LoginADMComponent } from './pages/login-adm/login-adm.component';
 
 //IMPORTS DOS COMPONENTES DO PORTAL
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'class-number', component: ClassNumberComponent },
   { path: 'edit-classroom', component: EditClassroomComponent },
+  { path: 'card-management', component: CardManagementComponent },
   { path: 'register2', component: Register2Component },
   { path: 'register3', component: Register3Component },
 ];

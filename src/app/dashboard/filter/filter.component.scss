@@ -262,7 +262,8 @@
 
 .dropdown-checkbox:checked ~ .dropdown-content {
   display: block;
-  margin-left: -20px;
+  margin-left: 280px;
+  margin-top: -14px;
 }
 .dropdown-checkbox2 {
   display: none;
@@ -270,6 +271,7 @@
 
 .dropdown-content2 {
   display: none;
+  margin-left: 24px;
 }
 
 #dropdown2:checked ~ .dropdown-content2 {

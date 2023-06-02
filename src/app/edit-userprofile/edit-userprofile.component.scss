@@ -333,16 +333,6 @@
     box-shadow: 0px 0px 12px #9EFFCA;
 }
 
-
-.dropdown-checkbox {
-    display: none;
-  }
-  
-  .dropdown-checkbox:checked ~ .dropdown-content {
-    display: block;
-    margin-left: 100px;
-  }
-
   label {
     width: 320px;
     height: 20px;
@@ -372,28 +362,40 @@
     margin-left: 290px;
 }
 
-.course {
-    position: relative;
-  }
-
-.gender {
-    position: relative;
-  }
-  .class {
-    position: relative;
-  }
-
-
-.dropdown-checkbox2 {
+  .dropdown-checkbox4 {
     display: none;
   }
   
-  #dropdown2:checked ~ .dropdown-content2 {
-    display: block;
-    margin-left: 70px;
+  .fieldlabel4 {
+    width: 320px;
+    height: 20px;
+  
+    border-radius: 0px 0px 12px 0px;
+    border-bottom: 1px solid var(--color-2);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 8px;
+    text-align: left;
+    color: #FFFFFF;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    
+    background: var(--color-1);
+  }
+
+.dropdown-checkbox5 {
+    display: none;
   }
   
-  .fieldlabel2 {
+  .fieldlabel5 {
     width: 320px;
     height: 20px;
   
@@ -420,27 +422,11 @@
     background: var(--color-1);
   }
 
-  
-.dropdown-checkbox3 {
+  .dropdown-checkbox6 {
     display: none;
   }
-  
-  .dropdown-content3 {
-    display: none;
-    position: fixed;
-    top: 40;
-    left: 80;
-    display: none;
-    /* Estilize o dropdown conforme necessário */
-    z-index: 9999;
-  }
-  
-  #dropdown3:checked ~ .dropdown-content3 {
-    display: block;
-    margin-left: 70px;
-  }
-  
-  .fieldlabel3 {
+   
+  .fieldlabel6 {
     width: 320px;
     height: 20px;
   
@@ -461,8 +447,16 @@
     justify-content: center;
     align-items: center;
     padding: 16px 0;
+    top: 0;
+    left: 0;
     
     background: var(--color-1);
   }
 
-  
+.dropdown-content5 {
+    margin-top: 4px;
+}
+
+.dropdown-content6 {
+    margin-top: 22px;
+}

@@ -49,20 +49,20 @@ export class EditUserprofileComponent {
     };
   }
 
-  isDropdownVisible1 = false;
-  isDropdownVisible2 = false;
+  isDropdownVisible4 = false;
+  isDropdownVisible5 = false;
   isDropdownVisible3 = false;
 
-  toggleDropdown1() {
-    this.isDropdownVisible1 = !this.isDropdownVisible1;
-  }
-  
-  toggleDropdown2() {
-    this.isDropdownVisible2 = !this.isDropdownVisible2;
+  toggleDropdown4() {
+    this.isDropdownVisible4 = !this.isDropdownVisible4;
   }
 
   toggleDropdown3() {
     this.isDropdownVisible3 = !this.isDropdownVisible3;
+  }
+
+  toggleDropdown5() {
+    this.isDropdownVisible5 = !this.isDropdownVisible5;
   }
 
 }
