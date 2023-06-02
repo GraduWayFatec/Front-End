@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { InfoCard } from '../shared/card.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,13 @@ export class ConectionApiService {
     return this.http.get(this.SERVER_URL + '/usuario')
   }
 
+  
+
   public postTurma(turma: any){
-    return this.http.post(this.SERVER_URL + '/turma', turma)
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return this.http.post(this.SERVER_URL + '/novaTurma', turma, { headers: headers })
   }
 }
