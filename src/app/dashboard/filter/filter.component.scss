@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
 
-  width: 450px;
-  height: 54vh;
+  width: auto;
+  height: auto;
   background-color: var(--color-1);
   box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
 
@@ -17,6 +17,7 @@
   position: absolute;
   top: 28vh;
   left: 33vw;
+  margin-top: -80px;
 }
 
 .modal-dialog .modal-content {
