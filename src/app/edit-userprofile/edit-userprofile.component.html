@@ -76,11 +76,12 @@
                         <input type="checkbox" id="dropdown4" class="dropdown-checkbox4">
                         <label class="fieldlabel4" for="dropdown4" id="dropdown-btn4">
                             <p>{{inputValue}}</p>
-                            <img class="arrow" src="../../assets/img/dropdown.svg" alt="" (click)="toggleDropdown4()">
+                            <img class="arrow" src="../../assets/img/dropdown.svg" alt="" (click)="toggleDropdown4()">     
                             <div class="dropdown-content4" *ngIf="isDropdownVisible4" [ngStyle]="{ 'top.px': dropdownPosition.top, 'left.px': dropdownPosition.left }">
                                 <app-class-number (checkboxChange)="atualizarInput($event)"></app-class-number>
-                            </div>
+                            </div>                       
                         </label>
+                        
                         
                     </div>
                     
@@ -91,11 +92,12 @@
                         <input type="checkbox" id="dropdown5" class="dropdown-checkbox5">
                         <label class="fieldlabel5" for="dropdown5" id="dropdown-btn5">
                             <p>{{inputValue_course}}</p>
-                            <img class="arrow" src="../../assets/img/dropdown.svg" alt="" (click)="toggleDropdown5()">
+                            <img class="arrow" src="../../assets/img/dropdown.svg" alt="" (click)="toggleDropdown5()">      
                             <div class="dropdown-content5" *ngIf="isDropdownVisible5" [ngStyle]="{ 'top.px': dropdownPosition.top, 'left.px': dropdownPosition.left }">
                                 <app-course (checkboxChange)="atualizarInput_course($event)"></app-course>
-                            </div>
+                            </div>          
                         </label>
+                        
                         
                     
                     </div>
@@ -115,6 +117,7 @@
                         <p class="title">Sexo</p>
                         <input type="checkbox"  id="dropdown6" class="dropdown-checkbox6">
                         <label for="dropdown6" id="dropdown-btn6">
+                            <p></p>
                             <img class="arrow" src="../../assets/img/dropdown.svg" alt="" (click)="toggleDropdown3()">
                             <div class="dropdown-content6" *ngIf="isDropdownVisible3" [ngStyle]="{ 'top.px': dropdownPosition.top, 'left.px': dropdownPosition.left }">
                             <app-gender></app-gender>
