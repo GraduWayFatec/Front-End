@@ -32,13 +32,29 @@ export class CardsComponent implements OnInit{
 
   constructor(private modalService: BsModalService) {}
 
-  abrirModal() {
-    this.modalRef = this.modalService.show(StudentComponent, {class: "classroom-modal"});
+  abrirModal(infocard: InfoCard) {
+    const initialState = {
+      infocard: infocard
+    }
+    this.modalRef = this.modalService.show(StudentComponent, { initialState, class: "classroom-modal" });
   }
 
   fecharModal() {
     this.modalRef.hide();
   }
 
+  getYearFromDate(dateString: string): number {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  }
+
+  extractNumberFromString(string: string): number | null {
+    const numberPattern = /\d+/;
+    const matches = string.match(numberPattern);
+    if (matches && matches.length > 0) {
+      return parseInt(matches[0]);
+    }
+    return null;
+  }
   
 }

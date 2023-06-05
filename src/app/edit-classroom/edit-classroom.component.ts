@@ -1,9 +1,11 @@
-import { Component,AfterViewInit, ViewChildren,QueryList, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Component,AfterViewInit, ViewChildren,QueryList, HostListener, ElementRef, ViewChild, Input } from '@angular/core';
 import { InfoPerson } from '../shared/card-person.model';
 import { CardEditStudentComponent } from './card-edit-student/card-edit-student.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { SaveComponent } from '../save/save.component';
 import { DeleteComponent } from '../delete/delete.component';
+import { ConectionApiService } from '../services/conection-api.service';
+import { InfoCard } from '../shared/card.model';
 
 @Component({
   selector: 'app-edit-classroom',
@@ -12,28 +14,9 @@ import { DeleteComponent } from '../delete/delete.component';
 })
 export class EditClassroomComponent implements AfterViewInit{
 
-  InfoPerson: InfoPerson[] = [
-    new InfoPerson("Daniel Matunoshita"),
-    new InfoPerson("Matheus Rezende"),
-    new InfoPerson("Jacqueline Nakagawa"),
-    new InfoPerson("Gabriel Calil"),
-    new InfoPerson("Luis Ricardo"),
-    new InfoPerson("Nao sei quem mais"),
-    new InfoPerson("Glaubas"),
-    new InfoPerson("Douglas"),
-    new InfoPerson("Jucelino"),
-    new InfoPerson("ffsaf ssafsafa"),
-    new InfoPerson("aaaaaaa aaaaaaaa"),
-    new InfoPerson("eeeeee eeeeeeeeeee"),
-    new InfoPerson("daaaaaaa aaaadadad"),
-    new InfoPerson("sssssss ssssssssss"),
-    new InfoPerson("dadafafsf sdgrgewgw"),
-    new InfoPerson("aaaaaaa aaaaaaaa"),
-    new InfoPerson("eeeeeeeee eeeeeeee"),
-    new InfoPerson("daaaaaaa aaaadadad"),
-    new InfoPerson("ssssssss sssssssss"),
-    new InfoPerson("dadafafs fsdgrgewgw")
-  ]
+  @Input() infocard!: InfoCard;
+
+  infoPerson: InfoPerson[] = []
 
   @ViewChildren(CardEditStudentComponent)
   cardStudent!: QueryList<CardEditStudentComponent>;
@@ -59,7 +42,7 @@ export class EditClassroomComponent implements AfterViewInit{
     
   }
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, private conection_api: ConectionApiService) {}
 
   modalRef!: BsModalRef;
  
@@ -96,4 +79,42 @@ export class EditClassroomComponent implements AfterViewInit{
     this.isDropdownVisible5 = !this.isDropdownVisible5;
   }
 
+  ngOnInit(): void {
+    this.conection_api.getUser().subscribe((data: any) => {
+      // this.infoPerson = data;
+      console.log(data);
+      this.infoPerson = data;
+    }, 
+    (error) => {
+      console.log(error)
+    });
+  }
+
+  getYear(dateString: string): number {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  }
+
+  getYearFromDate(dateString: string): string {
+    const date = new Date(dateString);
+    const day = this.padZero(date.getDate());
+    const month = this.padZero(date.getMonth() + 1);
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
+  padZero(num: number): string {
+    return num < 10 ? `0${num}` : num.toString();
+  }
+
+  inputValue_course = '';
+  inputValue_year = ''
+
+  atualizarInput_course(checkedValues_course: string[]) {
+    this.inputValue_course = checkedValues_course.join(', ');
+  }
+
+  atualizarInput_year(checkedValues_year: number[]){
+    this.inputValue_year = checkedValues_year.join('')
+  }
 }

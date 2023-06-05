@@ -1,5 +1,5 @@
 export class Year{
 
-    constructor(public year: number){
+    constructor(public year: number, public checked: boolean){
     }
 }

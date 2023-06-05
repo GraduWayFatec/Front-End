@@ -1,9 +1,10 @@
-import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Component, HostListener, ElementRef, ViewChild, Input } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { SaveComponent } from '../save/save.component';
 import { DeleteComponent } from '../delete/delete.component';
 import { AcademicEducationComponent } from '../academic-education/academic-education.component';
 import { ProfessionalExperienceComponent } from '../professional-experience/professional-experience.component';
+import { InfoPerson } from '../shared/card-person.model';
 
 @Component({
   selector: 'app-edit-userprofile',
@@ -12,6 +13,7 @@ import { ProfessionalExperienceComponent } from '../professional-experience/prof
 })
 
 export class EditUserprofileComponent {
+  @Input() infoperson!: InfoPerson;
   modalRef!: BsModalRef;
  
   constructor(private modalService: BsModalService) {}
@@ -65,4 +67,24 @@ export class EditUserprofileComponent {
     this.isDropdownVisible5 = !this.isDropdownVisible5;
   }
 
+  getYearFromDate(dateString: string): string {
+    const date = new Date(dateString);
+    const day = this.padZero(date.getDate());
+    const month = this.padZero(date.getMonth() + 1);
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
+  padZero(num: number): string {
+    return num < 10 ? `0${num}` : num.toString();
+  }
+
+  inputValue = ''
+  inputValue_course = '';
+  atualizarInput_course(checkedValues_course: string[]) {
+    this.inputValue_course = checkedValues_course.join(', ');
+  }
+  atualizarInput(checkedValues: string[]) {
+    this.inputValue = checkedValues.join(', ');
+  }
 }

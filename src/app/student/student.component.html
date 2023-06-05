@@ -3,22 +3,22 @@
         <div class="left">
             <img src="../../assets/img/Big Data.svg" alt="" class="logo">
             <div class="title">
-                <h1>Turma 13º</h1>
-                <h2>Big Data no Agronegócio</h2>
+                <h1>Turma {{ extractNumberFromString(infocard.turma_nome)}}º</h1>
+                <h2>{{ infocard.curso_nome }}</h2>
             </div>
         </div>
         <div class="center">
             <div class="date">
                 <h3>Data de formatura</h3>
-                <h4>25/04/2023</h4>
+                <h4>{{ getYearFromDate(infocard.ano_formatura) }}</h4>
             </div>
             <div class="student">
                 <h3>Alunos Cadastrados</h3>
-                <h4>20/37</h4>
+                <h4>20/{{ infocard.qtd_aln }}</h4>
             </div>
         </div>
         <div class="right">
-            <button class="mensager" (click)="abrirModal2()">
+            <button class="mensager" (click)="abrirModal2()" (click)="onChangeCheckbox()">
                 <img src="../../assets/img/Mensagem.svg" alt="" class="mensager-img">
                 Enviar Mensagem
             </button>
@@ -28,9 +28,14 @@
         </div>
     </div>
     <hr>
-    <div class="bottom">
-        <div class="cards" *ngFor="let i of InfoPerson" (click)="abrirModal()">
-            <app-card-student [itens]="i"></app-card-student>
-        </div>
+    <div class="bottom">       
+        <ng-container class="cards" *ngFor="let i of infoPerson">
+        
+            <ng-container *ngIf="i.turma_id === infocard.turma_id">
+                <div (click)="abrirModal(i)">
+                    <app-card-student [itens]="i"></app-card-student>
+                </div>
+            </ng-container>
+        </ng-container>
     </div>
 </div>

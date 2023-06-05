@@ -1,9 +1,10 @@
 import { AppRoutingModule } from './app-routing.module';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { registerLocaleData } from '@angular/common';
 import localePT from '@angular/common/locales/pt'
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -49,6 +50,8 @@ import { ClassNumberComponent } from './add-class/class-number/class-number.comp
 import { GenderComponent } from './edit-userprofile/gender/gender.component';
 import { LoginADMComponent } from './pages/login-adm/login-adm.component';
 import { ModalHelpComponent } from './modal-help/modal-help.component';
+import { HttpClientModule } from '@angular/common/http';
+
 registerLocaleData(localePT);
 
 
@@ -104,7 +107,8 @@ registerLocaleData(localePT);
     BrowserModule,
     ModalModule.forRoot(),
     AppRoutingModule,
-
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ 
     {provide: LOCALE_ID, useValue: 'pt-br'},

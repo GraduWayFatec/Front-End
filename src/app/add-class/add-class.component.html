@@ -23,10 +23,10 @@
                     <div class="course">
 
                         <p class="title">Curso</p>
-                        <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
-                            <label class="fieldlabel" for="dropdown" id="dropdown-btn"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox" [value]="inputValue_course" #course>
+                            <label class="fieldlabel" for="dropdown" id="dropdown-btn"><p>{{inputValue_course}}</p><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
                             <div class="dropdown-content">
-                              <app-course></app-course>
+                              <app-course  (checkboxChange)="atualizarInput_course($event)"></app-course>
                             </div>            
                         
                     </div>
@@ -34,10 +34,10 @@
                     <div class="class">
 
                         <p class="title">Turma</p>
-                        <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
-                        <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2"><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
+                        <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2" [value]="inputValue" #classe>
+                        <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2"><p >{{inputValue}}</p><img class="arrow" src="../../assets/img/dropdown.svg" alt=""></label>
                         <div class="dropdown-content2">
-                            <app-class-number></app-class-number>
+                            <app-class-number (checkboxChange)="atualizarInput($event)"></app-class-number>
                         </div>
     
                     </div>
@@ -49,13 +49,13 @@
                     <div class="number">
 
                         <p class="title">Quantidade de egressos</p>
-                        <input class="field" type="text" placeholder="37" value="">
+                        <input class="field" type="text" placeholder="37" #qnt_student>
                     </div>
 
                     <div class="date">
 
                         <p class="title">Data de formatura</p>
-                        <input class="field" type="text" placeholder="31/12/2023" value="">
+                        <input class="field" type="date" placeholder="31/12/2023" #date>
 
                     </div>
                     
@@ -69,7 +69,7 @@
 
                 <button type="button" class="cancel" data-bs-dismiss="modal">Cancelar</button>
         
-                <button type="button" class="add">Adicionar</button>
+                <button type="button" class="add" (click)="OnSubmit()">Adicionar</button>
         
         </div>
 

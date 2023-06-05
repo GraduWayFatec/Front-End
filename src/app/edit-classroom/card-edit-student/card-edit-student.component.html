@@ -1,11 +1,11 @@
 <div class="card-body">
     <div class="left">
         <img src="../../../assets/img/perfil-student.svg" alt="">
-        <h2>{{ itens.name }}</h2>
+        <h2>{{ infoperson.user_name }}</h2>
     </div>
     <div class="right">
         <div class="buttons">
-            <button class="edit" (click)="abrirModalEdit()">
+            <button class="edit" (click)="abrirModalEdit(infoperson)">
                 <img src="../../../assets/img/Edit.svg" alt="">
             </button>
             <button class="delete" (click)="abrirModalDelete()">

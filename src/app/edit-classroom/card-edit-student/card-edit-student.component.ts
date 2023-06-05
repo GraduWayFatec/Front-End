@@ -10,7 +10,7 @@ import { DeleteComponent } from '../../delete/delete.component';
   styleUrls: ['./card-edit-student.component.scss']
 })
 export class CardEditStudentComponent {
-  @Input() itens!: InfoPerson;
+  @Input() infoperson!: InfoPerson;
 
   isChecked:boolean = false;
 
@@ -27,8 +27,12 @@ export class CardEditStudentComponent {
   modalRef!: BsModalRef;
  
 
-  abrirModalEdit() {
-    this.modalRef = this.modalService.show(EditUserprofileComponent, {class: "edit-user-profile-modal"});
+  abrirModalEdit(infoperson: InfoPerson) {
+    const initialState: any = {
+      infoperson: infoperson
+    }
+    // alert(infoperson.user_email)
+    this.modalRef = this.modalService.show(EditUserprofileComponent, { initialState, class: "edit-user-profile-modal"});
   }
 
   abrirModalDelete() {

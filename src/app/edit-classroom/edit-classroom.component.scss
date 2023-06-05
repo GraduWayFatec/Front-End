@@ -154,6 +154,10 @@
     outline: revert;
 }
 
+.modal-dialog .modal-content .modal-top .modal-body .first-line p {
+    margin-bottom: 0;
+}
+
 .modal-dialog .modal-content .modal-top .modal-body .first-line .class button {
     position: absolute;
 
@@ -341,7 +345,7 @@ hr{
     color: #FFFFFF;
   
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 16px 8px;
     
@@ -388,9 +392,45 @@ hr{
     color: #FFFFFF;
   
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px 8px;
     
     background: var(--color-1);
+  }
+  
+  .class {
+    position: relative;
+  }
+  
+  .dropdown-content2 {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+    
+  }
+  
+  .field2:checked ~ .dropdown-content2 {
+    display: block;
+  }
+
+  .course {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    position: fixed;
+    top: 40;
+    left: 80;
+    display: none;
+    /* Estilize o dropdown conforme necessário */
+    z-index: 9999;
+    
+  }
+  
+  .field:checked ~ .dropdown-content {
+    display: block;
   }

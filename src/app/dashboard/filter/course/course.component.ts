@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Course } from 'src/app/shared/course.model';
 
 @Component({
@@ -10,8 +10,8 @@ export class CourseComponent implements OnInit {
 
   courses: Course[] = [
 
-    new Course('Big Data no Agronegócio'),
-    new Course('Mecanização em Agricultura de Precisão'),
+    new Course('Big Data no Agronegócio', false),
+    new Course('MAP', false),
 
   ];
 
@@ -21,5 +21,20 @@ export class CourseComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  @Output() checkboxChange = new EventEmitter<string[]>();
 
+  checkboxChanged(checkbox_course: any) {
+    if (checkbox_course.checked) {
+      this.courses.forEach((c: any) => {
+        if (c !== checkbox_course) {
+          c.checked = false;
+        }
+      });
+    }
+    const checkedValues_course = this.courses
+      .filter(c => c.checked)
+      .map(c => c.course);
+
+    this.checkboxChange.emit(checkedValues_course);
+  }
 }
