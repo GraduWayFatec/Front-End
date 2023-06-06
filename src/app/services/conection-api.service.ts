@@ -32,4 +32,8 @@ export class ConectionApiService {
 
     return this.http.post(this.SERVER_URL + '/novaTurma', turma, { headers: headers })
   }
+
+  public updateTurma(curso:any){
+    return this.http.put(`${this.SERVER_URL}/atualizar/turma/${curso.turma_id}`, curso)
+  }
 }
