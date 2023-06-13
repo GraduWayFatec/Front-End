@@ -18,6 +18,12 @@ export class EditClassroomComponent implements AfterViewInit{
 
   infoPerson: InfoPerson[] = []
 
+  qtd_aln!: number
+  date!: string
+  course_id!: number
+  course!:string
+  year!: number
+
   @ViewChildren(CardEditStudentComponent)
   cardStudent!: QueryList<CardEditStudentComponent>;
 
@@ -42,13 +48,18 @@ export class EditClassroomComponent implements AfterViewInit{
     
   }
 
-  constructor(private modalService: BsModalService, private conection_api: ConectionApiService) {}
+  constructor(private modalService: BsModalService, private conection_api: ConectionApiService) {
+  }
 
   modalRef!: BsModalRef;
  
 
   abrirModalSave() {
+
     this.modalRef = this.modalService.show(SaveComponent);
+    this.modalRef.content.confirmed.subscribe(() => {
+      this.OnSubmit()
+    })
   }
 
   abrirModalDelete() {
@@ -117,4 +128,58 @@ export class EditClassroomComponent implements AfterViewInit{
   atualizarInput_year(checkedValues_year: number[]){
     this.inputValue_year = checkedValues_year.join('')
   }
+
+
+  
+  OnSubmit() {
+    // const course = this.form.value.course;
+    // const year = this.form.value.year;
+    this.course = this.inputValue_course
+    this.year = parseInt(this.inputValue_year)
+    let date_sub = new Date(Date.parse(this.date))
+
+
+    console.log("Curso = " + this.course)
+    console.log("Ano = "+ this.year)
+    console.log("qnd_aln = " + this.qtd_aln)
+    console.log("date = " + date_sub)
+
+    let course_id: number;
+    if (this.course === 'MAP') {
+      course_id = 1;
+    } else {
+      course_id = 3;
+    }
+
+    if (date_sub === undefined){
+      date_sub = new Date(Date.parse(this.infocard.ano_formatura))
+    }
+
+    date_sub.setFullYear(this.year);
+
+    const isoString = date_sub.toISOString();
+    const date_json = isoString.slice(0,10)
+
+    const infoCourse = {
+      curso_id: course_id,
+      qtd_aln: this.qtd_aln,
+      ano_formatura: date_json
+    };
+
+
+    console.log(infoCourse)
+    const formattedInfoCourse = JSON.stringify(infoCourse);
+  
+    console.log(formattedInfoCourse)
+  
+    this.conection_api.updateTurma(formattedInfoCourse, this.infocard.turma_id).subscribe(response => {
+      console.log('API response:', response);
+    }, error => {
+      console.error('API error:', error);
+    });
+
+    this.modalRef.hide()
+    
+  }
+  
 }

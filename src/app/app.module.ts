@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { registerLocaleData } from '@angular/common';
 import localePT from '@angular/common/locales/pt'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -108,7 +108,8 @@ registerLocaleData(localePT);
     ModalModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ 
     {provide: LOCALE_ID, useValue: 'pt-br'},
