@@ -40,23 +40,11 @@ export class SearchComponent implements AfterViewInit, OnInit {
   }
 
   foreignTurma(){
-    // for (const card of this.infocard){
-    //   const curso_id = card.curso_id
-    //   this.conection_api.getCurso(curso_id).subscribe(
-    //     (cursoData: any) =>{
-    //       console.log(cursoData);
-    //       card.curso_id = cursoData
-    //     },
-    //     (error) =>{
-    //       console.log(error)
-    //     }
-    //   )
-    // }
     this.conection_api.getCurso().subscribe(
       (data: any) => {
         console.log(data);
         this.cursos = data;
-        this.mergeCursoData(); // Combina os dados dos cursos com os dados dos InfoCards
+        this.mergeCursoData();
       },
       (error) => {
         console.log(error);
@@ -69,7 +57,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
       const cursoId = card.curso_id;
       const curso = this.cursos.find((c) => c.curso_id === cursoId);
       if (curso) {
-        card.curso_nome = curso.curso_nome; // Adiciona o campo 'curso_nome' ao InfoCard
+        card.curso_nome = curso.curso_nome; 
       }
     }
   }

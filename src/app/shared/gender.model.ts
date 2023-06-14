@@ -1,5 +1,5 @@
 export class Gender {
 
-    constructor (public gender: string) {
+    constructor (public gender: string, public checked: boolean) {
     }
 }
