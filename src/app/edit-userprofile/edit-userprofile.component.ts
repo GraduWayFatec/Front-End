@@ -45,6 +45,9 @@ export class EditUserprofileComponent {
 
   abrirModal() {
     this.modalRef = this.modalService.show(SaveComponent);
+    this.modalRef.content.confirmed.subscribe(() => {
+      this.OnSubmitUser()
+    })
   }
 
   abrirModal2() {
@@ -157,7 +160,7 @@ export class EditUserprofileComponent {
   }
 
 
-  OnSubmit(){
+  OnSubmitUser(){
     
     this.turma = this.inputValue
     this.curso = this.inputValue_course
