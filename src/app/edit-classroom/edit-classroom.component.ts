@@ -55,7 +55,6 @@ export class EditClassroomComponent implements AfterViewInit{
  
 
   abrirModalSave() {
-
     this.modalRef = this.modalService.show(SaveComponent);
     this.modalRef.content.confirmed.subscribe(() => {
       this.OnSubmit()
@@ -153,12 +152,19 @@ export class EditClassroomComponent implements AfterViewInit{
 
     if (date_sub === undefined){
       date_sub = new Date(Date.parse(this.infocard.ano_formatura))
+    }else{
+      date_sub.setFullYear(parseInt(this.infocard.ano_formatura))
     }
 
-    date_sub.setFullYear(this.year);
-
+    if(Number.isNaN(this.year)){
+      console.log("vazio")
+    }else{
+      date_sub.setFullYear(this.year);
+    }
     const isoString = date_sub.toISOString();
     const date_json = isoString.slice(0,10)
+
+    console.log(date_json)
 
     const infoCourse = {
       curso_id: course_id,

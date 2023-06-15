@@ -1,5 +1,4 @@
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-
     <div class="modal-content">
 
         <div class="modal-header">
@@ -121,9 +120,7 @@
 
                         <p class="title">Sexo</p>
                         <input type="checkbox"  id="dropdown6" class="dropdown-checkbox6">
-                        <label for="dropdown6" id="dropdown-btn6">
-                            <p></p>
-                            <div class="field_info">
+                        <label class="fieldlabel6" for="dropdown6" id="dropdown-btn6">
                                 <p>{{inputValue_gender}}</p>
                                 <div class="field_info">
                                     <img class="arrow" src="../../assets/img/dropdown.svg" alt="" (click)="toggleDropdown3()">
@@ -131,7 +128,6 @@
                                         <app-gender (checkboxChange)="atualizarInput_gender($event)"></app-gender>
                                     </div>
                                 </div>
-                            </div>
                     </label>
                         
                         
@@ -309,9 +305,6 @@
                 <button type="button" class="close" data-bs-dismiss="modal">Cancelar</button>
         
                 <button type="button" class="accept" (click)="abrirModal()">Salvar</button>
-                <!-- <button type="button" class="accept" (click)="OnSubmit()">Salvar</button> -->
         </div>
-
     </div>
-
 </div>

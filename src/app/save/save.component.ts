@@ -16,5 +16,6 @@ export class SaveComponent {
 
   Save(){
     this.confirmed.emit();
+    window.location.reload()
   }
 }
