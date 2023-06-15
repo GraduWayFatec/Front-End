@@ -5,6 +5,7 @@ import { DeleteComponent } from '../delete/delete.component';
 import { AcademicEducationComponent } from '../academic-education/academic-education.component';
 import { ProfessionalExperienceComponent } from '../professional-experience/professional-experience.component';
 import { InfoPerson } from '../shared/card-person.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit-userprofile',
@@ -16,7 +17,8 @@ export class EditUserprofileComponent {
   @Input() infoperson!: InfoPerson;
   modalRef!: BsModalRef;
  
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService,
+    private location: Location) {}
 
   abrirModal() {
     this.modalRef = this.modalService.show(SaveComponent);
@@ -87,4 +89,10 @@ export class EditUserprofileComponent {
   atualizarInput(checkedValues: string[]) {
     this.inputValue = checkedValues.join(', ');
   }
+  
+  closeModal() {
+
+    window.location.reload();
+  }
+
 }

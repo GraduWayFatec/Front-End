@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { EditUserprofileComponent } from '../edit-userprofile/edit-userprofile.component';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,7 +11,7 @@ import { EditUserprofileComponent } from '../edit-userprofile/edit-userprofile.c
 export class UserProfileComponent {
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService) { }
+  constructor(private modalService: BsModalService, private location: Location) { }
 
   abrirModal() {
     this.modalRef = this.modalService.show(EditUserprofileComponent, {class: "edit-user-profile-modal"});
@@ -18,5 +19,10 @@ export class UserProfileComponent {
 
   fecharModal() {
     this.modalRef.hide();
+  }
+  
+  closeModal() {
+
+    window.location.reload();
   }
 }

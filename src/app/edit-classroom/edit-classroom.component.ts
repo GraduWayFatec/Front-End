@@ -6,6 +6,7 @@ import { SaveComponent } from '../save/save.component';
 import { DeleteComponent } from '../delete/delete.component';
 import { ConectionApiService } from '../services/conection-api.service';
 import { InfoCard } from '../shared/card.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit-classroom',
@@ -42,7 +43,7 @@ export class EditClassroomComponent implements AfterViewInit{
     
   }
 
-  constructor(private modalService: BsModalService, private conection_api: ConectionApiService) {}
+  constructor(private modalService: BsModalService,private location: Location, private conection_api: ConectionApiService) {}
 
   modalRef!: BsModalRef;
  
@@ -116,5 +117,10 @@ export class EditClassroomComponent implements AfterViewInit{
 
   atualizarInput_year(checkedValues_year: number[]){
     this.inputValue_year = checkedValues_year.join('')
+  }
+
+  closeModal() {
+
+    window.location.reload();
   }
 }

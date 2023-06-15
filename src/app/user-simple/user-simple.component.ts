@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { InfoPerson } from '../shared/card-person.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-simple',
@@ -11,7 +12,7 @@ export class UserSimpleComponent {
 
   @Input() infoperson!:InfoPerson
 
-  constructor(public modalRef: BsModalRef) {}
+  constructor(public modalRef: BsModalRef,  private location: Location) {}
 
   fecharModal() {
     this.modalRef.hide();
@@ -30,5 +31,11 @@ export class UserSimpleComponent {
   Facebook(){
     window.open(this.infoperson.facebook, '_blank');
   }
+    
+  closeModal() {
+
+    window.location.reload();
+  }
+
 
 }

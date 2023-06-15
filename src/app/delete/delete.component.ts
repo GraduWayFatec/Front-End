@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-delete',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class DeleteComponent {
 
+  constructor(private location: Location) {}
+
+  closeModal() {
+
+    window.location.reload();
+  }
 }

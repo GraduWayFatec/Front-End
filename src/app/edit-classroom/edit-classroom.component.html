@@ -1,11 +1,18 @@
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
+        <div class="h-right">
+
+            <button class="close-btn" id='close-btn' (click)="closeModal()"></button>
+            
+        </div>
         <div class="modal-top">
+            
             <div class="modal-left">
                 <div class="modal-header">
                     <div class="h-left">
                         <h1 class="title" id="staticBackdropLabel">Editar turma</h1>
                     </div>
+
                 </div>
                 <div class="modal-body">
                     <h5>Dados da turma</h5>
@@ -60,7 +67,7 @@
                     </div>
                 </div>
                 <div class="modal-footer-right-bottom">
-                    <button type="button" class="cancel" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="cancel" data-bs-dismiss="modal" (click)="closeModal()">Cancelar</button>
                     <button type="button" class="save" (click)="abrirModalSave()">Salvar</button>
                 </div>
             </div>

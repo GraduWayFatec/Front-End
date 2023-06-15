@@ -8,6 +8,7 @@ import { MessageComponent } from '../message/message.component';
 import { ConectionApiService } from '../services/conection-api.service';
 import { InfoCard } from '../shared/card.model';
 import { CheckboxCountServiceService } from '../services/checkbox-count-service.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-student',
@@ -45,7 +46,7 @@ export class StudentComponent implements AfterViewInit{
 
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService,private checkboxService: CheckboxCountServiceService, private conection_api: ConectionApiService ) {}
+  constructor(private modalService: BsModalService,private checkboxService: CheckboxCountServiceService, private location: Location, private conection_api: ConectionApiService ) {}
 
   abrirModal(infoperson: InfoPerson) {
     const initialState: any = {
@@ -97,5 +98,10 @@ export class StudentComponent implements AfterViewInit{
   onChangeCheckbox() {
     const count = this.cardStudent.filter(component => component.isChecked).length
     this.checkboxService.setCheckboxCountStudent(count)
+  }
+    
+  closeModal() {
+
+    window.location.reload();
   }
 }

@@ -1,6 +1,11 @@
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 
     <div class="modal-content">
+        <div class="h-right">
+
+            <button class="close-btn" id='close-btn' (click)="closeModal()"></button>
+            
+        </div>
 
     <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">DECLARAÇÃO DE PRIVACIDADE</h1>
@@ -351,7 +356,7 @@
 
     <div class="modal-footer">
 
-        <button type="button" class="close" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="close" data-bs-dismiss="modal" (click)="closeModal()">Fechar</button>
 
         <button type="button" class="accept">Eu concordo</button>
 

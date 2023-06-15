@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-filter',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent {
+  constructor(private location: Location) {}
+  closeModal() {
+
+    window.location.reload();
+  }
 
 }
 

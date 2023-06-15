@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { InfoCard } from '../shared/card.model';
 import { ConectionApiService } from '../services/conection-api.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-add-class',
@@ -18,7 +19,9 @@ export class AddClassComponent {
   @ViewChild('qnt_student', {static: false}) qnt_student!: ElementRef;
   @ViewChild('date', {static: false}) date!: ElementRef;
 
-  constructor(private conection_api: ConectionApiService, private http: HttpClient){
+  constructor(private conection_api: ConectionApiService, 
+    private http: HttpClient,
+    private location: Location){
 
     
   }
@@ -75,5 +78,14 @@ export class AddClassComponent {
     }, error => {
       console.error('API error:', error);
     });
+  }
+
+  closeModal() {
+    // const modalDiv = document.getElementById('myModal');
+    // if (modalDiv) {
+    //   modalDiv.style.display = 'none';
+    //   document.body.classList.remove('modal-open'); 
+    // }
+    window.location.reload();
   }
 }

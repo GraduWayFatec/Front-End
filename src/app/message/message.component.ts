@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { CheckboxCountServiceService } from '../services/checkbox-count-service.service';
 import { Subject } from 'rxjs';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-message',
@@ -12,7 +13,7 @@ export class MessageComponent implements OnInit{
   checkboxCountClass!: number
   
 
-  constructor(public modalRef: BsModalRef, private checkboxCountService: CheckboxCountServiceService) {}
+  constructor(public modalRef: BsModalRef,private location: Location, private checkboxCountService: CheckboxCountServiceService) {}
 
   fecharModal() {
     this.modalRef.hide();
@@ -26,6 +27,12 @@ export class MessageComponent implements OnInit{
     // Obter o valor inicial
     this.checkboxCountClass = this.checkboxCountService.getCheckboxCountClass();
   }
+    
+  closeModal() {
+
+    window.location.reload();
+  }
+
 
   // 
 

@@ -1,6 +1,11 @@
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 
     <div class="modal-content">
+        <div class="h-right">
+
+            <button class="close-btn" id='close-btn' (click)="closeModal()"></button>
+            
+        </div>
 
         <div class="modal-body">
 
@@ -14,7 +19,7 @@
 
             <div class="button">
 
-                <button class="cancel" id="cancel">Cancelar</button>
+                <button class="cancel" id="cancel" (click)="closeModal()">Cancelar</button>
 
                 <button class="delete" id="delete">Excluir</button>
 

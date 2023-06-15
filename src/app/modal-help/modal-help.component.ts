@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-modal-help',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ModalHelpComponent {
 
+  constructor(private location: Location) {}
+
+  closeModal() {
+
+    window.location.reload();
+  }
 }

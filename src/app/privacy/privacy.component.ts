@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-privacy',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./privacy.component.scss']
 })
 export class PrivacyComponent {
+ 
+  constructor(private location: Location) {}
+
+  closeModal() {
+
+    window.location.reload();
+  }
 
 }
