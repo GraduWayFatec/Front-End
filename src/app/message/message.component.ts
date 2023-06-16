@@ -10,6 +10,7 @@ import { Subject } from 'rxjs';
 })
 export class MessageComponent implements OnInit{
   checkboxCountClass!: number
+  email!: any
   
 
   constructor(public modalRef: BsModalRef, private checkboxCountService: CheckboxCountServiceService) {}
@@ -25,9 +26,17 @@ export class MessageComponent implements OnInit{
 
     // Obter o valor inicial
     this.checkboxCountClass = this.checkboxCountService.getCheckboxCountClass();
+
+    
+    
   }
 
   // 
+
+  enviarEmail(){
+    this.email = this.checkboxCountService.getEmail()
+    console.log(this.email)
+  }
 
 
 }

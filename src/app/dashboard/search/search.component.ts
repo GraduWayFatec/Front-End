@@ -109,6 +109,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
   onChangeCheckbox() {
     const count = this.cardsComponents.filter(component => component.isChecked).length
+    // const email = this.cardsComponents.filter(component => component.itens.)
     this.checkboxService.setCheckboxCountClass(count)
   }
 
