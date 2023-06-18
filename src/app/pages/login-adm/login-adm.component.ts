@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { PrivacyComponent } from '../../privacy/privacy.component';
+import { ForgotPasswordComponent } from '../login/forgot-password/forgot-password.component';
 
 @Component({
   selector: 'app-login-adm',
@@ -14,6 +15,10 @@ export class LoginADMComponent {
 
   abrirModal() {
     this.modalRef = this.modalService.show(PrivacyComponent, {class:"privacy-modal"});
+  }
+
+  abrirModal2() {
+    this.modalRef = this.modalService.show(ForgotPasswordComponent, {class:"forgot-password-modal"});
   }
 
   fecharModal() {

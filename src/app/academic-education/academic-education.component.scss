@@ -253,8 +253,9 @@ $grey: #9EFFCA;
       opacity: 1;
       background-color: #9EFFCA;
       box-shadow: 0px 0px 10px #9EFFCA;
-      margin-top: -6px;
-      box-shadow: 0px 0px 10px #9EFFCA;
+      margin-top: -4px;
+      border-radius: 3px;
+      
     }
   }
 }
@@ -419,16 +420,6 @@ margin-right:140px;
   .category {
     position: relative;
   }
-  
-  .dropdown-content7 {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // display: none;
-    /* Estilize o dropdown conforme necessário */
-    // z-index: 9999;
-  }
-  
   
   #close-btn {
     overflow: hidden;
