@@ -11,9 +11,11 @@ export class CheckboxCountServiceService {
   EmailUpdate: Subject<any> = new Subject<any>();
 
 
-  setCheckboxCountClass(count: number) {
+  setCheckboxCountClass(count: number, email: any) {
     this.checkboxCount = count;
+    this.countemail = email
     this.checkboxCountUpdated.next(this.checkboxCount)
+    this.EmailUpdate.next(this.countemail)
   }
 
   getCheckboxCountClass() {
