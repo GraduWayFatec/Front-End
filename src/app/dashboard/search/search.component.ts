@@ -9,6 +9,7 @@ import { FilterComponent } from '../../dashboard/filter/filter.component';
 import { count, every, zipAll } from 'rxjs';
 import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-service.service';
 import { ConectionApiService } from 'src/app/services/conection-api.service';
+import { InfoPerson } from 'src/app/shared/card-person.model';
 
 @Component({
   selector: 'app-search',
@@ -18,6 +19,7 @@ import { ConectionApiService } from 'src/app/services/conection-api.service';
 export class SearchComponent implements AfterViewInit, OnInit {
 
   infocard: InfoCard[] = []
+  person: InfoPerson[] = []
 
   cursos: any[] = []
   
@@ -32,6 +34,15 @@ export class SearchComponent implements AfterViewInit, OnInit {
         console.log(data)
         this.infocard = data;
         this.foreignTurma()
+      }, 
+      (error) => {
+        console.log(error)
+      }     
+    )
+    this.conection_api.getUser().subscribe(
+      (data: any) => {
+        console.log(data)
+        this.person = data;
       }, 
       (error) => {
         console.log(error)
@@ -109,10 +120,21 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
   onChangeCheckbox() {
     const count = this.cardsComponents.filter(component => component.isChecked).length
-    // const email = this.cardsComponents.filter(component => component.itens.)
+    // const email = this.cardsComponents.map(component => component.person.user_email)
+    // console.log(email)
+    // const email_filter = this.person.filter(component => component.turma_id === this.cardsComponents.map(component =>)).map(component => component.user_email)
+    
+    
+    // const email_filter = this.cardsComponents.filter(compontent => compontent.person && compontent.person.user_email).map(component => component.person.user_email)
+    const email_filter = this.cardsComponents
+      .map(component => component.person);
+    // const email_filter = this.cardsComponents.filter(component => component.isChecked).filter(component => component.person.turma_id === component.itens.turma_id).map(component => component.person.user_email)
+    console.log(email_filter)
     this.checkboxService.setCheckboxCountClass(count)
   }
 
-
+  test(){
+    
+  }
 
 }
