@@ -19,7 +19,7 @@ import { InfoPerson } from 'src/app/shared/card-person.model';
 export class SearchComponent implements AfterViewInit, OnInit {
 
   infocard: InfoCard[] = []
-  person: InfoPerson[] = []
+  person!: QueryList<InfoPerson>
 
   cursos: any[] = []
   
@@ -120,21 +120,10 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
   onChangeCheckbox() {
     const count = this.cardsComponents.filter(component => component.isChecked).length
-    // const email = this.cardsComponents.map(component => component.person.user_email)
-    // console.log(email)
-    // const email_filter = this.person.filter(component => component.turma_id === this.cardsComponents.map(component =>)).map(component => component.user_email)
     
-    
-    // const email_filter = this.cardsComponents.filter(compontent => compontent.person && compontent.person.user_email).map(component => component.person.user_email)
-    const email_filter = this.cardsComponents
-      .map(component => component.person);
-    // const email_filter = this.cardsComponents.filter(component => component.isChecked).filter(component => component.person.turma_id === component.itens.turma_id).map(component => component.person.user_email)
-    console.log(email_filter)
-    this.checkboxService.setCheckboxCountClass(count)
+    const turma_filter = this.cardsComponents.filter(component => component.isChecked).map(component => component.itens.turma_id)
+    console.log(turma_filter)
+    const email_filter = this.person.filter(component => turma_filter.includes(component.turma_id)).map(component => component.user_email)
+    this.checkboxService.setCheckboxCountClass(count, email_filter)
   }
-
-  test(){
-    
-  }
-
 }

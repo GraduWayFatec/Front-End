@@ -14,21 +14,10 @@ import { ConectionApiService } from 'src/app/services/conection-api.service';
 
 export class CardsComponent implements OnInit{
   @Input() itens!: InfoCard;
-  @Input() person!: InfoPerson
-  @Input() email!: any
 
 
   isChecked: boolean = false;
   ngOnInit() {
-    this.conection_api.getUser().subscribe(
-      (data: any) => {
-        console.log(data)
-        this.person = data;
-      }, 
-      (error) => {
-        console.log(error)
-      }
-    )
     
   }
 
@@ -71,11 +60,5 @@ export class CardsComponent implements OnInit{
       return parseInt(matches[0]);
     }
     return null;
-  }
-
-  
-  test(){
-    // this.email = this.person.filter(component => component.turma_id === this.itens.turma_id).map(component => component.user_email)
-    // console.log(this.email)
   }
 }
