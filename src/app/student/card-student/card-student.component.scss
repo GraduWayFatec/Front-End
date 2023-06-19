@@ -9,7 +9,7 @@
 
     border-radius: 28px;
     width: 350px;
-    height: 80px;
+    height: 100px;
     padding: 24px;
 }
 
@@ -39,7 +39,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 9px;
+    gap: 16px;
+}
+
+.card-body .left img {
+  width: 64px;
+  height: 64px;
 }
 
 $main: #9EFFCA; //#008cff;
@@ -60,11 +65,11 @@ $grey: #9EFFCA;
   }
 
   input[type="checkbox"] + div{
-    border: 2px solid $grey;
+    border: 1px solid #9EFFCA;
     height: 1.5em;
     width: 1.5em;
     box-sizing: border-box;
-    border-radius: 2px;
+    border-radius: 5px;
     display: flex;
 // aqui traz a check box, tranforma em quadrado, o tamanho e etc
   }
@@ -73,6 +78,7 @@ $grey: #9EFFCA;
     .mcui-check {
       // opacity: 1;
       background-color: #9EFFCA;
+      box-shadow: 0px 0px 10px #9EFFCA;
     }
   }
 

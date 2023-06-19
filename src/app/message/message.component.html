@@ -8,7 +8,7 @@
                 
                 <h3 class="title">Enviar E-mail</h3>
 
-                <p>{{ checkboxCount }} turmas selecionados(as)</p>
+                <p>{{ checkboxCountClass }} turmas selecionados(as)</p>
             
             </div>
 
@@ -16,7 +16,7 @@
 
                 <button class="cancel" id="cancel">Cancelar</button>
 
-                <button class="send" id="send">Enviar</button>
+                <button class="send" id="send" (click)="enviarEmail()">Enviar</button>
 
             </div>
 

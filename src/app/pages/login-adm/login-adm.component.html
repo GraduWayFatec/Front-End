@@ -5,13 +5,13 @@
         <div class="header">
 
             <div class="h-left">
-                <img src="../../../assets/img/logoG.svg" alt="">
+                <img src="../../../assets/img/G1.svg" alt="">
             </div> 
 
             <div class="h-right">
-                <p>Ainda não possui conta? <button routerLink="/register">Cadastre-se</button><button routerLink="/login-adm">Entre como ADM</button></p>
+                <p>Não sou ADM?<button routerLink="/login">Voltar</button></p>
             </div>
-
+            
         </div>
 
         <div class="body">
@@ -25,31 +25,29 @@
             </div>
 
             <div class="b-right">
-
+                
                 <div class="content">
 
                     <div class="title">
 
-                        <h5>Bem vindo(a) ao GraduWay.</h5>
+                       <h5>Bem vindo(a), ADM.</h5>
 
                     </div>
 
                     <div class="forms">
 
-                        <div>
+                        <form>
 
                             <div class="input">
                                 <label class="email">E-mail</label><br>
-                                <input [(ngModel)]="email" type="email" class="email" id="email" aria-describedby="emailHelp"
-                                    placeholder="Digite seu e-mail">
+                                <input type="email" class="email" id="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
                             </div>
 
                             <br>
 
                             <div class="input">
                                 <label class="password">Senha</label><br>
-                                <input [(ngModel)]="senha" type="password" class="password" id="password" name="password"
-                                    placeholder="Digite sua senha">
+                                <input type="password" class="password" id="password" name="password" placeholder="Digite sua senha">
                             </div>
 
                             <br>
@@ -57,7 +55,6 @@
                             <div class="horizontal">
 
                                 <div class="remember">
-
                                     <label class="mcui-checkbox">
                                         <input type="checkbox">
                                         <div class="check-tipo">
@@ -67,37 +64,33 @@
                                         </div> 
                                         <p class="remember-me" style="margin-left: 8px;">Lembre-me</p>
                                     </label>
-
-
                                 </div>
 
                                 <div class="forget">
                                     <button>Esqueci a senha</button>
                                 </div>
-
+                                
                             </div>
 
-                        </div>
+                        </form>
 
                     </div>
 
                     <div class="button">
 
-                        <button   routerLink="/dashboard" (click)="login()" type="submit" class="btn-btn-primary" >Entrar</button> 
-                       
+                        <button type="submit" class="btn-btn-primary" routerLink="/dashboard">Entrar</button>
 
                     </div>
 
                 </div>
-
+                
             </div>
-
+            
         </div>
 
         <div class="footer">
 
-            <p>Ao criar uma conta, você concorda com os <button (click)="abrirModal()">Termos de Privacidade.</button>
-            </p>
+            <p>Ao criar uma conta, você concorda com os <button (click)="abrirModal()">Termos de Privacidade.</button></p>
 
         </div>
 

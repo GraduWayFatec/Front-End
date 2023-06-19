@@ -4,43 +4,47 @@
   left: -9999px;
   opacity: 0;
   pointer-events: none;
-  background-color: #383448;
 
 }
 
 $grey: #9EFFCA;
 
 .card-check {
-  padding: 10px 0 10px 0;
+  padding: 6px 0 6px 0;
   height: auto;
   width: 400px;
   background-color: #383448;
   border-radius: 28px;
   box-sizing: border-box;
-  position: absolute;
   box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
-  z-index: 9999;
+  z-index: 1;
   position: absolute;
+  margin-top: 16px;
+  margin-left: -380px;
 }
 
 .checkbox{
-    display: flex;  
-    gap: 25px;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+  gap: 18px;
 
+  margin-right: -24px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
   .mcui-checkbox {
-    padding: 2px 0 0 20px; 
+    padding: 2px 0 0 20px;
 
     input[type="checkbox"] + div{
-      border: 2px solid $grey;
+      border: 1px solid #9EFFCA;
       height: 1.2em;
       width: 1.2em;
       box-sizing: border-box;
-      border-radius: 2px;
+      border-radius: 5px;
       position: absolute;
       display: flex;
-      
 
 // aqui traz a check box, tranforma em quadrado, o tamanho e etc
     }
@@ -49,12 +53,14 @@ $grey: #9EFFCA;
       .mcui-check {
         opacity: 1;
         background-color: #9EFFCA;
+        box-shadow: 0px 0px 10px #9EFFCA;
       }
     }
   }
   
   .mcui-check {
-
+    height: 100%;
+    width: 100%;
     transform: scale(1);
     color: #383448;
     opacity: 0;
@@ -70,10 +76,10 @@ $grey: #9EFFCA;
     }
   }
 
-.years {
+.course {
   font-family: 'Poppins', sans-serif; 
   color: white;
   width: 100%;
-  margin-left: -10px;
+  margin-left: -4px;
   font-size: 16px;
 }

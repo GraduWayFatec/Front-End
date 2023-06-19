@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 737px;
+    gap: 540px;
 }
 
 .header .h-left {
@@ -42,7 +42,7 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    width: 373px;
+    width: 573px;
     height: 40px;
 }
 
@@ -51,18 +51,18 @@
     color: var(--color-4);
     align-items: center;
     gap: 8px;
-    width: 373px;
+    width: 573px;
     height: 20px;
 
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
 }
 
 .header .h-right button {
-    width: 141px;
+    width: 161px;
     height: 40px;
 
     background: var(--color-2);
@@ -212,31 +212,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
-
-.body .b-right .content .forms .horizontal .remember {
-    display: flex;
-    align-items: center;
     gap: 8px;
-}
 
-.body .b-right .content .forms .horizontal .checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 1px solid var(--color-2);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  .body .b-right .content .forms .horizontal .checkbox:checked {
-    background-color: var(--color-2);
-    border-color: var(--color-2);
-    box-shadow: 0px 0px 10px #9EFFCA;
 }
 
 .body .b-right .content .forms .horizontal .forget button {
@@ -268,28 +245,6 @@
     color: var(--color-2);
     border: none;
     text-decoration: underline;
-}
-
-// .body .b-right .content .forms .terms .checkbox input:checked {
-//     display: none;
-//     background-color: var(--color-2);
-// }
-
-.body .b-right .content .forms .terms .checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 1px solid var(--color-2);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  .body .b-right .content .forms .terms .checkbox:checked {
-    background-color: var(--color-2);
-    border-color: var(--color-2);
 }
 
 .body .b-right .content .button .btn-btn-primary {
@@ -371,21 +326,53 @@
     text-shadow: 0px 0px 10px #9EFFCA;
 }
 
-
-.mcui-check {
-    height: 100%;
-    width: 100%;
-    transform: scale(1);
-    color: #383448;
-    opacity: 0;
-    // cor do check do quadrado
+    .mcui-checkbox {
+      padding: 0px 0 0 0px; 
+      display: flex;
+      margin-bottom: -20px;
   
-    polyline {
-      fill: none;
-      transform-origin: 50% 50%;
-      stroke-width: 5px;
-      stroke-dasharray: 22.771367900227325;
-      stroke: currentcolor;
-    //   faz o ícone de dentro do quadrado ser uma check
+      input[type="checkbox"] + div{
+        border: 1px solid #9EFFCA;
+        height: 1.2em;
+        width: 1.2em;
+        box-sizing: border-box;
+        border-radius: 5px;
+        // position: absolute;
+        display: flex;  
+  // aqui traz a check box, tranforma em quadrado, o tamanho e etc
+      }
+    
+      input[type="checkbox"]:checked + div {
+        .mcui-check {
+          opacity: 1;
+          background-color: #9EFFCA;
+          box-shadow: 0px 0px 10px #9EFFCA;
+        }
+      }
     }
+    
+    .mcui-check {
+      transform: scale(1);
+      color: #383448;
+      opacity: 0;
+      // cor do check do quadrado
+      
+    
+      polyline {
+        fill: none;
+        transform-origin: 50% 50%;
+        stroke-width: 5px;
+        stroke-dasharray: 22.771367900227325;
+        stroke: currentcolor;
+      //   faz o ícone de dentro do quadrado ser uma check
+      }
+    }
+
+  input[type="checkbox"] {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  //   Retira o checkbox original
   }
+

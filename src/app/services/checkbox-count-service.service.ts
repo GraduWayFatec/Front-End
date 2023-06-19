@@ -6,14 +6,34 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class CheckboxCountServiceService {
   private checkboxCount = 0;
+  private countemail!: any
   checkboxCountUpdated: Subject<number> = new Subject<number>();
+  EmailUpdate: Subject<any> = new Subject<any>();
 
-  setCheckboxCount(count: number) {
+
+  setCheckboxCountClass(count: number, email: any) {
     this.checkboxCount = count;
+    this.countemail = email
     this.checkboxCountUpdated.next(this.checkboxCount)
+    this.EmailUpdate.next(this.countemail)
   }
 
-  getCheckboxCount() {
+  getCheckboxCountClass() {
     return this.checkboxCount;
+  }
+
+  setCheckboxCountStudent(count: number, email: any) {
+    this.checkboxCount = count;
+    this.countemail = email
+    this.checkboxCountUpdated.next(this.checkboxCount)
+    this.EmailUpdate.next(this.countemail)
+  }
+
+  getCheckboxCountStudent() {
+    return this.checkboxCount;
+  }
+
+  getEmail(){
+    return this.countemail
   }
 }

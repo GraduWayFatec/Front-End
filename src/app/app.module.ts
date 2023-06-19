@@ -1,9 +1,10 @@
 import { AppRoutingModule } from './app-routing.module';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { registerLocaleData } from '@angular/common';
 import localePT from '@angular/common/locales/pt'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -47,8 +48,11 @@ import { CardEditStudentComponent } from './edit-classroom/card-edit-student/car
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
 import { ClassNumberComponent } from './add-class/class-number/class-number.component';
 import { GenderComponent } from './edit-userprofile/gender/gender.component';
-import { FormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
+import { LoginADMComponent } from './pages/login-adm/login-adm.component';
+import { ModalHelpComponent } from './modal-help/modal-help.component';
+
 registerLocaleData(localePT);
 
 
@@ -96,6 +100,8 @@ registerLocaleData(localePT);
     ForgotPasswordComponent,
     ClassNumberComponent,
     GenderComponent,
+    LoginADMComponent,
+    ModalHelpComponent,
 ],
   
   imports: [
@@ -103,7 +109,9 @@ registerLocaleData(localePT);
     ModalModule.forRoot(),
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ 
     {provide: LOCALE_ID, useValue: 'pt-br'},

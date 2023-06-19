@@ -31,7 +31,7 @@
     color: var(--color-4);
     background-color: var(--color-1);
 
-    padding: 24px 40px 24px 24px; 
+    padding: 16px 40px 24px 24px; 
 
     border-radius: 25px;
 }
@@ -41,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     
-    padding: 24px 0px 24px 24px;
+    padding: 0px 0px 16px 24px;
 }
 
 .modal-dialog .modal-content .modal-header .h-left {
@@ -51,7 +51,18 @@
     gap: 24px;
 }
 
-.modal-dialog .modal-content .modal-header .h-left h1 {
+.modal-dialog .modal-content .modal-header .h-left img {
+    width: 120px;
+    height: 120px;
+}
+
+.modal-dialog .modal-content .modal-header .h-left button {
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+}
+
+.modal-dialog .modal-content .modal-header .h-left .modal-title {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -110,7 +121,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 8px;
+    // line-height: 8px;
     text-align: left;
     color: #FFFFFF;
 
@@ -118,7 +129,6 @@
     justify-content: center;
     align-items: center;
     padding: 16px 8px;
-    z-index: 0;
     
     background: var(--color-1);
 }
@@ -267,7 +277,7 @@
     align-items: center;
     justify-content:flex-end;
 
-    padding: 10px 0px 10px 0px;
+    padding: 20px 0px 0px 0px;
 
     gap: 24px;
 }
@@ -323,7 +333,6 @@
     box-shadow: 0px 0px 12px #9EFFCA;
 }
 
-
 .dropdown-checkbox {
     display: none;
   }
@@ -343,7 +352,7 @@
     margin-left: 100px;
   }
 
-  label {
+label {
     width: 320px;
     height: 20px;
 
@@ -356,54 +365,53 @@
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 8px;
+    // line-height: 8px;
     text-align: left;
     color: #FFFFFF;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8px;
+
+    background: var(--color-1);
+}
+
+
+  .dropdown-checkbox4 {
+    display: none;
+  }
+  
+  .fieldlabel4 {
+    width: 320px;
+    height: 20px;
+  
+    border-radius: 0px 0px 12px 0px;
+    border-bottom: 1px solid var(--color-2);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    // line-height: 8px;
+    text-align: left;
+    color: #FFFFFF;
+  
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 16px 8px;
     
     background: var(--color-1);
-}
-
-.arrow {
-    margin-left: 290px;
-}
-
-.course {
-    position: relative;
   }
 
-.gender {
-    position: relative;
-  }
-  .class {
-    position: relative;
-  }
-
-
-.dropdown-checkbox2 {
+.dropdown-checkbox5 {
     display: none;
   }
   
-  .dropdown-content2 {
-    display: none;
-    position: fixed;
-    top: 40;
-    left: 80;
-    display: none;
-    /* Estilize o dropdown conforme necessário */
-    z-index: 9999;
-  }
-  
-  #dropdown2:checked ~ .dropdown-content2 {
-    display: block;
-    margin-left: 70px;
-  }
-  
-  .fieldlabel2 {
+  .fieldlabel5 {
     width: 320px;
     height: 20px;
   
@@ -416,60 +424,59 @@
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 8px;
+    // line-height: 8px;
     text-align: left;
     color: #FFFFFF;
   
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px 8px;
+    top: 0;
+    left: 0;
     
     background: var(--color-1);
   }
 
-  
-.dropdown-checkbox3 {
+  .dropdown-checkbox6 {
     display: none;
   }
+   
+//   .fieldlabel6 {
+//     width: 320px;
+//     height: 20px;
   
-  .dropdown-content3 {
-    // display: none;
-    // position: fixed;
-    // top: 40;
-    // left: 80;
-    // display: none;
-    // z-index: 9999;
-  }
+//     border-radius: 0px 0px 12px 0px;
+//     border-bottom: 1px solid var(--color-2);
+//     border-top: 0;
+//     border-left: 0;
+//     border-right: 0;
   
-  #dropdown3:checked ~ .dropdown-content3 {
-    display: block;
-    margin-left: 70px;
-  }
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 16px;
+//     // line-height: 8px;
+//     text-align: left;
+//     color: #FFFFFF;
   
-  .fieldlabel3 {
-    width: 320px;
-    height: 20px;
-  
-    border-radius: 0px 0px 12px 0px;
-    border-bottom: 1px solid var(--color-2);
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-  
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 8px;
-    text-align: left;
-    color: #FFFFFF;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 0;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 16px 8px;
+//     top: 0;
+//     left: 0;
     
-    background: var(--color-1);
-  }
+//     background: var(--color-1);
+//   }
 
-  
+// .dropdown-content5 {
+//     margin-top: 4px;
+// }
+
+// .dropdown-content6 {
+//     margin-top: 22px;
+// }
+
+label p{
+    margin: 0;
+}

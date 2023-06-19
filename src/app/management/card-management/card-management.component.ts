@@ -28,11 +28,29 @@ export class CardManagementComponent implements OnInit {
     this.modalRef = this.modalService.show(DeleteComponent);
   }
 
-  abrirModal2() {
-    this.modalRef = this.modalService.show(EditClassroomComponent, {class: "edit-classroom-modal"});
+
+  abrirModal2(infocard: InfoCard) {
+    const initialState = {
+      infocard: infocard
+    }
+    this.modalRef = this.modalService.show(EditClassroomComponent, { initialState, class: "edit-classroom-modal" });
   }
 
   fecharModal() {
     this.modalRef.hide();
+  }
+
+  getYearFromDate(dateString: string): number {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  }
+
+  extractNumberFromString(string: string): number | null {
+    const numberPattern = /\d+/;
+    const matches = string.match(numberPattern);
+    if (matches && matches.length > 0) {
+      return parseInt(matches[0]);
+    }
+    return null;
   }
 }

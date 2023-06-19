@@ -8,7 +8,7 @@
 
                 <img src="../../assets/img/Profile.svg" alt="">
                 
-                <p>Daniel Matunoshita</p>
+                <p>{{infoperson.user_name}}</p>
             
             </div>
 
@@ -20,13 +20,13 @@
 
             <div class="social-medias">
 
-                <button class="linkedin" id="linkedin"><img src="../../assets/img/Linkedin.svg" alt=""></button>
+                <button class="linkedin" id="linkedin" (click)="Linkedin()"><img src="../../assets/img/Linkedin.svg" alt=""></button>
 
-                <button class="instagram" id="instagram"><img src="../../assets/img/Instagram.svg" alt=""></button>
+                <button class="instagram" id="instagram" (click)="Instagram()"><img src="../../assets/img/Instagram.svg" alt=""></button>
 
-                <button class="lattes" id="lattes"><img src="../../assets/img/Lattes.svg" alt=""></button>
+                <button class="lattes" id="lattes" (click)="Lattes()"><img src="../../assets/img/Lattes.svg" alt=""></button>
 
-                <button class="facebook" id="facebook"><img src="../../assets/img/Facebook.svg" alt=""></button>
+                <button class="facebook" id="facebook" (click)="Facebook()"><img src="../../assets/img/Facebook.svg" alt=""></button>
 
             </div>
 

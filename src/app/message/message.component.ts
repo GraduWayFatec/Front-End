@@ -9,7 +9,8 @@ import { Subject } from 'rxjs';
   styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit{
-  checkboxCount!: number
+  checkboxCountClass!: number
+  email!: any
   
 
   constructor(public modalRef: BsModalRef, private checkboxCountService: CheckboxCountServiceService) {}
@@ -20,14 +21,22 @@ export class MessageComponent implements OnInit{
 
   ngOnInit(): void {
     this.checkboxCountService.checkboxCountUpdated.subscribe((count: number) => {
-      this.checkboxCount = count;
+      this.checkboxCountClass = count;
     });
 
     // Obter o valor inicial
-    this.checkboxCount = this.checkboxCountService.getCheckboxCount();
+    this.checkboxCountClass = this.checkboxCountService.getCheckboxCountClass();
+
+    
+    
   }
 
   // 
+
+  enviarEmail(){
+    this.email = this.checkboxCountService.getEmail()
+    console.log(this.email)
+  }
 
 
 }

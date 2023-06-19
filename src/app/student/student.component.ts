@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AfterViewInit, ViewChildren,QueryList } from '@angular/core';
 import { InfoPerson } from '../shared/card-person.model';
 import { CardStudentComponent } from './card-student/card-student.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { UserSimpleComponent } from '../user-simple/user-simple.component';
 import { MessageComponent } from '../message/message.component';
+import { ConectionApiService } from '../services/conection-api.service';
+import { InfoCard } from '../shared/card.model';
+import { CheckboxCountServiceService } from '../services/checkbox-count-service.service';
 
 @Component({
   selector: 'app-student',
@@ -13,28 +16,9 @@ import { MessageComponent } from '../message/message.component';
 })
 export class StudentComponent implements AfterViewInit{
 
-  InfoPerson: InfoPerson[] = [
-    new InfoPerson("Daniel Matunoshita"),
-    new InfoPerson("Matheus Rezende"),
-    new InfoPerson("Jacqueline Nakagawa"),
-    new InfoPerson("Gabriel Calil"),
-    new InfoPerson("Luis Ricardo"),
-    new InfoPerson("Nao sei quem mais"),
-    new InfoPerson("Glaubas"),
-    new InfoPerson("Douglas"),
-    new InfoPerson("Jucelino"),
-    new InfoPerson("ffsafssafsafa"),
-    new InfoPerson("aaaaaaaaaaaaaaa"),
-    new InfoPerson("eeeeeeeeeeeeeeeee"),
-    new InfoPerson("daaaaaaaaaaadadad"),
-    new InfoPerson("sssssssssssssssss"),
-    new InfoPerson("dadafafsfsdgrgewgw"),
-    new InfoPerson("aaaaaaaaaaaaaaa"),
-    new InfoPerson("eeeeeeeeeeeeeeeee"),
-    new InfoPerson("daaaaaaaaaaadadad"),
-    new InfoPerson("sssssssssssssssss"),
-    new InfoPerson("dadafafsfsdgrgewgw")
-  ]
+  @Input() infocard!: InfoCard
+
+  infoPerson: InfoPerson[] = []
 
   @ViewChildren(CardStudentComponent)
   cardStudent!: QueryList<CardStudentComponent>;
@@ -61,10 +45,13 @@ export class StudentComponent implements AfterViewInit{
 
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService,private checkboxService: CheckboxCountServiceService, private conection_api: ConectionApiService ) {}
 
-  abrirModal() {
-    this.modalRef = this.modalService.show(UserSimpleComponent);
+  abrirModal(infoperson: InfoPerson) {
+    const initialState: any = {
+      infoperson: infoperson
+    }
+    this.modalRef = this.modalService.show(UserSimpleComponent, { initialState });
   }
 
   abrirModal2() {
@@ -73,5 +60,45 @@ export class StudentComponent implements AfterViewInit{
 
   fecharModal() {
     this.modalRef.hide();
+  }
+
+  ngOnInit(): void {
+    this.conection_api.getUser().subscribe((data: any) => {
+      // this.infoPerson = data;
+      console.log(data);
+      this.infoPerson = data;
+    }, 
+    (error) => {
+      console.log(error)
+    });
+  }
+
+  extractNumberFromString(string: string): number | null {
+    const numberPattern = /\d+/;
+    const matches = string.match(numberPattern);
+    if (matches && matches.length > 0) {
+      return parseInt(matches[0]);
+    }
+    return null;
+  }
+
+  getYearFromDate(dateString: string): string {
+    const date = new Date(dateString);
+  const day = this.padZero(date.getDate());
+  const month = this.padZero(date.getMonth() + 1);
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+  }
+
+  padZero(num: number): string {
+    return num < 10 ? `0${num}` : num.toString();
+  }
+
+  onChangeCheckbox() {
+    const count = this.cardStudent.filter(component => component.isChecked).length
+    
+    const email = this.cardStudent.filter(component => component.isChecked).map(component => component.itens.user_email)
+
+    this.checkboxService.setCheckboxCountStudent(count, email)
   }
 }
