@@ -47,6 +47,8 @@ import { CardEditStudentComponent } from './edit-classroom/card-edit-student/car
 import { ForgotPasswordComponent } from './pages/login/forgot-password/forgot-password.component';
 import { ClassNumberComponent } from './add-class/class-number/class-number.component';
 import { GenderComponent } from './edit-userprofile/gender/gender.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 registerLocaleData(localePT);
 
 
@@ -100,7 +102,8 @@ registerLocaleData(localePT);
     BrowserModule,
     ModalModule.forRoot(),
     AppRoutingModule,
-
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ 
     {provide: LOCALE_ID, useValue: 'pt-br'},
