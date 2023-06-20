@@ -13,15 +13,15 @@
                 
                 <h3 class="title">Enviar E-mail</h3>
 
-                <p>{{ checkboxCountClass }} turmas selecionados(as)</p>
-            
+                <p *ngIf="isValue === true">{{ checkboxCountClass }} turmas selecionados(as)</p>
+                <p *ngIf="isValue === false">{{ checkboxCountClass }} usuários selecionados(as)</p>
             </div>
 
             <div class="button">
 
                 <button class="cancel" id="cancel" (click)="closeModal()">Cancelar</button>
 
-                <button class="send" id="send" (click)="enviarEmail()">Enviar</button>
+                <a class="send" id="send" (click)="enviarEmail()" href="mailto:{{email}}">Enviar</a>
 
             </div>
 

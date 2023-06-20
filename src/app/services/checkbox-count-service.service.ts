@@ -9,13 +9,18 @@ export class CheckboxCountServiceService {
   private countemail!: any
   checkboxCountUpdated: Subject<number> = new Subject<number>();
   EmailUpdate: Subject<any> = new Subject<any>();
+  isValueUpdate: Subject<boolean> = new Subject<boolean>();
+
+  private isValue!: boolean
 
 
   setCheckboxCountClass(count: number, email: any) {
     this.checkboxCount = count;
     this.countemail = email
+    this.isValue = true
     this.checkboxCountUpdated.next(this.checkboxCount)
     this.EmailUpdate.next(this.countemail)
+    this.isValueUpdate.next(this.isValue)
   }
 
   getCheckboxCountClass() {
@@ -25,8 +30,10 @@ export class CheckboxCountServiceService {
   setCheckboxCountStudent(count: number, email: any) {
     this.checkboxCount = count;
     this.countemail = email
+    this.isValue = false
     this.checkboxCountUpdated.next(this.checkboxCount)
     this.EmailUpdate.next(this.countemail)
+    this.isValueUpdate.next(this.isValue)
   }
 
   getCheckboxCountStudent() {
@@ -35,5 +42,9 @@ export class CheckboxCountServiceService {
 
   getEmail(){
     return this.countemail
+  }
+
+  getIsValue(){
+    return this.isValue
   }
 }

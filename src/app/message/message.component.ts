@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 export class MessageComponent implements OnInit{
   checkboxCountClass!: number
   email!: any
+  isValue!: boolean
   
 
   constructor(public modalRef: BsModalRef,private location: Location, private checkboxCountService: CheckboxCountServiceService) {}
@@ -24,9 +25,14 @@ export class MessageComponent implements OnInit{
     this.checkboxCountService.checkboxCountUpdated.subscribe((count: number) => {
       this.checkboxCountClass = count;
     });
+    this.checkboxCountService.isValueUpdate.subscribe((Value: boolean) => {
+      this.isValue = Value;
+    })
+    
 
     // Obter o valor inicial
     this.checkboxCountClass = this.checkboxCountService.getCheckboxCountClass();
+    this.isValue = this.checkboxCountService.getIsValue()
 
     
     
