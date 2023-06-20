@@ -3,6 +3,8 @@ import { InfoCard } from 'src/app/shared/card.model';
 import { Component } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { StudentComponent } from '../../student/student.component';
+import { InfoPerson } from 'src/app/shared/card-person.model';
+import { ConectionApiService } from 'src/app/services/conection-api.service';
 
 @Component({
   selector: 'app-cards',
@@ -13,8 +15,11 @@ import { StudentComponent } from '../../student/student.component';
 export class CardsComponent implements OnInit{
   @Input() itens!: InfoCard;
 
+
   isChecked: boolean = false;
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   onCardClick() {
     this.isChecked = !this.isChecked;
@@ -30,7 +35,7 @@ export class CardsComponent implements OnInit{
 
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, private conection_api: ConectionApiService) {}
 
   abrirModal(infocard: InfoCard) {
     const initialState = {
@@ -56,5 +61,4 @@ export class CardsComponent implements OnInit{
     }
     return null;
   }
-  
 }

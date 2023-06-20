@@ -36,11 +36,11 @@
 
                     <div class="forms">
 
-                        <form>
+                        <div>
 
                             <div class="input">
                                 <label class="email">E-mail</label><br>
-                                <input type="email" class="email" id="email" aria-describedby="emailHelp"
+                                <input [(ngModel)]="email" type="email" class="email" id="email" aria-describedby="emailHelp"
                                     placeholder="Digite seu e-mail">
                             </div>
 
@@ -48,7 +48,7 @@
 
                             <div class="input">
                                 <label class="password">Senha</label><br>
-                                <input type="password" class="password" id="password" name="password"
+                                <input [(ngModel)]="senha" type="password" class="password" id="password" name="password"
                                     placeholder="Digite sua senha">
                             </div>
 
@@ -77,13 +77,14 @@
 
                             </div>
 
-                        </form>
+                        </div>
 
                     </div>
 
                     <div class="button">
 
-                        <button type="submit" class="btn-btn-primary" routerLink="/dashboard">Entrar</button>
+                        <button   routerLink="/dashboard" (click)="login()" type="submit" class="btn-btn-primary" >Entrar</button> 
+                       
 
                     </div>
 

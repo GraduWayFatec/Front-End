@@ -97,7 +97,10 @@ export class StudentComponent implements AfterViewInit{
 
   onChangeCheckbox() {
     const count = this.cardStudent.filter(component => component.isChecked).length
-    this.checkboxService.setCheckboxCountStudent(count)
+    
+    const email = this.cardStudent.filter(component => component.isChecked).map(component => component.itens.user_email)
+
+    this.checkboxService.setCheckboxCountStudent(count, email)
   }
     
   closeModal() {

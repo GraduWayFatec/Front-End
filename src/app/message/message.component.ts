@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 })
 export class MessageComponent implements OnInit{
   checkboxCountClass!: number
+  email!: any
   
 
   constructor(public modalRef: BsModalRef,private location: Location, private checkboxCountService: CheckboxCountServiceService) {}
@@ -26,6 +27,9 @@ export class MessageComponent implements OnInit{
 
     // Obter o valor inicial
     this.checkboxCountClass = this.checkboxCountService.getCheckboxCountClass();
+
+    
+    
   }
     
   closeModal() {
@@ -35,6 +39,11 @@ export class MessageComponent implements OnInit{
 
 
   // 
+
+  enviarEmail(){
+    this.email = this.checkboxCountService.getEmail()
+    console.log(this.email)
+  }
 
 
 }

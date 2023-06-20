@@ -33,7 +33,17 @@ export class ConectionApiService {
     return this.http.post(this.SERVER_URL + '/novaTurma', turma, { headers: headers })
   }
 
-  public updateTurma(curso:any){
-    return this.http.put(`${this.SERVER_URL}/atualizar/turma/${curso.turma_id}`, curso)
+  public updateTurma(curso:any, curso_id:number){
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.put(`${this.SERVER_URL}/atualizar/turma/${curso_id}`, curso, { headers: headers})
+  }
+
+  public updateUser(user:any, user_id:number){
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+    return this.http.put(`${this.SERVER_URL}/atualizar/usuario/${user_id}`, user, { headers: headers})
   }
 }

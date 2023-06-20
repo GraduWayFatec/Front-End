@@ -20,10 +20,11 @@
                         <div class="first-line">
                             <div class="course">
                                 <p class="title">Curso</p>
-                                <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
+                                <input class="field dropdown-checkbox" type="checkbox" id="dropdown" >
                                 <label class="fieldlabel" for="dropdown" id="dropdown-btn">
                                     <p *ngIf="inputValue_course === ''">{{infocard.curso_nome}}</p>
                                     <p>{{inputValue_course}}</p>
+                                    <!-- <p>{{inputValue_course}}</p> -->
                                     <img class="arrow" src="../../assets/img/dropdown.svg" alt="">
                                 </label>
                                 <div class="dropdown-content">
@@ -33,9 +34,10 @@
                             
                             <div class="class">
                                 <p class="title">Ano Formatura</p>
-                                <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
+                                <input class="field2 dropdown-checkbox2" type="checkbox" id="dropdown2">
                                 <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2">
                                     <p *ngIf="inputValue_year === ''">{{ getYear(infocard.ano_formatura) }}</p>
+                                    <!-- <p [(ngModel)]="year">{{inputValue_year}}</p> -->
                                     <p>{{inputValue_year}}</p>
                                     <img class="arrow" src="../../assets/img/dropdown.svg" alt="">
                                 </label>
@@ -48,11 +50,11 @@
                         <div class="second-line">
                             <div class="number">
                                 <p class="title">Quantidade de egressos</p>
-                                <input class="field" type="text" placeholder="{{infocard.qtd_aln}}" value="">
+                                <input class="field" type="text" [placeholder]="infocard.qtd_aln" [(ngModel)]="qtd_aln" name="qtd_aln">
                             </div>
                             <div class="date">
                                 <p class="title">Data de formatura</p>
-                                <input class="field" type="date" placeholder="{{getYearFromDate(infocard.ano_formatura)}}" value="">
+                                <input class="field" type="date" [placeholder]="getYearFromDate(infocard.ano_formatura)" [(ngModel)]="date" name="date">
                             </div>
                         </div>
                     </form>
