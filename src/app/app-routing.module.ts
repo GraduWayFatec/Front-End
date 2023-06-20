@@ -28,7 +28,6 @@ import { ProfessionalExperienceComponent } from './professional-experience/profe
 import { StudentComponent } from './student/student.component';
 import { CardManagementComponent } from './management/card-management/card-management.component';
 import { LoginADMComponent } from './pages/login-adm/login-adm.component';
-
 //IMPORTS DOS COMPONENTES DO PORTAL
 
 const routes: Routes = [
@@ -53,7 +52,7 @@ const routes: Routes = [
   { path: 'cookies', component: CookiesComponent },
   { path: 'edit-userprofile', component: EditUserprofileComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent},
   { path: "management", component: ManagementComponent},
   { path: 'privacy', component: PrivacyComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },

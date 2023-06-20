@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { PrivacyComponent } from '../../privacy/privacy.component';
 import { LoginuserService } from 'src/app/services/loginuser.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
   email: string = "";
   senha: string = "";
 
-  constructor(private modalService: BsModalService, public loginuserService: LoginuserService) {}
+  constructor(private modalService: BsModalService, public loginuserService: LoginuserService, public router: Router) {}
 
   
   abrirModal() {
@@ -27,7 +28,12 @@ export class LoginComponent {
   login() {
     this.loginuserService.login(this.email, this.senha).subscribe(res => {
       console.log(res);
+      this.router.navigate(["/dashboard"])
+      // const userId = this.loginuserService.getUserId();
+      // console.log(userId)
     })
+
+
     
   }
 }
