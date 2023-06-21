@@ -188,7 +188,7 @@ export class EditClassroomComponent implements AfterViewInit{
       console.error('API error:', error);
     });
 
-    this.modalRef.hide()
+    window.location.reload()
     
   }
   
