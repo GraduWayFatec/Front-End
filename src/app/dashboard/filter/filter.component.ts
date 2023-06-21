@@ -12,6 +12,15 @@ export class FilterComponent {
 
     window.location.reload();
   }
+  inputValue_course = '';
+  inputValue_year = ''
+
+  atualizarInput_course(checkedValues_course: string[]) {
+    this.inputValue_course = checkedValues_course.join(', ');
+  }
+  atualizarInput_year(checkedValues_year: number[]){
+    this.inputValue_year= checkedValues_year.join(',');
+  }
 
 }
 
