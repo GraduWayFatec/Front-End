@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 1288px;
+    width: 1330px;
     height: 95vh;
     background-color: var(--color-1);
     box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
@@ -18,7 +18,7 @@
     box-shadow: 0px 4px 250px 71px rgba(0, 0, 0, 0.25);
     // transform: translate(-50%, -50%);
     top: 2vh;
-    left: 8vw;
+    left: 2vw;
 }
 
 .modal-content{
@@ -289,6 +289,19 @@ hr{
     border-radius: 12px;
 }
 
+button.delete{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
+  gap: 8px;
+  background: rgba(255, 46, 0, 0.41);
+  border-radius: 12px;
+  border-color: #FF2E00 rgba(255, 46, 0, 0.41) rgba(255, 46, 0, 0.41) #FF2E00;
+  font-weight: 400;
+  font-size: 13px;
+}
   // .arrow {
   //   margin-left: 280px;
   // }
@@ -446,7 +459,7 @@ hr{
   font: inherit;
   text-indent: 100%;
   cursor: pointer;
-  margin: 8px 0 0 1240px ;
+  margin: 8px 0 0 1280px ;
 
   
   &:focus {

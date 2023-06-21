@@ -1,10 +1,11 @@
 .modal-dialog {
+    margin-top: -50px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 888px;
-    height: 80vh;
+    height: 90vh;
     background-color: var(--color-1);
     box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
 
@@ -517,3 +518,5 @@ label p{
     
     &:after { transform: rotate(-45deg); }
   }
+
+  

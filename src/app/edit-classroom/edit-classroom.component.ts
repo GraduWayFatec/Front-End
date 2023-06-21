@@ -91,6 +91,10 @@ export class EditClassroomComponent implements AfterViewInit{
     });
   }
 
+  ContChecked(){
+    // alert(this.cards.filter(component => component.isChecked).length)
+  }
+
   getYear(dateString: string): number {
     const date = new Date(dateString);
     return date.getFullYear();
@@ -117,6 +121,9 @@ export class EditClassroomComponent implements AfterViewInit{
 
   atualizarInput_year(checkedValues_year: number[]){
     this.inputValue_year = checkedValues_year.join('')
+  }
+  abrirModal3() {
+    this.modalRef = this.modalService.show(DeleteComponent);
   }
 
   closeModal() {

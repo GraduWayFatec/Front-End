@@ -15,9 +15,9 @@
 
   // Posição MODAL
   position: absolute;
-  top: 28vh;
-  left: 33vw;
-  margin-top: -80px;
+  top: 6vh;
+  left: 30vw;
+  // margin-top: -80px;
 }
 
 .modal-dialog .modal-content {
@@ -326,9 +326,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px 0 16px 0;
   
   background: var(--color-1);
+  margin-bottom: 30px;
 }
 
 .arrow {
