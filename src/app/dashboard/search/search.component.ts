@@ -20,7 +20,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
   isValueTurma!: boolean 
   infocard: InfoCard[] = []
   person!: QueryList<InfoPerson>
-  filter: InfoCard[] = []
+  checkedFilter!: boolean
 
   cursos: any[] = []
   
@@ -73,6 +73,20 @@ export class SearchComponent implements AfterViewInit, OnInit {
     );
   }
 
+  filterCancel(){
+    this.conection_api.getTurma().subscribe(
+      (data: any) => {
+        console.log(data)
+        this.infocard = data;
+        this.foreignTurma()
+      },
+      (error) => {
+        console.log(error)
+      }     
+    )
+    this.checkedFilter = false
+  }
+
   mergeCursoData() {
     for (const card of this.infocard) {
       const cursoId = card.curso_id;
@@ -117,6 +131,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
         console.log(error)
       }     
     )
+    this.checkedFilter = true 
   }
 
   ngAfterViewInit(): void {}

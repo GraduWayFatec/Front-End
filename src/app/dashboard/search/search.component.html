@@ -17,8 +17,12 @@
                     {{ selectAll ? 'Deselecionar Todos' : 'Selecionar Todos' }}
                 </button>
                 <button class="btn-filter" (click)="abrirModal2()">
-                    <img src="../../../assets/img/Vector.svg" alt="" class="filter">
+                    <img src="../../../assets/img/filter.svg" alt="" class="filter">
                     <img src="../../../assets/img/filter_active.svg" alt="" class="filter_active">
+                </button>
+                <button class="btn-filter" (click)="filterCancel()" *ngIf="checkedFilter">
+                    <img src="../../../assets/img/filter_cancel.svg" alt="" class="filter">
+                    <img src="../../../assets/img/filter_cancel_active.svg" alt="" class="filter_active">
                 </button>
             </div>
         </div>

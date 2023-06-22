@@ -6,6 +6,7 @@ import { AddClassComponent } from '../../add-class/add-class.component';
 import { DeleteComponent } from '../../delete/delete.component';
 import { FilterComponent } from '../../dashboard/filter/filter.component';
 import { ConectionApiService } from 'src/app/services/conection-api.service';
+import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-service.service';
 
 @Component({
   selector: 'app-body-management',
@@ -16,13 +17,15 @@ export class BodyManagementComponent  implements AfterViewInit{
   
   infocard: InfoCard[] = []
   cursos: any[] = []
+  checkedFilter!: boolean
   
   constructor(private modalService: BsModalService, 
-    private conection_api: ConectionApiService
+    private conection_api: ConectionApiService,
+    private checkboxService: CheckboxCountServiceService
     ) {}
 
   ngOnInit(){
-    this.conection_api.filterTurma().subscribe(
+    this.conection_api.getTurma().subscribe(
       (data: any) => {
         console.log(data)
         this.infocard = data;
@@ -32,6 +35,14 @@ export class BodyManagementComponent  implements AfterViewInit{
         console.log(error)
       }
     )
+
+    this.conection_api.filterChenged$.subscribe(()=>{
+      this.filterChanged()
+    })
+
+    this.checkboxService.closeModalDashboard.subscribe(()=>{
+      this.fecharModal()
+    })
   }
 
   foreignTurma(){
@@ -57,7 +68,6 @@ export class BodyManagementComponent  implements AfterViewInit{
     }
   }
 
-
   @ViewChildren(CardManagementComponent)
   cards!: QueryList<CardManagementComponent>;
 
@@ -78,8 +88,33 @@ export class BodyManagementComponent  implements AfterViewInit{
     this.selectAll = !this.selectAll;
   }
   
-  ContChecked(){
-    // alert(this.cards.filter(component => component.isChecked).length)
+  filterCancel(){
+    this.conection_api.getTurma().subscribe(
+      (data: any) => {
+        console.log(data)
+        this.infocard = data;
+        this.foreignTurma()
+        
+      },
+      (error) => {
+        console.log(error)
+      }     
+    )
+    this.checkedFilter = false
+  }
+
+  filterChanged(){
+    this.conection_api.filterTurma().subscribe(
+      (data: any) => {
+        console.log(data)
+        this.infocard = data;
+        this.foreignTurma()
+      },
+      (error) => {
+        console.log(error)
+      }     
+    )
+    this.checkedFilter = true 
   }
 
   
