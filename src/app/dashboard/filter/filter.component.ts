@@ -13,11 +13,16 @@ import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-ser
 export class FilterComponent {
 
 
-  constructor(private location: Location, private conection_api: ConectionApiService, private router: Router, private checkboxService: CheckboxCountServiceService) {}
-  closeModal() {
+  constructor(private location: Location, 
+    private conection_api: ConectionApiService, 
+    private router: Router, 
+    private checkboxService: CheckboxCountServiceService) {}
 
-    window.location.reload();
+  
+  closeModal() {
+    this.checkboxService.fecharModalDashboard()
   }
+  
   inputValue_course = '';
   inputValue_year = ''
 
