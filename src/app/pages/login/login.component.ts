@@ -35,6 +35,5 @@ export class LoginComponent {
     this.loginuserService.login(this.email, this.senha).subscribe(res => {
       console.log(res);
     })
-    
   }
 }

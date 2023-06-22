@@ -17,16 +17,19 @@ import { InfoPerson } from 'src/app/shared/card-person.model';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements AfterViewInit, OnInit {
-
+  isValueTurma!: boolean 
   infocard: InfoCard[] = []
   person!: QueryList<InfoPerson>
+  filter: InfoCard[] = []
 
   cursos: any[] = []
   
   constructor(private modalService: BsModalService, 
     private checkboxService: CheckboxCountServiceService,
     private conection_api: ConectionApiService
-    ) {}
+    ) {
+      
+    }
 
   ngOnInit(){
     this.conection_api.getTurma().subscribe(
@@ -34,11 +37,18 @@ export class SearchComponent implements AfterViewInit, OnInit {
         console.log(data)
         this.infocard = data;
         this.foreignTurma()
-      }, 
+      },
       (error) => {
         console.log(error)
       }     
     )
+    this.conection_api.filterChenged$.subscribe(()=>{
+      this.filterChanged()
+    })
+    this.checkboxService.closeModalDashboard.subscribe(()=>{
+      this.fecharModal()
+    })
+
     this.conection_api.getUser().subscribe(
       (data: any) => {
         console.log(data)
@@ -96,8 +106,17 @@ export class SearchComponent implements AfterViewInit, OnInit {
     this.selectAll = !this.selectAll;
   }
 
-  ContChecked(){
-    // alert(this.cardsComponents.filter(component => component.isChecked).length)
+  filterChanged(){
+    this.conection_api.filterTurma().subscribe(
+      (data: any) => {
+        console.log(data)
+        this.infocard = data;
+        this.foreignTurma()
+      },
+      (error) => {
+        console.log(error)
+      }     
+    )
   }
 
   ngAfterViewInit(): void {}

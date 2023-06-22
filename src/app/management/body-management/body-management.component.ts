@@ -22,7 +22,7 @@ export class BodyManagementComponent  implements AfterViewInit{
     ) {}
 
   ngOnInit(){
-    this.conection_api.getTurma().subscribe(
+    this.conection_api.filterTurma().subscribe(
       (data: any) => {
         console.log(data)
         this.infocard = data;
