@@ -71,5 +71,11 @@ export class ConectionApiService {
     return this.http.put(`${this.SERVER_URL}/atualizar/usuario/${user_id}`, user, { headers: headers})
   }
 
-  
+  public getUserTurma(turma_id: any){
+    return this.http.get(this.SERVER_URL + `/usuario/:${turma_id}`)
+  }
+
+  removeUserTurma(turma_id: any) {
+    return this.http.delete(this.SERVER_URL + `/usuario/:${turma_id}`)
+  }
 }

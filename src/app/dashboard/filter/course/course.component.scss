@@ -12,15 +12,17 @@ $grey: #9EFFCA;
 .card-check {
   padding: 6px 0 6px 0;
   height: auto;
-  width: 400px;
+  width: auto;
   background-color: #383448;
   border-radius: 28px;
   box-sizing: border-box;
   box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
   z-index: 1;
-  position: absolute;
+  // position: absolute;
   margin-top: 16px;
   margin-left: -380px;
+  display: flex;
+
 }
 
 .checkbox{
@@ -35,7 +37,7 @@ $grey: #9EFFCA;
 }
 
   .mcui-checkbox {
-    padding: 2px 0 0 20px;
+    padding: 0px 10px 0 30px;
 
     input[type="checkbox"] + div{
       border: 1px solid #9EFFCA;
@@ -83,4 +85,5 @@ $grey: #9EFFCA;
   width: 100%;
   margin-left: -4px;
   font-size: 16px;
+  gap: 16px;
 }

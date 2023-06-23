@@ -49,6 +49,8 @@ export class EditClassroomComponent implements AfterViewInit{
     
   }
 
+  cardTurma : boolean = false
+
   constructor(private modalService: BsModalService,private location: Location, private conection_api: ConectionApiService) {}
 
   modalRef!: BsModalRef;
@@ -68,7 +70,6 @@ export class EditClassroomComponent implements AfterViewInit{
   fecharModal() {
     this.modalRef.hide();
   }
-
   
   dropdownPosition = { top: 0, left: 0 };
   @ViewChild('buttonRef') buttonRef!: ElementRef;
@@ -100,6 +101,10 @@ export class EditClassroomComponent implements AfterViewInit{
     });
   }
 
+  ContChecked(){
+    // alert(this.cards.filter(component => component.isChecked).length)
+  }
+
   getYear(dateString: string): number {
     const date = new Date(dateString);
     return date.getFullYear();
@@ -126,6 +131,10 @@ export class EditClassroomComponent implements AfterViewInit{
 
   atualizarInput_year(checkedValues_year: number[]){
     this.inputValue_year = checkedValues_year.join('')
+  }
+
+  abrirModal3() {
+    this.modalRef = this.modalService.show(DeleteComponent);
   }
 
   closeModal() {

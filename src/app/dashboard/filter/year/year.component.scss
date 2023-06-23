@@ -21,6 +21,8 @@ $grey: #9EFFCA;
   box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
   text-align: center;
   z-index: 1;
+  position: absolute;
+  align-items: center;
   
 }
 
@@ -41,6 +43,7 @@ $grey: #9EFFCA;
       border-radius: 5px;
       position: absolute;
       display: flex;
+
       
 
 // aqui traz a check box, tranforma em quadrado, o tamanho e etc
