@@ -7,6 +7,9 @@ import { DeleteComponent } from '../../delete/delete.component';
 import { FilterComponent } from '../../dashboard/filter/filter.component';
 import { ConectionApiService } from 'src/app/services/conection-api.service';
 import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-service.service';
+import { InfoPerson } from 'src/app/shared/card-person.model';
+import { CardStudentComponent } from 'src/app/student/card-student/card-student.component';
+import { CardEditStudentComponent } from 'src/app/edit-classroom/card-edit-student/card-edit-student.component';
 
 @Component({
   selector: 'app-body-management',
@@ -18,6 +21,9 @@ export class BodyManagementComponent  implements AfterViewInit{
   infocard: InfoCard[] = []
   cursos: any[] = []
   checkedFilter!: boolean
+  person!: QueryList<InfoPerson>
+  search!: string
+  filteredPersons: InfoPerson[] = []
   
   constructor(private modalService: BsModalService, 
     private conection_api: ConectionApiService,
@@ -43,6 +49,16 @@ export class BodyManagementComponent  implements AfterViewInit{
     this.checkboxService.closeModalDashboard.subscribe(()=>{
       this.fecharModal()
     })
+    this.conection_api.getUser().subscribe(
+      (data: any) => {
+        console.log(data)
+        this.person = data;
+        this.filteredPersons = data
+      }, 
+      (error) => {
+        console.log(error)
+      }
+    )
   }
 
   foreignTurma(){
@@ -70,22 +86,43 @@ export class BodyManagementComponent  implements AfterViewInit{
 
   @ViewChildren(CardManagementComponent)
   cards!: QueryList<CardManagementComponent>;
+  @ViewChildren(CardEditStudentComponent)
+  cardStudentComponent!: QueryList<CardStudentComponent>
 
   selectAll: boolean = false;
 
   onAllCardClick() {
-    if (this.selectAll) {
-      // Todos estão selecionados, então vamos deselecionar todos
-      this.cards.forEach(component => {
-        component.isChecked = false;
-      });
-    } else {
-      // Nem todos estão selecionados, então vamos selecionar todos
-      this.cards.forEach(component => {
-        component.isChecked = true;
-      });
+    if(this.search == '' || this.search == undefined){
+      if (this.selectAll) {
+        // Todos estão selecionados, então vamos deselecionar todos
+        this.cards.forEach(component => {
+          component.isChecked = false;
+        });
+      } else {
+        // Nem todos estão selecionados, então vamos selecionar todos
+        this.cards.forEach(component => {
+          component.isChecked = true;
+        });
+      }
+    }else{
+      if (this.selectAll) {
+        // Todos estão selecionados, então vamos deselecionar todos
+        this.cardStudentComponent.forEach(component => {
+          component.isChecked = false;
+        });
+      } else {
+        // Nem todos estão selecionados, então vamos selecionar todos
+        this.cardStudentComponent.forEach(component => {
+          component.isChecked = true;
+        });
+      }
     }
     this.selectAll = !this.selectAll;
+  }
+
+  FilterPerson(search:string){
+    this.filteredPersons = this.person.filter(component => component.user_name.toLowerCase().includes(search.toLowerCase()))
+    console.log(this.filteredPersons)
   }
   
   filterCancel(){

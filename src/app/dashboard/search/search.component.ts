@@ -10,6 +10,8 @@ import { count, every, zipAll } from 'rxjs';
 import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-service.service';
 import { ConectionApiService } from 'src/app/services/conection-api.service';
 import { InfoPerson } from 'src/app/shared/card-person.model';
+import { UserSimpleComponent } from 'src/app/user-simple/user-simple.component';
+import { CardStudentComponent } from 'src/app/student/card-student/card-student.component';
 
 @Component({
   selector: 'app-search',
@@ -21,6 +23,8 @@ export class SearchComponent implements AfterViewInit, OnInit {
   infocard: InfoCard[] = []
   person!: QueryList<InfoPerson>
   checkedFilter!: boolean
+  search!: string
+  filteredPersons: InfoPerson[] = []
 
   cursos: any[] = []
   
@@ -54,11 +58,13 @@ export class SearchComponent implements AfterViewInit, OnInit {
       (data: any) => {
         console.log(data)
         this.person = data;
+        this.filteredPersons = data
       }, 
       (error) => {
         console.log(error)
       }
     )
+    
   }
 
   foreignTurma(){
@@ -103,22 +109,46 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
   @ViewChildren(CardsComponent)
   cardsComponents!: QueryList<CardsComponent>;
+  @ViewChildren(CardStudentComponent)
+  cardStudentComponent!: QueryList<CardStudentComponent>
+  
 
   selectAll: boolean = false;
 
-  onCardClickAll() {
-    if (this.selectAll) {
-      // Todos estão selecionados, então vamos deselecionar todos
-      this.cardsComponents.forEach(component => {
-        component.isChecked = false;
-      });
-    } else {
-      // Nem todos estão selecionados, então vamos selecionar todos
-      this.cardsComponents.forEach(component => {
-        component.isChecked = true;
-      });
+  onCardClickAll() { 
+    if(this.search == '' || this.search == undefined){
+      if (this.selectAll) {
+        // Todos estão selecionados, então vamos deselecionar todos
+        this.cardsComponents.forEach(component => {
+          component.isChecked = false;
+        });
+      } else {
+        // Nem todos estão selecionados, então vamos selecionar todos
+        this.cardsComponents.forEach(component => {
+          component.isChecked = true;
+        });
+      }
+    }else{
+      if (this.selectAll) {
+        // Todos estão selecionados, então vamos deselecionar todos
+        this.cardStudentComponent.forEach(component => {
+          component.isChecked = false;
+        });
+      } else {
+        // Nem todos estão selecionados, então vamos selecionar todos
+        this.cardStudentComponent.forEach(component => {
+          component.isChecked = true;
+        });
+      }
     }
+    
     this.selectAll = !this.selectAll;
+    
+  }
+
+  FilterPerson(search:string){
+    this.filteredPersons = this.person.filter(component => component.user_name.toLowerCase().includes(search.toLowerCase()))
+    console.log(this.filteredPersons)
   }
 
   filterChanged(){
@@ -149,16 +179,33 @@ export class SearchComponent implements AfterViewInit, OnInit {
     this.modalRef = this.modalService.show(FilterComponent);
   }
 
+  abrirModalCardStudent(infoperson: InfoPerson) {
+    const initialState: any = {
+      infoperson: infoperson
+    }
+    this.modalRef = this.modalService.show(UserSimpleComponent, { initialState });
+  }
+
   fecharModal() {
     this.modalRef.hide();
   }
 
   onChangeCheckbox() {
-    const count = this.cardsComponents.filter(component => component.isChecked).length
+    if(this.search == '' || this.search == undefined){
+      const count = this.cardsComponents.filter(component => component.isChecked).length
+      const turma_filter = this.cardsComponents.filter(component => component.isChecked).map(component => component.itens.turma_id)
+      console.log(turma_filter)
+      const email_filter = this.person.filter(component => turma_filter.includes(component.turma_id)).map(component => component.user_email)
+      this.checkboxService.setCheckboxCountClass(count, email_filter)
+    }else{
+      const count = this.cardStudentComponent.filter(component => component.isChecked).length
+      const turma_filter = this.cardStudentComponent.filter(component => component.isChecked).map(component => component.itens.turma_id)
+      console.log(turma_filter)
+      const email_filter = this.person.filter(component => turma_filter.includes(component.turma_id)).map(component => component.user_email)
+      this.checkboxService.setCheckboxCountStudent(count, email_filter)
+    }
     
-    const turma_filter = this.cardsComponents.filter(component => component.isChecked).map(component => component.itens.turma_id)
-    console.log(turma_filter)
-    const email_filter = this.person.filter(component => turma_filter.includes(component.turma_id)).map(component => component.user_email)
-    this.checkboxService.setCheckboxCountClass(count, email_filter)
+    
+    
   }
 }

@@ -3,7 +3,8 @@
         <div class="search">
             <div class="left">
                 <form class="forms">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Pesquisar">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Pesquisar"
+                    [(ngModel)]="search" (ngModelChange)="FilterPerson($event)" name="search">
                 </form>
             </div>
             <div class="right">
@@ -27,9 +28,16 @@
                 <button class="add" (click)="abrirModal()">Adicionar</button>
             </div>
         </div>
-        <div class="container-cards">
+        <div class="container-cards" *ngIf="search == '' || search == undefined">
             <div class="cards" *ngFor="let i of infocard">
                 <app-card-management [itens]="i"></app-card-management>
+            </div>
+        </div>
+        <div class="container-cards" *ngIf="search">
+            <div class="cards" *ngFor="let i of filteredPersons">
+                <div>
+                    <app-card-edit-student [infoperson]="i"></app-card-edit-student>
+                </div>
             </div>
         </div>
     </div>
