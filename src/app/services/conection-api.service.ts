@@ -23,8 +23,6 @@ export class ConectionApiService {
     return this.http.get(this.SERVER_URL + '/usuario')
   }
 
-  
-
   public postTurma(turma: any){
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -35,5 +33,13 @@ export class ConectionApiService {
 
   public updateTurma(curso:any){
     return this.http.put(`${this.SERVER_URL}/atualizar/turma/${curso.turma_id}`, curso)
+  }
+
+  public getUserTurma(turma_id: any){
+    return this.http.get(this.SERVER_URL + `/usuario/:${turma_id}`)
+  }
+
+  removeUserTurma(turma_id: any) {
+    return this.http.delete(this.SERVER_URL + `/usuario/:${turma_id}`)
   }
 }

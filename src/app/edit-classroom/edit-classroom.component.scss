@@ -224,6 +224,9 @@
     background: rgba(255, 46, 0, 0.41);
     border: 1px solid;
     border-color: rgba(255, 46, 0, 0.41)  rgba(139, 130, 181, 0.4) rgba(139, 130, 181, 0.4) rgba(255, 46, 0, 0.41);
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .modal-dialog .modal-content .modal-top .modal-right .modal-footer-right-top .modal-footer-buttons{
