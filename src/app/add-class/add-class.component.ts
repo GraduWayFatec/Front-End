@@ -3,6 +3,7 @@ import { InfoCard } from '../shared/card.model';
 import { ConectionApiService } from '../services/conection-api.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Location } from '@angular/common'
+import { CheckboxCountServiceService } from '../services/checkbox-count-service.service';
 
 @Component({
   selector: 'app-add-class',
@@ -21,7 +22,9 @@ export class AddClassComponent {
 
   constructor(private conection_api: ConectionApiService, 
     private http: HttpClient,
-    private location: Location){
+    private location: Location,
+    private checkboxService: CheckboxCountServiceService
+    ){
 
     
   }
@@ -70,22 +73,16 @@ export class AddClassComponent {
 
   
     const formattedInfoCourse = JSON.stringify(infoCourse);
-  
-    // console.log(formattedInfoCourse)
-  
+
     this.conection_api.postTurma(formattedInfoCourse).subscribe(response => {
       console.log('API response:', response);
+      window.location.reload();
     }, error => {
       console.error('API error:', error);
     });
   }
 
   closeModal() {
-    // const modalDiv = document.getElementById('myModal');
-    // if (modalDiv) {
-    //   modalDiv.style.display = 'none';
-    //   document.body.classList.remove('modal-open'); 
-    // }
-    window.location.reload();
+    this.checkboxService.fecharModalDashboard()
   }
 }

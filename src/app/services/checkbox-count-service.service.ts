@@ -11,6 +11,7 @@ export class CheckboxCountServiceService {
   EmailUpdate: Subject<any> = new Subject<any>();
   isValueUpdate: Subject<boolean> = new Subject<boolean>();
   closeModalDashboard = new Subject<void>
+  closeModal2 = new Subject<void>
 
   private isValue!: boolean
 
@@ -51,5 +52,9 @@ export class CheckboxCountServiceService {
 
   fecharModalDashboard(){
     this.closeModalDashboard.next()
+  }
+
+  fecharModal2(){
+    this.closeModal2.next();
   }
 }

@@ -433,6 +433,11 @@ hr{
   .field:checked ~ .dropdown-content {
     display: block;
   }
+
+.h-right{
+  display: flex;
+  justify-content: end;
+}
   
 #close-btn {
   overflow: hidden;
@@ -446,7 +451,7 @@ hr{
   font: inherit;
   text-indent: 100%;
   cursor: pointer;
-  margin: 8px 0 0 1240px ;
+  margin: 8px 8px 0 0 ;
 
   
   &:focus {

@@ -72,6 +72,10 @@ export class StudentComponent implements AfterViewInit{
     (error) => {
       console.log(error)
     });
+
+    this.checkboxService.closeModal2.subscribe(()=>{
+      this.fecharModal()
+    })
   }
 
   extractNumberFromString(string: string): number | null {
@@ -85,10 +89,10 @@ export class StudentComponent implements AfterViewInit{
 
   getYearFromDate(dateString: string): string {
     const date = new Date(dateString);
-  const day = this.padZero(date.getDate());
-  const month = this.padZero(date.getMonth() + 1);
-  const year = date.getFullYear();
-  return `${day}/${month}/${year}`;
+    const day = this.padZero(date.getDate());
+    const month = this.padZero(date.getMonth() + 1);
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
   }
 
   padZero(num: number): string {
@@ -104,7 +108,6 @@ export class StudentComponent implements AfterViewInit{
   }
     
   closeModal() {
-
-    window.location.reload();
+    this.checkboxService.fecharModalDashboard()
   }
 }

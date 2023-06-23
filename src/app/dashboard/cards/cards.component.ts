@@ -5,6 +5,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { StudentComponent } from '../../student/student.component';
 import { InfoPerson } from 'src/app/shared/card-person.model';
 import { ConectionApiService } from 'src/app/services/conection-api.service';
+import { CheckboxCountServiceService } from 'src/app/services/checkbox-count-service.service';
 
 @Component({
   selector: 'app-cards',
@@ -18,7 +19,9 @@ export class CardsComponent implements OnInit{
 
   isChecked: boolean = false;
   ngOnInit() {
-    
+    this.checkboxService.closeModalDashboard.subscribe(()=>{
+      this.fecharModal()
+    })
   }
 
   onCardClick() {
@@ -35,7 +38,7 @@ export class CardsComponent implements OnInit{
 
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService, private conection_api: ConectionApiService) {}
+  constructor(private modalService: BsModalService, private conection_api: ConectionApiService, private checkboxService: CheckboxCountServiceService) {}
 
   abrirModal(infocard: InfoCard) {
     const initialState = {

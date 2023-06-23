@@ -45,6 +45,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
     this.conection_api.filterChenged$.subscribe(()=>{
       this.filterChanged()
     })
+    
     this.checkboxService.closeModalDashboard.subscribe(()=>{
       this.fecharModal()
     })

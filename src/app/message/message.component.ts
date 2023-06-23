@@ -17,10 +17,6 @@ export class MessageComponent implements OnInit{
 
   constructor(public modalRef: BsModalRef,private location: Location, private checkboxCountService: CheckboxCountServiceService) {}
 
-  fecharModal() {
-    this.modalRef.hide();
-  }
-
   ngOnInit(): void {
     this.checkboxCountService.checkboxCountUpdated.subscribe((count: number) => {
       this.checkboxCountClass = count;
@@ -29,18 +25,13 @@ export class MessageComponent implements OnInit{
       this.isValue = Value;
     })
     
-
-    // Obter o valor inicial
     this.checkboxCountClass = this.checkboxCountService.getCheckboxCountClass();
     this.isValue = this.checkboxCountService.getIsValue()
 
-    
-    
   }
     
   closeModal() {
-
-    window.location.reload();
+    this.checkboxCountService.fecharModalDashboard()
   }
 
 
