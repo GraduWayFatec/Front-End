@@ -17,6 +17,7 @@ export class LoginComponent {
   modalRef!: BsModalRef;
   email: string = "";
   senha: string = "";
+  erro!: boolean
 
   constructor(private modalService: BsModalService, public loginuserService: LoginuserService, private router:Router) {}
 
@@ -39,6 +40,7 @@ export class LoginComponent {
       this.router.navigate(['/dashboard'])
     })
     this.loginuserService.getLogin()
+    this.erro = true
     
   }
 }

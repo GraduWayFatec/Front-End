@@ -51,7 +51,9 @@
                                 <input [(ngModel)]="senha" type="password" class="password" id="password" name="password"
                                     placeholder="Digite sua senha">
                             </div>
-
+                            
+                            <span class="invalid" *ngIf="erro">Email ou senha inválidos</span>
+                            
                             <br>
 
                             <div class="horizontal">
