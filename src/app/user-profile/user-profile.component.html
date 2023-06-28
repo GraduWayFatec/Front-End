@@ -1,6 +1,6 @@
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 
-    <div class="modal-content">
+    <div class="modal-content" *ngFor="let item of user">
         <div class="h-right">
 
             <button class="close-btn" id='close-btn' (click)="closeModal()"></button>
@@ -12,13 +12,13 @@
             <div class="h-left">
 
                 <img src="../../assets/img/Profile.svg" alt="">
-                <h1 class="modal-title" id="staticBackdropLabel">Daniel Matunoshita</h1>
+                <h1 class="modal-title" id="staticBackdropLabel">{{item.user_name}}</h1>
 
             </div>
 
             <div class="h-right">
 
-                <button type="submit" (click)="abrirModal()">
+                <button type="submit" (click)="abrirModal(item)">
                     <img src="../../assets/img/edit.svg" alt="">
                 </button>
 
@@ -35,7 +35,7 @@
                 <div class="email">
 
                     <p class="title">E-mail</p>
-                    <p class="filed">daniel@gmail.com</p>
+                    <p class="filed">{{item.user_email}}</p>
 
                 </div>
 
@@ -53,14 +53,14 @@
                 <div class="second-email">
 
                     <p class="title">2° E-mail</p>
-                    <p class="filed">daniel@gmail.com</p>
+                    <p class="filed">{{item.email2}}</p>
 
                 </div>
 
                 <div class="born">
 
                     <p class="title">Data de nascimento</p>
-                    <p class="filed">09/05/2023</p>
+                    <p class="filed">{{getYearFromDate(item.data_nasc)}}</p>
 
                 </div>
 
@@ -89,14 +89,14 @@
                 <div class="cell">
 
                     <p class="title">Celular</p>
-                    <p class="filed">(14) 99999-0000</p>
+                        <p class="filed">{{item.user_telefone}}</p>
 
                 </div>
 
                 <div class="gender">
 
                     <p class="title">Sexo</p>
-                    <p class="filed">Masculino</p>
+                    <p class="filed">{{item.sexo}}</p>
 
                 </div>
 
@@ -107,14 +107,14 @@
                 <div class="city">
 
                     <p class="title">Cidade</p>
-                    <p class="filed">Pompéia</p>
+                    <p class="filed">{{item.cdd_local_trabalho}}</p>
 
                 </div>
 
                 <div class="state">
 
                     <p class="title">Estado</p>
-                    <p class="filed">São Paulo</p>
+                    <p class="filed">{{item.est_local_trabalho}}</p>
 
                 </div>
 
@@ -125,7 +125,7 @@
                 <div class="adress">
 
                     <p class="title">Endereço</p>
-                    <p class="filed">Rua tal de tal lugar desconhecido</p>
+                    <p class="filed">{{item.end_local_trabalho}}</p>
 
                 </div>
 
@@ -154,11 +154,11 @@
                 <tbody>
 
                     <tr>
-                        <td>Ensino Técnico</td>
-                        <td>Fatec</td>
+                        <td>{{item.formacao}}</td>
+                        <td>{{item.localformacao}}</td>
                         <td>Big Data no Agronegócio</td>
                         <td>Pública</td>
-                        <td>2023 - 2025</td>
+                        <td>{{item.anoformacao}}</td>
                     </tr>
 
                     <tr>
@@ -220,7 +220,7 @@
                     <div class="info">
 
                         <p class="title">LinkedIn</p>
-                        <p class="filed">www.linkedin.com/daniel</p>
+                        <p class="filed">{{item.linkedin}}</p>
 
                     </div>
 
@@ -233,7 +233,7 @@
                     <div class="info">
 
                         <p class="title">Instagram</p>
-                        <p class="filed">www.instagram.com/daniel</p>
+                        <p class="filed">{{item.instagram}}</p>
 
                     </div>
 
@@ -246,7 +246,7 @@
                     <div class="info">
 
                         <p class="title">Curriculum Lattes</p>
-                        <p class="filed">www.lattes.cnpq.br/daniel</p>
+                        <p class="filed">{{item.lattes}}</p>
 
                     </div>
 
@@ -259,7 +259,7 @@
                     <div class="info">
 
                         <p class="title">Facebook</p>
-                        <p class="filed">www.facebook.com/daniel</p>
+                        <p class="filed">{{item.facebook}}</p>
 
                     </div>
 

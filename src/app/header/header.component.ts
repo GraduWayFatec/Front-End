@@ -3,6 +3,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { UserProfileComponent } from '../user-profile/user-profile.component';
 import { ConectionApiService } from '../services/conection-api.service';
 import { InfoPerson } from '../shared/card-person.model';
+import { CheckboxCountServiceService } from '../services/checkbox-count-service.service';
 
 @Component({
   selector: 'app-header',
@@ -32,6 +33,7 @@ export class HeaderComponent implements OnInit {
         console.log(this.ids, this.name_user)
         this.user_id = this.ids[0]
         console.log(this.user_id)
+        this.checkbox_services.setUser(this.user_id)
       }
     }, 
     (error) => {
@@ -48,7 +50,7 @@ export class HeaderComponent implements OnInit {
 
   modalRef!: BsModalRef;
 
-  constructor(private modalService: BsModalService, private conection_api: ConectionApiService) {}
+  constructor(private modalService: BsModalService, private conection_api: ConectionApiService, private checkbox_services: CheckboxCountServiceService) {}
 
   abrirModal() {
     this.modalRef = this.modalService.show(UserProfileComponent, {class: "user-profile-modal"});

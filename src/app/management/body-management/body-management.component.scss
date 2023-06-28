@@ -178,6 +178,9 @@ input{
     box-shadow: none;
     color: #FFFFFF;
 }
+input::placeholder{
+    color: #FFFFFF;
+}
 
 input:focus {
     outline: none;
