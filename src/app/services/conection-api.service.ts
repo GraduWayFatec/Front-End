@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { InfoCard } from '../shared/card.model';
 import { Subject } from 'rxjs';
+import { LoginuserService } from './loginuser.service';
+import jwt_decode from 'jwt-decode'
 
 @Injectable({
   providedIn: 'root'
@@ -13,19 +15,48 @@ export class ConectionApiService {
   year: string = ''
   isValueFilter!: boolean
   filterChenged$ = new Subject<void>
+  headers!: HttpHeaders
+  user_email!: string
+  
+  constructor(private http: HttpClient, private loginServices: LoginuserService) {
+    this.headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+    this.setTokenHeader()
+  }
 
-  constructor(private http: HttpClient) { }
+  private setTokenHeader(){
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.headers = this.headers.set('x-access-token', token);
+    }
+  }
+
+  public decodeToken(){
+    const token = localStorage.getItem('token');
+    if (token){
+      try{
+        const decodedToken = jwt_decode(token) as { user_email?: string };
+        this.user_email = decodedToken.user_email ?? '';
+        console.log(decodedToken)
+        console.log(this.user_email)
+      } catch (error){
+        console.error('Erro ao decodificar o token:', error)
+      }
+    }
+  }
 
   public getTurma(){
-    return this.http.get(this.SERVER_URL + '/turma')
+    return this.http.get(this.SERVER_URL + '/turma', { headers: this.headers })
+    
   }
 
   public getCurso(){
-    return this.http.get(this.SERVER_URL + '/curso')
+    return this.http.get(this.SERVER_URL + '/curso', { headers: this.headers })
   }
 
   public getUser(){
-    return this.http.get(this.SERVER_URL + '/usuario')
+    return this.http.get(this.SERVER_URL + '/usuario', { headers: this.headers })
   }
 
   public infoFilter(curso_id: string, year: string, isValue: boolean){
@@ -50,29 +81,20 @@ export class ConectionApiService {
   
 
   public postTurma(turma: any){
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-
-    return this.http.post(this.SERVER_URL + '/novaTurma', turma, { headers: headers })
+    return this.http.post(this.SERVER_URL + '/novaTurma', turma, { headers: this.headers })
   }
 
   public updateTurma(curso:any, curso_id:number){
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-    return this.http.put(`${this.SERVER_URL}/atualizar/turma/${curso_id}`, curso, { headers: headers})
+    return this.http.put(`${this.SERVER_URL}/atualizar/turma/${curso_id}`, curso, { headers: this.headers})
   }
 
   public updateUser(user:any, user_id:number){
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-    return this.http.put(`${this.SERVER_URL}/atualizar/usuario/${user_id}`, user, { headers: headers})
+    
+    return this.http.put(`${this.SERVER_URL}/atualizar/usuario/${user_id}`, user, { headers: this.headers})
   }
 
-  public getUserTurma(turma_id: any){
-    return this.http.get(this.SERVER_URL + `/usuario/:${turma_id}`)
+  public getUserTurma(user_id: any){
+    return this.http.get(this.SERVER_URL + `/usuario/${user_id}`)
   }
 
   removeUserTurma(turma_id: any) {

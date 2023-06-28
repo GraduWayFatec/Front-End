@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, QueryList } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { PrivacyComponent } from '../../privacy/privacy.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoginuserService } from 'src/app/services/loginuser.service';
+import { Router } from '@angular/router';
+import { ConectionApiService } from 'src/app/services/conection-api.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -14,7 +18,7 @@ export class LoginComponent {
   email: string = "";
   senha: string = "";
 
-  constructor(private modalService: BsModalService, public loginuserService: LoginuserService) {}
+  constructor(private modalService: BsModalService, public loginuserService: LoginuserService, private router:Router) {}
 
   
   abrirModal() {
@@ -31,7 +35,10 @@ export class LoginComponent {
   
   login() {
     this.loginuserService.login(this.email, this.senha).subscribe(res => {
-      console.log(res);
+      console.log(res)
+      this.router.navigate(['/dashboard'])
     })
+    this.loginuserService.getLogin()
+    
   }
 }

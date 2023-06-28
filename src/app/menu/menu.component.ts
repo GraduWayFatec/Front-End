@@ -21,31 +21,5 @@ export class MenuComponent {
   fecharModal() {
     this.modalRef.hide();
   }
-
-  // isButtonSelected = true;
-
-  // toggleButtonSelection() {
-  //   this.isButtonSelected = !this.isButtonSelected;
-    
-  // }
-
-  // buttons = [
-  //   { label: 'btn-dashboard', isButtonSelected: true },
-  //   { label: 'btn-management', isButtonSelected: false },
-  // ];
-
-  // selectButton(button: { label: string; isButtonSelected: boolean; }) {
-  //   this.buttons.forEach(b => {
-  //     if (b.label === button.label) {
-  //       b.isButtonSelected = true;
-  //     } else {
-  //       b.isButtonSelected = false;
-  //     }
-  //   });
-  // }
-
-  
-
-
 }
 
