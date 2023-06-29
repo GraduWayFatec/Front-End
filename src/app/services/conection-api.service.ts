@@ -66,7 +66,7 @@ export class ConectionApiService {
   }
 
   public filterTurma(){
-    return this.http.get(this.SERVER_URL + `/turma/filtrar?curso_id=${this.curso_id}&ano_formatura=${this.year}`)
+    return this.http.get(this.SERVER_URL + `/turma/filtrar?curso_id=${this.curso_id}&ano_formatura=${this.year}`, {headers: this.headers })
   }
 
   public isCheckedFilter(){
