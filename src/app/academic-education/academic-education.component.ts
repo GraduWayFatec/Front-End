@@ -28,8 +28,8 @@ export class AcademicEducationComponent {
   toggleDropdown7() {
     this.isDropdownVisible7 = !this.isDropdownVisible7;
   }
-  closeModal() {
 
+  closeModal() {
     window.location.reload();
   }
 

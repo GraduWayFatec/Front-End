@@ -10,6 +10,8 @@ export class PrivacyComponent {
  
   constructor(private location: Location) {}
 
+  select: boolean = false;
+
   closeModal() {
 
     window.location.reload();

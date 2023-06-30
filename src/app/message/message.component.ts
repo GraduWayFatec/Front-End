@@ -31,11 +31,8 @@ export class MessageComponent implements OnInit{
   }
     
   closeModal() {
-    this.checkboxCountService.fecharModalDashboard()
+    this.checkboxCountService.fecharModal3()
   }
-
-
-  // 
 
   enviarEmail(){
     this.email = this.checkboxCountService.getEmail()

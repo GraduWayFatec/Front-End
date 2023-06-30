@@ -21,11 +21,6 @@ export class LoginComponent {
 
   constructor(private modalService: BsModalService, public loginuserService: LoginuserService, private router:Router) {}
 
-  
-  abrirModal() {
-    this.modalRef = this.modalService.show(PrivacyComponent, {class:"privacy-modal"});
-  }
-  
   abrirModal2() {
     this.modalRef = this.modalService.show(ForgotPasswordComponent, {class:"forgot-password-modal"});
   }
