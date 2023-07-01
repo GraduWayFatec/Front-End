@@ -11,9 +11,9 @@
 $grey: #9EFFCA;
 
 .card-check {
-  padding: 10px 7px 0px 0;
+  padding: 12px 10px 12px 0;
   height: auto;
-  width: 180px;
+  width: 200px;
   background-color: #383448;
   border-radius: 28px;
   box-sizing: border-box;
@@ -21,14 +21,16 @@ $grey: #9EFFCA;
   box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
   text-align: center;
   z-index: 1;
-  position: absolute;
   align-items: center;
+  gap: 2px;
   
 }
 
 .checkbox{
     display: flex;  
-    gap: 25px;  
+    gap: 25px;
+    align-content: center;
+    align-items: center;  
 
 }
 

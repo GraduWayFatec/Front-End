@@ -1,15 +1,12 @@
-
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
 
   left: -9999px;
   opacity: 0;
   pointer-events: none;
-
 }
 
 $grey: #9EFFCA;
-
 
 .card{
   
@@ -22,7 +19,7 @@ $grey: #9EFFCA;
     margin-top: 130px;
     margin-left: -180px;
     box-shadow: 16px 40px 64px rgba(41, 15, 0, 0.56);
-
+    z-index: 1;
     }
     
 .checkbox{   

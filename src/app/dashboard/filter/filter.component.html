@@ -26,21 +26,21 @@
       <form>
 
         <div class="first-line">
-
+        
           <div class="class">
-
+        
             <p class="title">Curso</p>
             <input class="field" type="checkbox" id="dropdown" class="dropdown-checkbox">
             <label class="fieldlabel" for="dropdown" id="dropdown-btn">
               <p>{{inputValue_course}}</p>
               <img class="arrow" src="../../assets/img/dropdown.svg" alt="">
             </label>
-            <div class="dropdown-content" style="margin: 6px 0 0 -90px ;">
+            <div class="dropdown-content">
               <app-course (checkboxChange)="atualizarInput_course($event)"></app-course>
             </div>
-          
+        
           </div>
-
+        
         </div>
 
         <div class="second-line">
@@ -51,7 +51,7 @@
           <input class="field2" type="checkbox" id="dropdown2" class="dropdown-checkbox2">
           <label class="fieldlabel2" for="dropdown2" id="dropdown-btn2">
             <p>{{inputValue_year}}</p>
-            <img class="arrow" src="../../assets/img/dropdown.svg" alt="">
+            <img class="arrow" src="../../assets/img/dropdown.svg" alt="" style="margin-right: 7px;">
           </label>
           <div class="dropdown-content2" >
             <app-year (checkboxChange)="atualizarInput_year($event)"></app-year>
