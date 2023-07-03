@@ -338,20 +338,20 @@
     display: none;
   }
   
-  .dropdown-content {
-    display: none;
-    position: fixed;
-  top: 40;
-  left: 80;
-  display: none;
-  /* Estilize o dropdown conforme necessário */
-  z-index: 9999;
-  }
+//   .dropdown-content {
+//     display: none;
+//     position: fixed;
+//   top: 40;
+//   left: 80;
+//   display: none;
+//   /* Estilize o dropdown conforme necessário */
+//   z-index: 9999;
+//   }
   
-  .dropdown-checkbox:checked ~ .dropdown-content {
-    display: block;
-    margin-left: 100px;
-  }
+//   .dropdown-checkbox:checked ~ .dropdown-content {
+//     display: block;
+//     margin-left: 100px;
+//   }
 
 label {
     width: 320px;
@@ -386,6 +386,7 @@ label {
   .fieldlabel4 {
     width: 320px;
     height: 20px;
+    cursor: pointer;
   
     border-radius: 0px 0px 12px 0px;
     border-bottom: 1px solid var(--color-2);
@@ -415,6 +416,7 @@ label {
   .fieldlabel5 {
     width: 320px;
     height: 20px;
+    cursor: pointer;
   
     border-radius: 0px 0px 12px 0px;
     border-bottom: 1px solid var(--color-2);
@@ -443,7 +445,9 @@ label {
     display: none;
   }
    
-//   .fieldlabel6 {
+  .fieldlabel6 {
+    cursor: pointer;
+  }
 //     width: 320px;
 //     height: 20px;
   
@@ -470,13 +474,14 @@ label {
 //     background: var(--color-1);
 //   }
 
-// .dropdown-content5 {
-//     margin-top: 4px;
-// }
+.dropdown-content5 {
+    margin: -8px 0 0 300px;
 
-// .dropdown-content6 {
-//     margin-top: 22px;
-// }
+}
+
+.dropdown-content6 {
+    margin: -130px 0 0 300px;
+}
 
 label p{
     margin: 0;
@@ -519,4 +524,6 @@ label p{
     &:after { transform: rotate(-45deg); }
   }
 
-  
+  .dropdown-content4{
+    margin: 3px 0 0 34px;
+  }
